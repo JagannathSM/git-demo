@@ -1,0 +1,63 @@
+
+
+body{
+    background-image: url("https://static.vecteezy.com/system/resources/previews/007/353/647/large_2x/blue-wrinkled-paper-background-with-abstract-seamless-pattern-crumpled-paper-texture-photo.jpg");
+    /* background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/07/Weather-Image-Download-Free.jpg"); */
+    /* background-color: rgb(173, 214, 249); */
+}
+
+.search_box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-img-overlay{
+    padding: 2px 0px 0px 2px;
+}
+
+#daily{
+    margin-top: 40px;
+}
+#search_city{
+    margin: 5px;
+}
+
+p{
+    margin: 0;
+}
+
+.btn{
+    margin: 2px;
+}
+
+.card{
+    font-size: medium;
+    font-weight: 700;
+    text-shadow: 2px 2px black;
+}
+
+.btn-dark{
+    width: 40%;
+    font-size: x-small;
+}
+
+.current{
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.trend{
+    text-align: center;
+    color:rgb(84, 128, 118);
+    font-weight: 700;
+}
+
+.popular{
+    color:rgb(100, 130, 107);
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+}

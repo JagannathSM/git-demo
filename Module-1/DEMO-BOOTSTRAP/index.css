@@ -1,0 +1,22 @@
+body{
+    background-color: lightgrey;
+}
+.box-part{
+    background-color: white;
+    padding: 50px 10px;
+    margin: 30px 5px;
+}
+.fa{
+    color: blue;
+}
+p{
+    margin: 10px 0px;
+    font-size: 12px;
+}
+.box{
+    padding: 90px 5px;
+}
+a{
+    color: blue;
+    border-bottom: 2px blue;
+}

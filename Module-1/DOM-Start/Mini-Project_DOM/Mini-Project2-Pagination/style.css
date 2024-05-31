@@ -1,0 +1,66 @@
+.tabel_part{
+    width: 100%;
+}
+
+.table{
+    font-size: small;
+    font-weight: 600;
+}
+
+.last_part{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer_last{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    background-color: rgb(197, 189, 189);
+    border-style: none;
+    border-radius: 2rem;
+    font-size: larger;
+    font-weight: 700;
+}
+
+button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4rem;
+    border-radius: 70px;
+    color: black;
+    margin: 0px 7px;
+}
+
+.btn{
+    color: white;
+    font-size: 1rem;
+}
+.page{
+    color: rgb(127, 121, 121);
+    font-size: 1rem;
+}
+
+.page:hover{
+    display: flex;
+    filter: brightness(0.5);
+}
+
+.btn:hover{
+    display: flex;
+    filter: brightness(0.5);
+}
+
+.active{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 60px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 100px;
+}

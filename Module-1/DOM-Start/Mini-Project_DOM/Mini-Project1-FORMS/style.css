@@ -1,0 +1,60 @@
+body{
+    background-color: lightgray;
+}
+
+.max-width{
+    width: 100%;
+    margin: 5px 0px 15px 0px;
+    background-color: rgb(244, 239, 239);
+    border-color: rgb(253, 254, 255);
+}
+
+.max-width1{
+    width: 100%;
+    margin: 5px 0px 15px 0px;
+    background-color: rgb(244, 239, 239);
+    border-color: rgb(253, 254, 255);
+}
+
+label{
+    font-weight: bold;
+}
+
+.genderclass{
+    font-weight: bold;
+}
+
+.for_radio{
+    width: 40px;
+}
+
+.for_food{
+    margin-right: 20px;
+}
+
+.para_class{
+    font-weight: bold;
+    font-size: small;
+    margin-bottom: 12px;
+}
+
+button{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.lastdiv{
+    margin: 10px 0px;
+}
+
+th{
+    font-size: small;
+    text-align: center;
+    font-weight: 700;
+}
+
+td{
+    font-size: smaller;
+    text-align: center;
+    font-weight: 500;
+}

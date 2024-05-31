@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form id="myForm" action="formprocess.php" method="post">
+        <!-- Your form fields here -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" class="text"><br>
+        <label for="add">Address:</label>
+        <input type="text" id="add" class="text"><br>
+        <input type="radio" id="male" name="gen" class="radio">
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+    <script>
+        function submitForm() {
+            getvalues();// Submit the form
+            document.getElementById("myForm").reset(); // Reset all form data
+        }
+
+        function getvalues(){
+            var arr =document.querySelectorAll(".text");
+            for(i=0;i<arr.length;i++){
+                console.log(arr[i].value);
+            }
+        }
+    </script>
+    
+
+</body>
+</html>

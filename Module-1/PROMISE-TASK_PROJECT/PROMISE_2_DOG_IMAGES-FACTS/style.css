@@ -1,0 +1,68 @@
+body{
+    background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20210327/pngtree-cute-dog-tiling-background-blue-claw-claw-image_595784.jpg");
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.title1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+    font-weight: 900;
+}
+
+.card-row{
+    background-color: rgba(39, 60, 155, 0.336);
+}
+
+
+.card-text{
+    font-size: 16px;
+    font-weight: 700;
+    justify-content: start;
+    margin-top: -5px;
+    text-shadow: 2px 2px black;
+}
+
+.card-title{
+    font-size: 18px;
+    font-weight: 800;
+    display: flex;
+}
+
+.button_class{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 20px;
+}
+
+.btn{
+    margin: 8px;
+    font-size: larger;
+    color: black;
+    font-weight: bold;
+}
+
+.row{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card{
+    margin: 20px;
+    color: rgb(241, 240, 240);
+    font-style: oblique;
+    border: double;
+}
+
+.card:hover{
+    cursor: pointer;
+}
+

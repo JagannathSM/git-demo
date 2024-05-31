@@ -1,0 +1,28 @@
+.main{
+    text-align: center;
+    margin-top: 50px;
+    padding-left: 15px;
+}
+
+.main1{
+    text-align: center;
+    margin-top: -1%;
+}
+
+body{
+    background-image: url(https://jnswire.s3.amazonaws.com/jns-media/84/15/487368/Birthday23.jpg);
+}
+
+p{
+    margin: 2px;
+    font-weight: bolder;
+}
+
+#dob{
+    width: 35%;
+}
+
+button{
+    margin:10px 10px 15px 15px;
+    margin-trim: 30px;
+}

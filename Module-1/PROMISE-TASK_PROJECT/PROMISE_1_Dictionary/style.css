@@ -1,0 +1,75 @@
+body{
+    background-color: bisque;
+    color: rgb(113, 109, 109);
+}
+
+.word_search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+}
+
+.popular{
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.main{
+    font-weight: 600;
+}
+
+button{
+    margin-top: -5px;
+}
+
+.btn:hover{
+    background-color: bisque;
+    color: blue;
+}
+
+.row{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.check:hover{
+    cursor: pointer;
+}
+
+li{
+    list-style: none;
+    justify-content: start;
+    font-size: large;
+}
+
+.card-header{
+    font-weight: 600;
+    background-color: rgb(250, 191, 118);
+}
+
+.card-footer{
+    font-weight: 600;
+    background-color: rgb(250, 191, 118);   
+}
+
+.card-body{
+    font-weight: 500;
+    background-color: rgb(194, 176, 117);   
+}
+
+h5{
+    font-size: xx-large;
+    font-weight: 800;
+}
+
+.card-text{
+    font-size: 30px;
+}
+
+.card{
+    margin-top: 20px;
+    color: black;
+}
