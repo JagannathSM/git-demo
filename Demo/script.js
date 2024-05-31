@@ -1,6 +1,3 @@
-//TO GET 'COUNTRY FLAG, COUNTRY NAME, REGION NAME, SUB-REGION NAME, POPULATION' 
-//AS OUTPUT IN CONSOLE
-
 var req = new XMLHttpRequest();
 req.open("GET","https://restcountries.com/v3.1/all")
 req.send();
@@ -15,13 +12,3 @@ req.onload = function(){
     }
     console.log(i);
 }
-
-
-var arr = fetch("https://664c9fc235bbda1098812cad.mockapi.io/data/Users",{
-    method:"POST",
-    body:JSON.stringify({
-        name:"jagan",
-    })
-});
-
-arr.then((data)=> {return data.json()}).then((data1)=>console.log(data1));
