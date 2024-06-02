@@ -1,0 +1,50 @@
+#root {
+  margin: 0 auto;
+}
+
+p{
+  margin: 5.5px;
+  font-weight: 400;
+  font-size: xx-small;
+}
+
+.row{
+  background-color:rgb(58, 58, 233);
+  border-radius : 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-right: 10px;
+}
+         
+.btn {
+  background-image: linear-gradient(to right, #00c6ff 0%, #0072ff  51%, #00c6ff  100%);
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 10px;
+  font-size: x-small;
+  font-weight: 700;
+}
+
+.card-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0%;
+}
+
+.text-muted{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: medium;
+  margin-bottom: 0%;
+  font-weight: 500;
+  font-size: x-small;
+  color: rgb(184, 184, 184);
+}
+
+.Para_class{
+  padding-top: 10px;
+  color: rgba(101, 96, 96, 0.715);
+}
