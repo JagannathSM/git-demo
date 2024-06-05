@@ -1,0 +1,16 @@
+.FSD-Container{
+    margin: 20px;
+}
+
+.FSD-Container-Head{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.FSD-Cards-Section{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,35 @@
+.Nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(98, 173, 98);
+    height: 10dvh;
+}
+
+.List-Nav{
+    list-style: none;
+    display: flex;
+}
+
+.List-Nav > li {
+    padding-right: 20px;
+}
+
+.List-Nav > li > a {
+    color: whitesmoke;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    font-size: large;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0px 20px;
+}
+
+.List-Nav > li :hover {
+    color: rgb(9, 9, 9);
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    font-size: x-large;
+    border-bottom: black 2px solid;
+    font-weight: 500;
+    padding: 0px 20px;
+    transition: 0.3s;
+}

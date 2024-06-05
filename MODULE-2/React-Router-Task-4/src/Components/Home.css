@@ -1,0 +1,15 @@
+.HomePage-Container{
+    margin: 20px;
+}
+.Homepage-head{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.Homepage-Cards-Section{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}

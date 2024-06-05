@@ -1,0 +1,54 @@
+.Career-Container{
+    margin: 20px;
+}
+
+.Career-Details{
+    margin: 50px;
+}
+
+.Career-Cards{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.Career-Cards > a{
+    display: flex;
+    margin: 20px;
+    width: 30%;
+}
+
+.Career-Card-Detail{
+    flex-wrap: wrap;
+    background-color: rgb(182, 215, 215);
+    border: 1px solid black;
+    width: 100%;
+}
+
+.Career-Cards > a :hover{
+   box-shadow: black 2px 2px;
+}
+
+.Career-Card-Detail-Img > img {
+    position: fixed;
+}
+
+.Career-Card-Detail-Para{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+}
+
+.Career-Card-Detail-Para > h4{
+    text-decoration: none;
+    color:black;
+    justify-content: center; 
+    text-align: center;   
+}
+
+.page-container > h3{
+    text-align: center;
+    margin-bottom: 0px;
+}

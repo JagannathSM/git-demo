@@ -1,0 +1,45 @@
+.Card-Container{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    border: 1px solid black;
+    margin: 10px 0px;
+    justify-content: space-around;
+}
+
+.Card-Img > img{
+    width: 100%;
+    height: 160px;
+}
+
+.Card-Detail{
+    text-align: justify;
+}
+
+.Card-Detail > h4 {
+    margin: 5px;
+    margin-bottom: 18px;
+}
+
+.Card-Detail > p {
+    font-size: 15px;
+    margin: 5px;
+    color: rgb(98, 98, 98);
+    display: flex;
+    justify-content: center;
+}
+
+.Card-date{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.Card-date > p {
+    font-size: small;
+    margin: 5px;
+    color: rgb(98, 98, 98);
+    font-weight: 500;
+   
+}

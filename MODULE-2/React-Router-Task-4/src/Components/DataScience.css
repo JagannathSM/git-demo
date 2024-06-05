@@ -1,0 +1,16 @@
+.DataScience-Container{
+    margin: 20px;
+}
+
+.DataScience-Head{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.Data-Science-Card-Section{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
