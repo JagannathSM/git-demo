@@ -1,0 +1,8 @@
+body{
+  display: flex;
+  justify-content: center;
+  background-image: url("https://media.giphy.com/media/LVodODv8uRb1u/giphy.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}

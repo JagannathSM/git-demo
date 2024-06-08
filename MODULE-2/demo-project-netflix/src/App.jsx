@@ -585,7 +585,6 @@ function MovieData(){
       actress:movieActress
     }
   }
-console.log(moviedata1)
 
 const [movieList,setMovieList] = useState(data_movies)
 

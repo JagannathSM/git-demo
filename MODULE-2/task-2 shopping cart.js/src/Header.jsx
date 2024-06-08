@@ -25,7 +25,7 @@ function Header() {
   }
 
   const showButton = () => {
-    if (window.innerWidth >= 720) {
+    if (window.innerWidth >= 780) {
       setShowHead(false);
     } else {
       setShowHead(true);

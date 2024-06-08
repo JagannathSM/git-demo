@@ -1,0 +1,41 @@
+.To-Do-Maker-Container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.To-Do-Maker-Head{
+    color: lightgreen;
+    text-shadow: 1px 1px black;
+    text-align: center;
+}
+
+.To-Do-Maker-Part{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 80%;
+}
+
+.To-Do-Maker-Part > input {
+    width: 35%;
+    height: 20px;
+    border-radius: 5px;
+}
+
+.To-Do-Maker-Part > button{
+    border-radius: 5px;
+    border: green 2px solid;
+    background-color: lightgreen;
+    width: 15%;
+    font-weight: 400;
+}
+
+.Cards-Container-Main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}

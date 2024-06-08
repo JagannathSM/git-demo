@@ -1,0 +1,54 @@
+.to-do-cards{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: white;
+    padding: 5px 15px;
+    margin: 10px;
+    background-color: lightgreen;
+    border: lightseagreen solid 1px;
+    width: 200px;
+}
+
+.to-do-cards-detail > p{
+   margin: 6px 0px;
+   font-size: small;
+}
+
+.to-do-cards-select> select {
+    width: 70%;
+    padding-bottom: 2px;
+    font-size: medium;
+    height: 20px;
+    font-weight: 700;
+    color: rgb(21, 32, 15);
+}
+
+.to-do-cards-select{
+    margin: 6px 0px;
+    font-size: small;
+}
+
+.to-do-cards-button{
+    display: flex;
+    justify-content: end;
+    margin: 3px 0px;
+    padding: 6px 0px 0px 0px;
+}
+
+.to-do-cards-button > button{
+    margin-left: 10px;
+    border: black 1px groove;
+    color: rgb(255, 255, 255);
+    font-size: small;
+    border-radius: 5px;
+    height: 20px;
+    font-weight: 600;
+}
+
+.to-do-cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
