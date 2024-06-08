@@ -1,0 +1,13 @@
+.Footer-Container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 200px;
+   background-color: black;
+}
+
+.Footer-content{
+    color: white;
+    font-size: x-large;
+    font-weight: 600;
+}

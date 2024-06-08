@@ -1,0 +1,110 @@
+.Navbar-Container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.Navbar-flex{
+    display: flex;
+    flex-direction: row;
+}
+
+.Navbar-pages{
+    padding-top: 7px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-weight: 500;
+}
+
+.Navbar-pages > ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0%;
+}
+
+.Navbar-pages > ul > li {
+    margin: 0px 5px;
+    cursor: pointer;
+}
+
+.Navbar-pages > ul > li > select{
+    font-weight: 500;
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+    width:auto;
+    margin-right: 5px;
+    cursor: pointer;
+    width:relative;
+}
+
+.Navbar-Button{
+    height: 35px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-weight: bolder;
+}
+
+.value-button-cart{
+    background-color: black;
+    margin: 0%;
+    margin-left: 5px;
+    color: white;
+    font-weight: bolder;
+    border-radius: 25%;
+    padding: 0px 5px;
+ 
+}
+
+.Navbar-logo{
+    padding-top: 2px;
+    font-size: x-large;
+    font-weight: 600;
+    font-family: cursive;
+    cursor: pointer;
+}
+
+.Card-Container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: antiquewhite;
+}
+
+.Navbar-dropdown{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 500;
+}
+
+.Navbar-dropdown-pages > ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0%;
+    margin-bottom: 3px;
+}
+
+.Navbar-dropdown-pages > ul > li > select{
+    font-weight: 500;
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+    width: 70px;
+}
+
+.Navbar-dropdown-pages > ul > li {
+    margin: 5px 2px;
+    text-align: center;
+}
+
+.Navbar-dropdown-Cart-Button > button {
+    margin-bottom: 5px;
+}

@@ -7,7 +7,7 @@
 }
 
 .Cards-Img{
-    width: 255px;
+    width: 253px;
     object-fit: cover;
     display: flex;
     justify-content: center;
@@ -26,12 +26,53 @@
 }
 
 .Cards-Content > h2,p {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    text-align: center;
 }
 
 .Cards-Button > button{
     margin:20px;
-    width: 60%;
-    height: 50px;
+    width: 50%;
+    height: 40px;
     border-radius: 10px;
+    font-size: small;
+    font-weight: 600;
+}
+
+.Cards-Img-Container{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.top-right{
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 25px;
+    width: 60px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2px;
+}
+
+.Cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.star{
+    color: gold;
+}
+
+.fa{
+    padding: 2px;
+}
+
+.style_price > p{
+    margin: 0;
 }
