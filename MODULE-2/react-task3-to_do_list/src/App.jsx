@@ -1,30 +1,34 @@
 import './App.css'
-import Cards from './components/Cards'
-import Filter_cards from './components/Filter_cards'
-import ToDoMake from './components/ToDoMake'
+import Header from './Header'
+import Tasks from './Tasks'
 
 export const data=[
   {
+    id:1,
     name:"office-task-1",
-    disc:"To complete by 5pm"
+    disc:"To complete by 5pm",
+    task:"false"
   },
   {
+    id:2,
     name:"office-task-2",
-    disc:"To complete by tonight"
+    disc:"To complete by tonight",
+    task:"false"
   },
   {
+    id:3,
     name:"office-task-3",
-    disc:"To complete by tomorrow"
+    disc:"To complete by tomorrow",
+    task:"false"
   }
 ]
-
-
 
 function App() {
 
   return (
     <>
-    <ToDoMake/>
+    <Header/>
+    <Tasks/>
     </>
   )
 }
