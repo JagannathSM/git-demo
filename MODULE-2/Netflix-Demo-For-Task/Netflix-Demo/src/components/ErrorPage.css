@@ -1,0 +1,16 @@
+.Error-Page-Container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    margin: 10px;
+    padding: 10px;
+    align-items: center;
+}
+
+.Error-Message{
+  margin-top: 20px;
+}
+
+.Error-Message > img {
+    width: 100%;
+}

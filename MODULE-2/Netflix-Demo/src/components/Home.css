@@ -1,0 +1,75 @@
+.Img_and_Text{
+    background-image: url("https://www.shutterstock.com/image-vector/cinema-film-strip-wave-reel-600nw-1422026513.jpg");
+    height: 250px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 5px 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    flex-direction: column;
+}
+
+.Text_quote > h1 {
+    margin: 10px 0px;
+    display: flex;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgb(18, 106, 106);
+    color: white;
+}
+
+.know-more{
+    padding-top: 20px;
+}
+
+.Home_footer{
+    height: 120px;
+    display: flex;
+    background-color: black;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.sample-box{
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    border: 1px black solid;
+    outline: 1px black solid;
+    padding: 10px;
+}
+
+.sample-box-1{
+    width: 50%;
+    border: 1px solid black;
+    margin-right: 5px;
+    padding : 5px 10px;
+    background-color: white;
+    box-shadow: 2px 2px 5px rgb(54, 52, 52);
+}
+
+.sample-box-2{
+    width: 50%;
+    border: 1px solid black;
+    margin-left: 5px;
+    padding : 5px 10px;
+    background-color: white;
+    box-shadow: 2px 2px 5px rgb(54, 52, 52);
+}
+
+.sample-box-1 > p {
+    margin: 0;
+    text-align: justify;
+    padding-bottom: 5px;
+}
+
+.sample-box-2 > p {
+    margin: 0;
+    text-align: justify;
+    padding-bottom: 5px;
+}
+

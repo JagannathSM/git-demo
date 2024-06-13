@@ -1,0 +1,21 @@
+.Search-Container{
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border: 2px double rgb(90, 90, 198);
+}
+
+.Search-Container > h2 {
+    margin-top: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 2px 1px 5px black;
+}
+
+.Search-Area{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}

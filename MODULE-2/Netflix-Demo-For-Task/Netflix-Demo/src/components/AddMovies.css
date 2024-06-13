@@ -1,0 +1,22 @@
+.form-button{
+    margin-top: 10px;
+}
+
+.Head-Text{
+    text-align: center;
+}
+
+.Head-Text > h2 {
+    text-shadow: 2px 2px 5px black;
+    margin-top: 5px;
+    text-decoration: underline;
+}
+
+.Add-Movie-Header{
+    border-style: double;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    border-color: rgba(0, 0, 255, 0.776);
+    padding-bottom: 10px;
+}

@@ -168,13 +168,14 @@ form{
 }
 
 .form-button{
-    width: 50%;
+    width: 100%;
     display: flex;
-    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-bottom: 2px solid black;
 }
 
 .form-button > button {
-    width:30%;
     height: 30px;
     font-size: medium;
     font-weight: 700;

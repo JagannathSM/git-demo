@@ -3,6 +3,8 @@ import './Series.css';
 import { Routes, Route, Link } from "react-router-dom";
 import { MovieCard } from './MovieCard';
 import { useState } from 'react';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 
 function App() {
@@ -596,69 +598,20 @@ const [movieList,setMovieList] = useState(data_movies)
         <div><h2>ADD MOVIES HERE</h2></div>
         <div>
           <form>
-            <div className='form-div'>
-            <label for='MovieName'>Movie Name:</label><br></br>
-            <input type='text' id='MovieName' placeholder='Name...'
-             onChange={(event) => setMovieName(event.target.value)} />
-            </div>
-            
-            <div className='form-div'>
-            <label for='Poster'>Movie Poster URL:</label><br></br>
-            <input type='text' id='Poster' placeholder='PosterURL...'
-            onChange={(event) => setMoviePoster(event.target.value)} />
-            </div>
-            
-            <div className='form-div'>
-            <label for='rating'>Movie Rating:</label><br></br>
-            <input type='text' id='rating' placeholder='rating...'
-            onChange={(event) => setMovieRating(event.target.value)} />
-            </div>
+            <TextField id="MovieName" label="Movie Name" variant="outlined" onChange={(event) => setMovieName(event.target.value)} style={{margin:"5px 10px"}}/>
+            <TextField id="Poster" label="Movie Poster URL" variant="outlined" onChange={(event) => setMoviePoster(event.target.value)} style={{margin:"5px 10px"}}/>
+            <TextField id="rating" label="Movie Rating" variant="outlined" onChange={(event) => setMovieRating(event.target.value)} style={{margin:"5px 10px"}}/>
+            <TextField id="summary" label="Movie Summary" variant="outlined" onChange={(event) => setMovieSummary(event.target.value)} style={{margin:"5px 10px"}}/>
+            <TextField id="runtime" label="Movie Runtime" variant="outlined" onChange={(event) => setMovieRuntime(event.target.value)} style={{margin:"5px 10px"}}/>
+            <TextField id="genre" label="Movie Genre" variant="outlined" onChange={(event) => setMovieGenre(event.target.value)} style={{margin:"5px 10px"}}/>
+            <TextField id="lang" label="Movie Language" variant="outlined" onChange={(event) => setMovieLanguage(event.target.value)} style={{margin:"5px 10px"}}/>
+            <TextField id="trailer" label="Movie Trailer URL" variant="outlined" onChange={(event) => setMovieTrailer(event.target.value)} style={{margin:"5px 10px"}}/>
+            <TextField id="actor" label="Movie Actor" variant="outlined" onChange={(event) => setMovieActor(event.target.value)} style={{margin:"5px 10px"}}/>
+            <TextField id="actress" label="Movie Actress" variant="outlined" onChange={(event) => setMovieActress(event.target.value)} style={{margin:"5px 10px"}}/>
 
-            <div className='form-div'>
-            <label for='summary'>Movie Summary:</label><br></br>
-            <textarea id='summary' placeholder='summary...' rows="4" cols="40"
-            onChange={(event) => setMovieSummary(event.target.value)} />
-            </div>
-
-            <div className='form-div'>
-            <label for='runtime'>Movie Runtime:</label><br></br>
-            <input type="text" id='runtime' placeholder='runtime...'
-            onChange={(event) => setMovieRuntime(event.target.value)} />          
-            </div>
-
-            <div className='form-div'>
-            <label for='genre'>Movie Genre:</label><br></br>
-            <input type="text" id='genre' placeholder='genre...'
-            onChange={(event) => setMovieGenre(event.target.value)} />
-            </div>
-            
-            <div className='form-div'>
-            <label for='lang'>Movie Language:</label><br></br>
-            <input type="text" id='lang' placeholder='Language...'
-            onChange={(event) => setMovieLanguage(event.target.value)} />
-            </div>
-            
-            <div className='form-div'>
-            <label for='trailer'>Movie Trailer URL:</label><br></br>
-            <input type="text" id='trailer' placeholder='Trailer URL...'
-            onChange={(event) => setMovieTrailer(event.target.value)} />
-            </div>
-
-            <div className='form-div'>
-            <label for='actor'>Movie Actor:</label><br></br>
-            <input type="text" id='actor' placeholder='Actor...'
-            onChange={(event) => setMovieActor(event.target.value)} />
-            </div>
-
-            <div className='form-div'>
-            <label for='actress'>Movie Actress:</label><br></br>
-            <input type="text" id='actress' placeholder='Actress...'
-            onChange={(event) => setMovieActress(event.target.value)} />
-            </div>
-           
            <div className='form-button'>
-           <button type='button' onClick={() => {
-            setMovieList([...movieList, moviedata1])}}>Add Movie</button>
+           <Button variant="outlined" onClick={() => {
+            setMovieList([...movieList, moviedata1])}}>Add Movie</Button>
            </div>
           </form>
         </div>

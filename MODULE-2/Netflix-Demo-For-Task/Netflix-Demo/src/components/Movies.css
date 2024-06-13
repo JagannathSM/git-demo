@@ -1,0 +1,44 @@
+.Movie-card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 35px;
+}
+
+.Title-Movie-Page > h1 {
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 2px 2px 5px lightblue;
+}
+
+.Title-Movie-Page{
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(175, 175, 108, 0.436);
+}
+
+.Movie-Functions-Btn{
+    background-color:none;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.Movie-function-Btn-Condition{
+    background-color: rgba(175, 175, 108, 0.436);
+    text-align: center;
+}
+
+.Movie-function-Btn-Condition > button {
+    background-color: rgba(109, 109, 232, 0.384);
+    margin: 5px;
+    padding: 5px;
+}
+
+.function-area{
+    background-color: rgba(175, 175, 108, 0.436);
+}
