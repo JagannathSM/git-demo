@@ -1,0 +1,12 @@
+.Mobile_images{
+    height: 150px;
+    
+}
+
+@media only screen and (max-width:300) {
+    .Mobile_images{
+        height: 150px;
+        width: 30%;
+    }
+}
+
