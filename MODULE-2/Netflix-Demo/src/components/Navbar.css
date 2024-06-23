@@ -37,6 +37,7 @@
     list-style: none;
     padding: 0;    
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .List-Nav > li > a {
@@ -53,6 +54,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     margin-right: 10px;
+    justify-content: center;
 }
 
 .sign-up-part > button {

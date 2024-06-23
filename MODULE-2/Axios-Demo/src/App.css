@@ -1,0 +1,70 @@
+.form-button{
+    margin-top: 10px;
+}
+
+.Head-Text{
+    text-align: center;
+}
+
+.Head-Text > h2 {
+    text-shadow: 2px 2px 5px black;
+    margin-top: 5px;
+    text-decoration: underline;
+}
+
+.Add-Movie-Header{
+    border-style: double;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    border-color: rgba(0, 0, 255, 0.776);
+    padding-bottom: 10px;
+}
+
+.Container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    margin: 10px;
+    padding-bottom: 10px;
+    width: fit-content;
+}
+
+.btn{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.summary{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    text-align: justify;
+    width: 30%;
+}
+
+.footer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.footerbase{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.MoreInfo{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}

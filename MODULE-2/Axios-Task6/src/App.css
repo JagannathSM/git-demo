@@ -1,0 +1,6 @@
+#outlined-required{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 15rem;
+}

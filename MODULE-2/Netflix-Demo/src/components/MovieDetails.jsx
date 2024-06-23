@@ -1,7 +1,20 @@
-import React from 'react'
+import React , {useState} from 'react'
 import { useNavigate, useParams } from "react-router-dom"
 import Button from '@mui/material/Button';
 import UndoIcon from '@mui/icons-material/Undo';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import PhoneIcon from '@mui/icons-material/Phone';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import PersonPinIcon from '@mui/icons-material/PersonPin';
+
+
+const showData = {
+  video: 1,
+  desc : 0,
+  more : 2
+}
+
 
 function MovieDetails({movieData}) {
     const { movieid } = useParams();
@@ -12,30 +25,61 @@ function MovieDetails({movieData}) {
     const youtubeLink = movie.trailer.slice(17)
 
     const youtube_src = `https://www.youtube.com/embed/${youtubeLink}`
+
+    const [value, setValue] = useState(0);
+
+    const handleChange = (event, newValue) => {
+      setValue(newValue);
+    };
+
   return (
     <>
-    <div className="movie-detail-card">
-        
-<iframe width="640" height="360" src={youtube_src} title={youtube_Title} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-
-      <div className="movie-spec">
-        <h2>
-          {movie.name}
-        </h2>
-        <h3>⭐{movie.rating}</h3>
-      </div>
-
-      <p className="movie-summary">{movie.summary}</p>
-
-      <Button variant="contained" startIcon={<UndoIcon />} onClick={() => navigate(-1)}>
+    <div style={{display:"flex",justifyContent:"center",flexWrap:"wrap"}}>
+     <Tabs value={value} onChange={handleChange} aria-label="icon label tabs example" style={{width:"100%"}}>
+      <Tab icon={<PhoneIcon />} label="About" />
+      <Tab icon={<FavoriteIcon />} label="Video" />
+      <Tab icon={<PersonPinIcon />} label="More" />
+    </Tabs>
+    </div>
+    <ShowValues value={value} movie={movie} youtube_Title={youtube_Title} youtube_src={youtube_src}/>
+    <Button variant="contained" startIcon={<UndoIcon />} onClick={() => navigate(-1)}>
         BACK
       </Button>
-
-
-    </div>
     </>
   )
+}
+
+function ShowValues ({value,movie,youtube_Title,youtube_src}) {
+  switch (value) {
+    case 0: {
+      return (
+        <div className="movie-spec">
+          <h2>{movie.name}</h2>
+          <h3>⭐{movie.rating}</h3>
+        </div>
+      )
+    }
+    case 1: {
+      return (
+        <div style={{justifyContent:"center",display:"flex",padding:"20px"}}>
+          <iframe width="100%" height="300" src={youtube_src} title={youtube_Title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+        </div>
+      )
+    }
+    case 2:{
+      return (
+        <div className="movie-detail-card">
+          <p className="movie-summary">{movie.summary}</p>
+        </div>
+      )
+    }
+    default : {
+      return (
+       <>
+       </>
+      )
+    }
+  }
 }
 
 export default MovieDetails
