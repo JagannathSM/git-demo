@@ -1,0 +1,72 @@
+[
+    {
+        "id":"1",
+        "name":"Harper Lee",
+        "DOB":"April 28, 1926",
+        "bio":"Nelle Harper Lee was an American novelist whose 1960 novel To Kill a Mockingbird won the 1961 Pulitzer Prize and became a classic of modern American literature. She assisted her close friend Truman Capote in his research for the book In Cold Blood.",
+        "knownfor":["To Kill a Mockingbird","Go Set a Watchman"]
+    },
+    {
+        "id":"2",
+        "name":"J. K. Rowling",
+        "DOB":"July 31, 1965",
+        "bio":"Joanne Rowling CH OBE FRSL, known by her pen name J. K. Rowling, is a British author and philanthropist. She wrote Harry Potter, a seven-volume fantasy series published from 1997 to 2007.",
+        "knownfor":["Harry Potter and the Philosopher's Stone","Harry Potter and the Deathly Hallows","Fantastic Beasts and Where to Find Them"]
+    },
+    {
+        "id":"3",
+        "name":"Mitchell, Margaret",
+        "DOB":"Nov 08, 1900",
+        "bio":"Margaret Munnerlyn Mitchell was an American novelist and journalist. Mitchell wrote only one novel that was published during her lifetime, the American Civil War-era novel Gone with the Wind",
+        "knownfor":["Gone with the Wind"]
+    },
+    {
+        "id":"4",
+        "name":"Frank, Anne",
+        "DOB":"June 12, 1929",
+        "bio":"Annelies Marie 'Anne' Frank was a German-born Jewish girl who kept a diary documenting her life in hiding amid Nazi persecution during the German occupation of the Netherlands. A celebrated diarist, Frank described everyday life from her family's hiding place in an Amsterdam attic.",
+        "knownfor":["The Diary of a Young Girl","Tales from the Secret Annex"]
+    },
+    {
+        "id":"5",
+        "name":"Hawkins, Paula",
+        "DOB":"August 26, 1972",
+        "bio":"Paula Hawkins is a British author best known for her top-selling psychological thriller novel The Girl on the Train, which deals with themes of domestic violence, alcohol, and drug abuse. The novel was adapted into a film starring Emily Blunt in 2016.",
+        "knownfor":["The Girl on the Train","The Reunion","The Blue Hour"]
+    },
+    {
+        "id":"6",
+        "name":"Mackesy, Charlie",
+        "DOB":"Dec 11, 1962",
+        "bio":"Charles Piers Mackesy OBE is a British artist, illustrator, and the author of The Boy, the Mole, the Fox and the Horse",
+        "knownfor":["The Boy, the Mole, the Fox and the Horse"]
+    },
+    {
+        "id":"7",
+        "name":"Kalanithi, Paul",
+        "DOB":"April 01, 1977",
+        "bio":"Paul Sudhir Arul Kalanithi was an American neurosurgeon and writer. His book When Breath Becomes Air is a memoir about his life and illness with stage IV metastatic lung cancer. It was posthumously published by Random House in January 2016. It was on The New York Times Non-Fiction Best Seller list for multiple weeks.",
+        "knownfor":["When Breath Becomes Air"]
+    },
+    {
+        "id":"8",
+        "name":"Meyer, Stephenie",
+        "DOB":"Dec 24, 1973",
+        "bio":"Stephenie Meyer is an American novelist and film producer known for writing the vampire romance series Twilight, which has sold over 160 million copies, with translations into 37 different languages.",
+        "knownfor":["Twilight","The Host","The Chemist"]
+    },
+    {
+        "id":"9",
+        "name":"Hannah, Kristin",
+        "DOB":"Sep 25, 1960",
+        "bio":"Kristin Hannah is the award-winning and bestselling author of more than 20 novels including the international blockbuster, The Nightingale, which was named Goodreads Best Historical fiction novel for 2015 and won the coveted People’s Choice award for best fiction in the same year.",
+        "knownfor":["Winter Garden","The Nightingale","The Great Alone","The Four Winds"]
+    },
+    {
+        "id":"10",
+        "name":"Natsukawa, Sosuke",
+        "DOB":"Dec 01, 1978",
+        "bio":"Sosuke Natsukawa is a Japanese physician and novelist. He graduated from the Shinshu University medical school and practises medicine at a hospital in the largely rural prefecture of Nagano.",
+        "knownfor":["The Cat Who Saved Books","The Cat Who Saved the Library"]
+    }
+]

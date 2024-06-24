@@ -85,7 +85,7 @@ function ShowContact({data}){
         </AccordionDetails>
       </Accordion>
       <div style={{display:"flex",justifyContent:"center",alignItems:"center", marginTop:"15px"}}>
-        <Button size="small" variant="contained" color="warning" startIcon={<ModeEditIcon />} onClick={()=>navigate(`/Contacts/Edit-Contacts/${id}`)}>
+        <Button size="small" variant="contained" color="warning" startIcon={<ModeEditIcon />} onClick={()=>navigate(`/Contacts/Edit-Contacts/${data.id}`)}>
           Edit
         </Button>
       </div>
