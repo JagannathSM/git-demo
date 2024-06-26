@@ -43,7 +43,6 @@ function Navbar() {
         <Route path="/Contacts/Edit-Contacts/:id" element={<EditContactPage/>}/>
         <Route path="/Contacts/:id" element={<ContactDetailsPage/>}/>
      </Routes>
- 
      </>
    );
 }
