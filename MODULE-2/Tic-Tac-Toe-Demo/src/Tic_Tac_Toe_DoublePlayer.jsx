@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import './App.css'
 
-function Tic_Tac_Toe_SinglrPlayer() {
+function Tic_Tac_Toe_DoublePlayer() {
     const data = [null,null,null,null,null,null,null,null,null];
     const [board , setBoard] = useState(data);
   
@@ -35,7 +35,7 @@ function Tic_Tac_Toe_SinglrPlayer() {
     return (
       <>
         <div className="full-game">
-          <h1>TicTacToe</h1>
+          <h1>TicTacToe DOUBLE PLAYER</h1>
           {winner && <h1>Winner:{winner}</h1>}
           <div className="board">
             {board.map((val, index) => (
@@ -56,4 +56,4 @@ function Tic_Tac_Toe_SinglrPlayer() {
     )
 }
 
-export default Tic_Tac_Toe_SinglrPlayer
+export default Tic_Tac_Toe_DoublePlayer

@@ -1,3 +1,9 @@
+body{
+  background-image: linear-gradient(rgb(203, 146, 23), rgb(211, 159, 90), rgb(232, 232, 67));
+  color: black;
+  display: flex;
+}
+
 .game-box {
     border: 1px solid black;
     width: 10rem;
@@ -15,8 +21,8 @@
 
   .board {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    width: min-content;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
   }
   
   .full-game {
@@ -27,3 +33,5 @@
     align-content: center;
     align-items: center;
   }
+
+ 
