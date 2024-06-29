@@ -3,7 +3,7 @@ import React from 'react'
 function Info(props) {
   return (
     <div>
-      Info. Says {props.clr} so {props.action} / {props.mark}
+      Test Info Says: Signal - {props.clr} so userAction - {props.action} / mark - {props.mark}
     </div>
   )
 }

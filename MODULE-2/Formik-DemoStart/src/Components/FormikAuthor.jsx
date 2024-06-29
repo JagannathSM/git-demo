@@ -71,6 +71,7 @@ function FormikAuthor() {
     <Button variant="contained" startIcon={<ArrowBackIosNewIcon />} onClick={()=>navigate(-1)}>
         Back
     </Button>
+    <div style={formStyle}><h2 style={{textAlign:"center"}}>Please provide all information to add Author detail</h2></div>
     <div style={{display:"flex", flexWrap:"wrap",justifyContent:"center"}}>
     <Box component="form"  sx={formStyle} autoComplete="off" onSubmit={formik.handleSubmit}>
         <Box component="section" sx={{ p: 2 }}>
