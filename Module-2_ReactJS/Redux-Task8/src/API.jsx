@@ -1,0 +1,1 @@
+export const API = "https://668387624102471fa4ca5b09.mockapi.io/mobileData"
