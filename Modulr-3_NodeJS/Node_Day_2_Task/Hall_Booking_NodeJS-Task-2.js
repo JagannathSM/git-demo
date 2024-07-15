@@ -111,6 +111,18 @@ app.post("/book-room", (req,res)=> {
                 }
                 booked_rooms.push(booked_room_data);
 
+                const total_customer_data = {
+                    customer_name,
+                    room_name,
+                    date,
+                    start_time,
+                    end_time,
+                    booking_id : total_booking_data.length +1,
+                    booking_data : new Date(),
+                    booking_status : "booked"
+                }
+                total_booking_data.push(total_customer_data)
+
                 const booked_customer_data = {
                     customer_name,
                     room_name,
@@ -119,18 +131,6 @@ app.post("/book-room", (req,res)=> {
                     end_time
                 }
                 booked_customer.push(booked_customer_data);
-
-                const total_customer_data = {
-                    customer_name,
-                    room_name,
-                    date,
-                    start_time,
-                    end_time,
-                    booking_id : total_booking_data.length +1,
-                    booking_data : date,
-                    booking_status : "booked"
-                }
-                total_booking_data.push(total_customer_data)
             }
 
             //If we got same room_name and date already booked then we proceed to check for its time availability
@@ -167,6 +167,18 @@ app.post("/book-room", (req,res)=> {
                     }
                     booked_rooms.push(booked_room_data);
     
+                    const total_customer_data = {
+                        customer_name,
+                        room_name,
+                        date,
+                        start_time,
+                        end_time,
+                        booking_id : total_booking_data.length +1,
+                        booking_data : new Date(),
+                        booking_status : "booked"
+                    }
+                    total_booking_data.push(total_customer_data)
+
                     const booked_customer_data = {
                         customer_name,
                         room_name,
@@ -175,18 +187,6 @@ app.post("/book-room", (req,res)=> {
                         end_time
                     }
                     booked_customer.push(booked_customer_data);
-    
-                    const total_customer_data = {
-                        customer_name,
-                        room_name,
-                        date,
-                        start_time,
-                        end_time,
-                        booking_id : total_booking_data.length +1,
-                        booking_data : date,
-                        booking_status : "booked"
-                    }
-                    total_booking_data.push(total_customer_data)
                 }
                 else {
                     return res.json({message:`Room not available for the given timing ${start_time} and ${end_time}`})
