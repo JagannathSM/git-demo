@@ -1,0 +1,21 @@
+3. Find all the company drives and students who are appeared for the placement.
+
+
+db.company_drive.aggregate(
+{
+	$lookup: { 
+		from: "users", 
+		localField: "userId", 
+		foreignField: "userId", 
+		as: "result" 
+}},
+{
+	$unwind:{
+		path:"$result"
+}},
+{
+	$project:{
+		"_id":0,
+		company:1,
+		user_name:"$result.userName"
+}} );

@@ -1,0 +1,25 @@
+1. Find all the topics and tasks which are thought in the month of October
+
+
+db.topics.aggregate([
+{ $lookup: 
+	{ 
+	from: "tasks", 
+	localField: "taskID", 
+	foreignField: "taskID", 
+	as: "taskinfo" 
+} }, 
+{ $unwind: "$takinfo" }, 
+{ $project:
+	{
+	topic:1,
+  	topicDate:1,
+ 	task:"$taskinfo.task",
+ 	task_dueDate:"$taskinfo.dueDate"
+} },
+{ $match:
+	{
+	$and:[ {topicDate:{$regex:"2024-10"}},
+    		{task_dueDate:{$regex:"2024-10"}} ]
+} }
+] );

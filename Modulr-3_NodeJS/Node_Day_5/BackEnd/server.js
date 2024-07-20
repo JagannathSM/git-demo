@@ -3,20 +3,14 @@ const express = require('express')
 const mongoose = require('mongoose')
 const routes = require('./routes/index')
 const dotenv = require('dotenv')
+const cors = require('cors')
 
-
-//Load Environment Variable from .env file
-// const user_env = process.env.NODE_ENV
-// console.log(user_env)
-// dotenv.config({path:`.env${user_env}`})
 dotenv.config();
 
-
 const app = express()
-app.use(bodyParser.json())
+app.use(cors());
+app.use(bodyParser.json());
 
-
-//MongoDB Connectivity  mongodb+srv://guvi:guvi@guvi.mxnupan.mongodb.net/guvi // mongodb://localhost:27017/guvi
 mongoose.connect(process.env.MONGO_URI)
 .then(() => {
     console.log("MongoDB Connected Successfully")
@@ -24,16 +18,12 @@ mongoose.connect(process.env.MONGO_URI)
     console.log('MongoDB Connection Failed')
 })
 
-
 //Checking for which URI
 console.log(`MONGO_URI - ${process.env.MONGO_URI}`)
 
-
-//USE ROUTES
 app.use('/API', routes)
-
 
 const PORT = process.env.PORT;
 app.listen(PORT,()=>{
     console.log(`Server Running on Port - ${PORT}`)
-})
+}) 
