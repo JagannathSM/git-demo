@@ -27,8 +27,45 @@ router.post("/add", async (req,res)=>{
 //GET ALL STUDENTS DETAILS
 router.get("/show", async (req,res)=>{
     try{
-        const students = await Student.find();
-        res.status(200).json({"Total Student Count":students.length,students})
+        const allstudents = await Student.find();
+        const mentors = await Mentor.find();
+        const finalresult = [];
+        const allStudentResult = [];
+        const mentorNameAndID = [];
+
+        mentors.forEach((ele)=>{
+            mentorNameAndID.push({name:ele.mentorName,id:ele._id.toString()});
+        })
+
+        allstudents.map((student)=>{
+            mentorNameAndID.forEach((ele)=>{
+                if(ele.id == student.currentMentor.toString()){
+                    const currentMentorName = ele.name;
+                    const student_name = student.studentName;
+                    const previousMentorsID = student.previousMentors;
+                    const changeToString = previousMentorsID.map((ele)=>ele.toString());
+                    allStudentResult.push({studentName:student_name, currentMentor:currentMentorName,
+                                            previousMentors:changeToString})
+    
+                }
+            })
+        })
+
+        allStudentResult.map((student)=>{
+            studentName=student.studentName;
+            currentMentor=student.currentMentor;
+            const temparr = [];
+            student.previousMentors.forEach((prevID)=>{
+                mentorNameAndID.forEach((nameID)=>{
+                    if(prevID == nameID.id){
+                        temparr.push(nameID.name)
+                    }
+                })
+            })
+            finalresult.push({studentName,currentMentor,previousMentors:temparr})
+        })
+
+        res.status(200).json({"Total Student Count":allstudents.length,allstudents:finalresult})
     }catch (err) {
         res.status(400).send(err)
     }

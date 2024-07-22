@@ -29,7 +29,28 @@ router.post("/add", async (req,res)=>{
 router.get("/show", async (req,res)=>{
     try{
         const mentors = await Mentor.find();
-        res.status(200).json({"Total Mentors Count":mentors.length,mentors})
+        const allstudents = await Student.find();
+        const allstudentsnameID = [];
+        const finalresult = [];
+
+        allstudents.forEach((ele)=>{
+            allstudentsnameID.push({name:ele.studentName,id:ele._id})
+        })
+
+        mentors.map((mentor)=>{
+            const mentorName = mentor.mentorName;
+            const mentorNameonly = []
+            mentor.assignedStudents.forEach((assignID)=>{
+                allstudentsnameID.forEach((stdnameID)=>{
+                    if(stdnameID.id == assignID.toString()){
+                        mentorNameonly.push(stdnameID.name)
+                    }
+                })
+            })
+            finalresult.push({mentorName,assignedStudents:mentorNameonly})
+        })
+
+        res.status(200).json({"Total Mentors Count":mentors.length,allmentors:finalresult})
     }catch (err) {
         res.status(400).send(err)
     }
