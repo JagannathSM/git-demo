@@ -77,10 +77,10 @@ router.get("/show/:mentorID",async(req,res)=>{
         const result = [];
 
         students.forEach((ele)=>{
-            AssignesStudentsName.push({name:ele.studentName,current:ele.currentMentor.toString()})
+            if(ele.currentMentor){
+                AssignesStudentsName.push({name:ele.studentName,current:ele.currentMentor.toString()})
+            }
         })
-        console.log(AssignesStudentsName)
-        console.log(_id)
 
         AssignesStudentsName.forEach((ele)=>{
             if(ele.current == _id){
@@ -102,9 +102,9 @@ router.get("/show/:mentorID",async(req,res)=>{
 router.put("/update/:mentorID", async(req,res)=>{
     try{
         const _id = req.params.mentorID;
-        const {assignedStudents} = req.body;
+        const { mentorName, assignedStudents } = req.body;
         const updateMentor = await Mentor.findOne({_id});
-        await Mentor.updateOne({_id},{assignedStudents:assignedStudents})
+        await Mentor.updateOne({_id},{mentorName, assignedStudents:assignedStudents})
 
         const mentors = await Mentor.find();
         const dataMentor = mentors.filter((ele)=> ele._id != _id)
