@@ -1,0 +1,17 @@
+[
+    {
+        "_id":1,
+        "mentorName":"Preethi",
+        "assignedStudents":[11,13]
+    },
+    {
+        "_id":2,
+        "mentorName":"Ramya",
+        "assignedStudents":[12]
+    },
+    {
+        "_id":3,
+        "mentorName":"Ganesh",
+        "assignedStudents":[]
+    }
+]

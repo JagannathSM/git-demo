@@ -1,0 +1,20 @@
+[
+    {
+        "_id":11,
+        "studentName":"Roy",
+        "currentMentor":1,
+        "previousMentors":[2,3]
+    },
+    {
+        "_id":12,
+        "studentName":"Raju",
+        "currentMentor":2,
+        "previousMentors":[1]
+    },
+    {
+        "_id":13,
+        "studentName":"Keerthy",
+        "currentMentor":1,
+        "previousMentors":[3]
+    }
+]
