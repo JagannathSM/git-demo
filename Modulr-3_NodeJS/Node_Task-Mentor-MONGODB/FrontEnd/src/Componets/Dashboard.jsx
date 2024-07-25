@@ -74,14 +74,23 @@ function Dashboard() {
     <>
       <div className="centered">
         <h2>Add Student</h2>
-        <Box sx={{ paddingBottom: "10px", display:"flex",justifyContent: "space-evenly",    alignItems: "center"}}>
+        <Box
+          sx={{
+            paddingBottom: "10px",
+            display: "flex",
+            justifyContent: "space-evenly",
+            alignItems: "center",
+          }}
+        >
           <TextField
             id="studentName"
             label="Student Name"
             variant="outlined"
             onChange={(e) => setStudentName(e.target.value)}
           />
-          <Button variant="contained" onClick={showStudent}>Add Student</Button>
+          <Button variant="contained" onClick={showStudent}>
+            Add Student
+          </Button>
         </Box>
         <div className="Table">
           {studentsData.length > 0 ? (
@@ -118,21 +127,32 @@ function Dashboard() {
               </TableContainer>
             </div>
           ) : (
-            <div className="WarningText">All Students were assigned to a mentor. Add more Students</div>
+            <div className="WarningText">
+              All Students were assigned to a mentor. Add more Students
+            </div>
           )}
         </div>
       </div>
 
       <div className="centered">
         <h2>Add Mentor</h2>
-        <Box sx={{ paddingBottom: "10px", display:"flex", justifyContent: "space-evenly",    alignItems: "center"}}>
+        <Box
+          sx={{
+            paddingBottom: "10px",
+            display: "flex",
+            justifyContent: "space-evenly",
+            alignItems: "center",
+          }}
+        >
           <TextField
             id="mentorName"
             label="Mentor Name"
             variant="outlined"
             onChange={(e) => setMentorName(e.target.value)}
           />
-          <Button variant="contained" onClick={showMentor}>Add Mentor</Button>
+          <Button variant="contained" onClick={showMentor}>
+            Add Mentor
+          </Button>
         </Box>
         <div className="Table">
           <div>
