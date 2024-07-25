@@ -8,6 +8,7 @@ import Select from "@mui/material/Select";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
+import FormControl from "@mui/material/FormControl";
 
 function UpdateStudent() {
   const navigat = useNavigate();
@@ -18,20 +19,28 @@ function UpdateStudent() {
   const [studentName, setStudentName] = useState("");
 
   const getValues = async (_id) => {
-    if (!studentName || !currentMentorID) {
+    if (!studentName && !currentMentorID) {
       alert("Need to fill all Required Fields");
-    } else {
+    } else if(!currentMentorID){
       try {
         await axios.put(
           `https://assign-mentor-backend-pws4.onrender.com/student/update/${_id}`,
-          { studentName, currentMentor: currentMentorID }
+          { studentName }
         );
         navigat(-1);
       } catch (err) {
-        alert(
-          `Warning message : ${err.response.data.message}. Only studentName will update`
-        );
+        alert(`Warning message : ${err.response.data.message}. Updated student Name only`);
       }
+    } else {
+        try {
+            await axios.put(
+              `https://assign-mentor-backend-pws4.onrender.com/student/update/${_id}`,
+              { studentName, currentMentor:currentMentorID}
+            );
+            navigat(-1);
+          } catch (err) {
+            alert(`Warning message : ${err.response.data.message}.`);
+          }
     }
   };
 
@@ -64,22 +73,39 @@ function UpdateStudent() {
     setCurrentMentorID(e.target.value);
   };
 
+  const para_style = {
+    textAlign: "center",
+    paddingBottom: "10px"
+  }
+
   useEffect(() => {
     getStudentData(_id);
     getMentorsData();
   }, []);
 
   if (!mentors || !studentName)
-    return <div>Loading Mentor Assign Page for Selected Student</div>;
+    return <div style={para_style}>Loading Mentor Assign Page for Selected Student</div>;
 
   if (error) return <div>{error}</div>;
 
   return (
     <>
       <div>
-        <p>Update Student / Assign Mentor to Student - {studentName}.</p>
+        <p style={para_style}>Update Student / Assign Mentor to Student - {studentName}.</p>
         {/* <button onClick={getValues}>get</button> */}
-        <Box component="form" sx={{ m: 1, width: "25ch" }} noValidate>
+        <Box
+          component="form"
+          sx={{
+            m: 1,
+            display: "flex",
+            flexDirection: "column",
+            alignContent: "center",
+            justifyContent: "center",
+            flexWrap: "wrap",
+            alignTtems: "center",
+          }}
+          noValidate
+        >
           <TextField
             id="StudentName"
             label="Student Name"
@@ -88,30 +114,29 @@ function UpdateStudent() {
             required
             onChange={(e) => setStudentName(e.target.value)}
           />
-
-          <InputLabel id="Select_Mentor_Name">Current Mentor</InputLabel>
-          <Select
-            labelId="demo-multiple-name-label"
-            id="demo-multiple-name"
-            value={currentMentorID}
-            label="Select_Mentor_Name"
-            onChange={handleChangeSelect}
-            input={<OutlinedInput label="Name" />}
-            required
-          >
-            {mentors.map((ele) => (
-              <MenuItem key={ele._id} value={ele._id}>
-                {ele.mentorName[0]}
-              </MenuItem>
-            ))}
-          </Select>
+          <FormControl sx={{ m: 2, width: 220, padding: "2px" }}>
+            <InputLabel id="mentorID">Select Mentor</InputLabel>
+            <Select
+              id="mentorID"
+              value={currentMentorID}
+              label="Select Mentor"
+              onChange={handleChangeSelect}
+            >
+              {mentors.map((ele) => (
+                <MenuItem key={ele._id} value={ele._id}>
+                  {ele.mentorName[0]}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
           <Button
+            color="warning"
             variant="contained"
             onClick={() => {
               getValues(_id);
             }}
           >
-            Get Values
+            Update Data
           </Button>
         </Box>
       </div>
