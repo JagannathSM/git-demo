@@ -22,6 +22,7 @@ import Dashboard from "./Dashboard";
 import Home from "./Home";
 import StudentList from "./StudentList";
 import MentorList from "./MentorList";
+import UpdateStudent from "./UpdateStudent";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -131,6 +132,7 @@ function Navbar() {
         <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/Studentslist" element={<StudentList />} />
         <Route path="/Mentorslist" element={<MentorList />} />
+        <Route path="/Student/:_id" element={<UpdateStudent/>}/>
       </Routes>
     </>
   );

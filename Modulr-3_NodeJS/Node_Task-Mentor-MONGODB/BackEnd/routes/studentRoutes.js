@@ -80,7 +80,7 @@ router.get("/show", async (req, res) => {
     ]);
 
     res.status(200).json({
-      "Total Student Count": allstudents.length,
+      "Total_Students": allstudents.length,
       allstudents,
     });
   } catch (err) {
@@ -146,7 +146,7 @@ router.get("/show/:studentID", async (req, res) => {
       }
     ]);
 
-    res.status(200).json(StudentData);
+    res.status(200).json({StudentData:StudentData[0]});
   } catch (err) {
     res.status(400).json({ message: `Error \b ${err}` });
   }
@@ -161,7 +161,7 @@ router.put("/update/:studentID", async (req, res) => {
     const newMentor = await Mentor.findOne({ _id: currentMentor });
     const allMentor = await Mentor.find();
 
-    if (!currentMentor) {
+    if (!currentMentor || currentMentor == newStudent.currentMentor) {
       await Student.updateOne({ _id }, { studentName });
     } else {
       allMentor.forEach(async (ele) => {

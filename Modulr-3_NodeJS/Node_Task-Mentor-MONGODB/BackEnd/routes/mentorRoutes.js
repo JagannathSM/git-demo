@@ -61,7 +61,7 @@ router.get("/show", async (req, res) => {
 
     res
       .status(200)
-      .json({ "Total Mentors Count": allmentors.length, allmentors });
+      .json({ "Total_Mentors": allmentors.length, allmentors });
   } catch (err) {
     res.status(400).send(err);
   }
@@ -112,7 +112,7 @@ router.get("/show/:mentorID", async (req, res) => {
         }
     ]);
 
-    res.status(200).json(MentorData);
+    res.status(200).json({MentorData:MentorData[0]});
   } catch (err) {
     res.status(400).send(err);
   }
@@ -125,6 +125,9 @@ router.put("/update/:mentorID", async (req, res) => {
     const { mentorName, assignedStudents } = req.body;
     const updateMentor = await Mentor.findOne({ _id });
 
+    if(JSON.stringify(assignedStudents)===JSON.stringify(updateMentor.assignedStudents)){
+      await Mentor.updateOne({ _id }, { mentorName });
+    }
     if (!assignedStudents || assignedStudents.length == 0) {
       await Mentor.updateOne({ _id }, { mentorName });
     } else {
