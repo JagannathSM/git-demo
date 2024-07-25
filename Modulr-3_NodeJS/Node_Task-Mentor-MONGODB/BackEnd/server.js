@@ -4,11 +4,13 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const mentor_routes = require("./routes/mentorRoutes");
 const student_routes = require("./routes/studentRoutes")
+const cors = require("cors")
 
 //Load the dotenv values
 dotenv.config();
 
 const app = express();
+app.use(cors());
 app.use(bodyParser.json());
 
 mongoose.connect(process.env.MONGO_URI)
