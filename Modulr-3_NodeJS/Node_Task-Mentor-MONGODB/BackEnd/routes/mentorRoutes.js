@@ -43,14 +43,18 @@ router.get("/show", async (req, res) => {
         },
         {
             $project:{
+                "_id":1,
                 "mentorName":1,
-                "assignedStudents":"$result.studentName"
+                "assignedStudentsName":"$result.studentName",
+                "assignedStudentsID":"$result._id"
             }
         },
         {
             $group:{
-                _id:"$mentorName",
-                "assignedStudents":{$addToSet:"$assignedStudents"}
+                _id:"$_id",
+                "mentorName":{$addToSet:"$mentorName"},
+                "assignedStudentsName":{$addToSet:"$assignedStudentsName"},
+                "assignedStudentsID":{$addToSet:"$assignedStudentsID"}
             }
         }
     ]);
@@ -92,15 +96,19 @@ router.get("/show/:mentorID", async (req, res) => {
         },
         {
             $project:{
-                "mentorName":1,
-                "assignedStudents":"$result.studentName"
-            }
+              "_id":1,
+              "mentorName":1,
+              "assignedStudentsName":"$result.studentName",
+              "assignedStudentsID":"$result._id"
+          }
         },
         {
             $group:{
-                _id:"$mentorName",
-                "assignedStudents":{$addToSet:"$assignedStudents"}
-            }
+              _id:"$_id",
+              "mentorName":{$addToSet:"$mentorName"},
+              "assignedStudentsName":{$addToSet:"$assignedStudentsName"},
+              "assignedStudentsID":{$addToSet:"$assignedStudentsID"}
+          }
         }
     ]);
 

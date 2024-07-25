@@ -59,16 +59,22 @@ router.get("/show", async (req, res) => {
       },
       {
         $project:{
+          _id:1,
           studentName:1,
-          currentMentor:"$currentMentorName.mentorName",
-          previousMentors:"$previousMentorsNames.mentorName"
+          currentMentorID:"$currentMentorName._id",
+          currentMentorName:"$currentMentorName.mentorName",
+          previousMentorsName:"$previousMentorsNames.mentorName",
+          previousMentorsID:"$previousMentorsNames._id"
         }
       },
       {
         $group:{
-          _id: "$studentName",
-          currentMentor:{$addToSet:"$currentMentor"},
-          previousMentors:{$addToSet:"$previousMentors"}
+          _id: "$_id",
+          studentName:{$addToSet:"$studentName"},
+          currentMentorName:{$addToSet:"$currentMentorName"},
+          currentMentorID:{$addToSet:"$currentMentorID"},
+          previousMentorsName:{$addToSet:"$previousMentorsName"},
+          previousMentorsID:{$addToSet:"$previousMentorsID"}
         }
       }
     ]);
@@ -123,15 +129,18 @@ router.get("/show/:studentID", async (req, res) => {
       },
       {
         $project:{
+          _id:1,
           studentName:1,
-          currentMentor:"$currentMentorName.mentorName",
+          currentMentorName:"$currentMentorName.mentorName",
+          currentMentorID:"$currentMentorName._id",
           previousMentors:"$previousMentorsNames.mentorName"
         }
       },
       {
         $group:{
           _id: "$studentName",
-          currentMentor:{$addToSet:"$currentMentor"},
+          currentMentorName:{$addToSet:"$currentMentorName"},
+          currentMentorID:{$addToSet:"$currentMentorID"},
           previousMentors:{$addToSet:"$previousMentors"}
         }
       }
