@@ -25,7 +25,6 @@ function StudentList() {
       const { data } = await axios.get(
         "https://assign-mentor-backend-pws4.onrender.com/student/show"
       );
-      console.log(data);
       data.allstudents.sort((a,b)=> a._id.localeCompare(b._id))
       setStudentsData(data.allstudents);
       setTotalStudents(data.Total_Students);

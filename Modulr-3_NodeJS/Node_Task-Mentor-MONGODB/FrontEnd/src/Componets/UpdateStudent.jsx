@@ -8,6 +8,10 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import FormControl from "@mui/material/FormControl";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 function UpdateStudent() {
   const navigate = useNavigate();
@@ -16,6 +20,8 @@ function UpdateStudent() {
   const [error, setError] = useState("");
   const [currentMentorID, setCurrentMentorID] = useState("");
   const [studentName, setStudentName] = useState("");
+  const [previousMentors, setPreviousMentors] = useState([]);
+  const [currentMentorName, setCurrentMentorName] = useState('')
 
   const UpdateValues = async (_id) => {
     if (!studentName && !currentMentorID) {
@@ -54,6 +60,8 @@ function UpdateStudent() {
         setCurrentMentorID(data.StudentData.currentMentorID[0]);
       }
       setStudentName(data.StudentData._id);
+      setPreviousMentors(data.StudentData.previousMentors);
+      setCurrentMentorName(data.StudentData.currentMentorName[0]);
     } catch (err) {
       setError(`Error While getting Student Data ${err.response.data.message}`);
     }
@@ -79,6 +87,8 @@ function UpdateStudent() {
     paddingBottom: "10px",
   };
 
+
+
   useEffect(() => {
     getStudentData(_id);
     getMentorsData();
@@ -102,7 +112,7 @@ function UpdateStudent() {
         >
           Back
         </Button>
-        <div style={{marginTop:"10px"}}>{error}</div>
+        <div style={{ marginTop: "10px" }}>{error}</div>
       </>
     );
 
@@ -116,6 +126,23 @@ function UpdateStudent() {
       >
         Back
       </Button>
+      <div className="AccordionDiv">
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="content"
+            id="header"
+          >
+            {studentName} Student Data.
+          </AccordionSummary>
+          <AccordionDetails>
+            <ol>
+              <li><b>Current Mentor </b> : {!currentMentorName ? `-` : currentMentorName}</li>
+              <li><b>Previous Mentors</b> : {previousMentors.length == 0 ? `-`: previousMentors.join(', ')}</li>
+            </ol>
+          </AccordionDetails>
+        </Accordion>
+      </div>
       <div>
         <p style={para_style}>
           Update Student / Assign Mentor to Student - {studentName}.

@@ -203,7 +203,7 @@ function Dashboard() {
             variant="outlined"
             onChange={(e) => setMentorName(e.target.value)}
           />
-          <Button variant="contained" onClick={AddMentor}>
+          <Button variant="contained" sx={{ marginTop: "3px" }} onClick={AddMentor}>
             Add Mentor
           </Button>
         </Box>

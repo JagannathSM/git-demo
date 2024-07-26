@@ -9,6 +9,10 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 function UpdateMentor() {
   const navigate = useNavigate();
@@ -17,6 +21,7 @@ function UpdateMentor() {
   const [error, setError] = useState("");
   const [assignedStudents, setAssignedStudents] = useState("");
   const [mentorName, setMentorName] = useState("");
+  const [assignedStudentsName,setAssignedStudentsName] = useState([]);
 
   const getMentorData = async (_id) => {
     try {
@@ -25,6 +30,7 @@ function UpdateMentor() {
       );
       setAssignedStudents([...data.MentorData.assignedStudentsID]);
       setMentorName(data.MentorData.mentorName[0]);
+      setAssignedStudentsName(data.MentorData.assignedStudentsName);
     } catch (err) {
       setError("Error whilde getting mentor details", err);
     }
@@ -118,6 +124,23 @@ function UpdateMentor() {
       >
         Back
       </Button>
+      <div className="AccordionDiv">
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="content"
+            id="header"
+          >
+            {mentorName} Mentor Data.
+          </AccordionSummary>
+          <AccordionDetails>
+            <ol>
+              <li><b>Current Students </b> : {assignedStudentsName.length == 0 ? `-` : assignedStudentsName.join(', ')}</li>
+            </ol>
+          </AccordionDetails>
+        </Accordion>
+      </div>
+      <div>
       <p style={para_style}>
         Update Mentor / Assign Students to Mentor - {mentorName}.
       </p>
@@ -169,6 +192,7 @@ function UpdateMentor() {
           Update
         </Button>
       </Box>
+      </div>
     </>
   );
 }

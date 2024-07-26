@@ -26,7 +26,6 @@ function MentorList() {
       const { data } = await axios.get(
         "https://assign-mentor-backend-pws4.onrender.com/mentor/show"
       );
-      console.log(data);
       data.allmentors.sort((a,b)=> a._id.localeCompare(b._id))
       setMentorsData(data.allmentors);
       setTotalMentors(data.Total_Mentors);

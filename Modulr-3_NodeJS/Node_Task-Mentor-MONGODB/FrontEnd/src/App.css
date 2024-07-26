@@ -24,3 +24,12 @@
 .LoadingText{
     padding-bottom: 20px;
 }
+
+li{
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+
+.AccordionDiv{
+   margin: 30px;
+}
