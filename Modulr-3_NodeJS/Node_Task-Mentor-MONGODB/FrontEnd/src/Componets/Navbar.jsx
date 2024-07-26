@@ -4,8 +4,6 @@ import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
-import Avatar from "@mui/material/Avatar";
-import { deepPurple } from "@mui/material/colors";
 import Drawer from "@mui/material/Drawer";
 import Box from "@mui/material/Box";
 import ListItem from "@mui/material/ListItem";
@@ -14,7 +12,8 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
-import DashboardIcon from "@mui/icons-material/Dashboard";
+import PersonAddAltIcon from '@mui/icons-material/PersonAddAlt';
+import HomeIcon from '@mui/icons-material/Home';
 import GroupsIcon from "@mui/icons-material/Groups";
 import BookmarkAddIcon from "@mui/icons-material/BookmarkAdd";
 import CloseIcon from "@mui/icons-material/Close";
@@ -23,6 +22,7 @@ import Home from "./Home";
 import StudentList from "./StudentList";
 import MentorList from "./MentorList";
 import UpdateStudent from "./UpdateStudent";
+import UpdateMentor from "./UpdateMentor";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -43,12 +43,12 @@ function Navbar() {
     {
       name: "Home",
       path: "/",
-      icon: <DashboardIcon />,
+      icon: <HomeIcon />,
     },
     {
-      name: "Dashboard",
+      name: "Add Student / Mentor",
       path: "/Dashboard",
-      icon: <DashboardIcon />,
+      icon: <PersonAddAltIcon />,
     },
     {
       name: "Student List",
@@ -133,6 +133,7 @@ function Navbar() {
         <Route path="/Studentslist" element={<StudentList />} />
         <Route path="/Mentorslist" element={<MentorList />} />
         <Route path="/Student/:_id" element={<UpdateStudent/>}/>
+        <Route path="/Mentor/:_id" element={<UpdateMentor/>}/>
       </Routes>
     </>
   );

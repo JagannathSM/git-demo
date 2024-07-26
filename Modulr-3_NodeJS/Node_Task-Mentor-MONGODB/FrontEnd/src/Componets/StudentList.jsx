@@ -9,6 +9,7 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import PersonAddAlt1Icon from "@mui/icons-material/PersonAddAlt1";
 import Button from "@mui/material/Button";
+import CircularProgress from "@mui/material/CircularProgress";
 import { useNavigate } from "react-router-dom";
 
 function StudentList() {
@@ -17,6 +18,7 @@ function StudentList() {
   const [studentsData, setStudentsData] = useState("");
   const [totalStudents, setTotalStudents] = useState("");
   const [error, setError] = useState("");
+  const [studentLoading,setStudentLoading] = useState(true)
 
   const getStudentsDetail = async () => {
     try {
@@ -24,9 +26,12 @@ function StudentList() {
         "https://assign-mentor-backend-pws4.onrender.com/student/show"
       );
       console.log(data);
+      data.allstudents.sort((a,b)=> a._id.localeCompare(b._id))
       setStudentsData(data.allstudents);
       setTotalStudents(data.Total_Students);
+      setStudentLoading(false)
     } catch (err) {
+      setStudentLoading(false)
       setError(err.message);
     }
   };
@@ -35,7 +40,14 @@ function StudentList() {
     getStudentsDetail();
   }, []);
 
-  if (!studentsData) return <div>Studentlist is Loading please wait...</div>;
+  if (studentLoading) return (
+    <div className="LoadingMain">
+        <div className="LoadingText">Loading Students list please wait...</div>
+        <div className="LoadingGIF">
+          <CircularProgress color="secondary" />
+        </div>
+      </div>
+  );
 
   if (error) return <div>Error while getting Student Data - {error}</div>;
 

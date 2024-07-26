@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import OutlinedInput from "@mui/material/OutlinedInput";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
@@ -11,36 +10,38 @@ import Button from "@mui/material/Button";
 import FormControl from "@mui/material/FormControl";
 
 function UpdateStudent() {
-  const navigat = useNavigate();
+  const navigate = useNavigate();
   const { _id } = useParams();
   const [mentors, setMentors] = useState([]);
   const [error, setError] = useState("");
   const [currentMentorID, setCurrentMentorID] = useState("");
   const [studentName, setStudentName] = useState("");
 
-  const getValues = async (_id) => {
+  const UpdateValues = async (_id) => {
     if (!studentName && !currentMentorID) {
-      alert("Need to fill all Required Fields");
-    } else if(!currentMentorID){
+      alert("Need to fill atleast Student Name to update");
+    } else if (!currentMentorID) {
       try {
         await axios.put(
           `https://assign-mentor-backend-pws4.onrender.com/student/update/${_id}`,
           { studentName }
         );
-        navigat(-1);
+        navigate("/Studentslist");
       } catch (err) {
-        alert(`Warning message : ${err.response.data.message}. Updated student Name only`);
+        alert(
+          `Warning message : ${err.response.data.message}. Updated student Name only`
+        );
       }
     } else {
-        try {
-            await axios.put(
-              `https://assign-mentor-backend-pws4.onrender.com/student/update/${_id}`,
-              { studentName, currentMentor:currentMentorID}
-            );
-            navigat(-1);
-          } catch (err) {
-            alert(`Warning message : ${err.response.data.message}.`);
-          }
+      try {
+        await axios.put(
+          `https://assign-mentor-backend-pws4.onrender.com/student/update/${_id}`,
+          { studentName, currentMentor: currentMentorID }
+        );
+        navigate("/Studentslist");
+      } catch (err) {
+        alert(`Warning message : ${err.response.data.message}.`);
+      }
     }
   };
 
@@ -75,23 +76,50 @@ function UpdateStudent() {
 
   const para_style = {
     textAlign: "center",
-    paddingBottom: "10px"
-  }
+    paddingBottom: "10px",
+  };
 
   useEffect(() => {
     getStudentData(_id);
     getMentorsData();
   }, []);
 
-  if (!mentors || !studentName)
-    return <div style={para_style}>Loading Mentor Assign Page for Selected Student</div>;
+  if (mentors.length == 0 || !studentName)
+    return (
+      <div style={para_style}>
+        Loading Mentor Assign Page for Selected Student
+      </div>
+    );
 
-  if (error) return <div>{error}</div>;
+  if (error)
+    return (
+      <>
+        <Button
+          variant="contained"
+          onClick={() => {
+            navigate(-1);
+          }}
+        >
+          Back
+        </Button>
+        <div style={{marginTop:"10px"}}>{error}</div>
+      </>
+    );
 
   return (
     <>
+      <Button
+        variant="contained"
+        onClick={() => {
+          navigate(-1);
+        }}
+      >
+        Back
+      </Button>
       <div>
-        <p style={para_style}>Update Student / Assign Mentor to Student - {studentName}.</p>
+        <p style={para_style}>
+          Update Student / Assign Mentor to Student - {studentName}.
+        </p>
         {/* <button onClick={getValues}>get</button> */}
         <Box
           component="form"
@@ -133,10 +161,10 @@ function UpdateStudent() {
             color="warning"
             variant="contained"
             onClick={() => {
-              getValues(_id);
+              UpdateValues(_id);
             }}
           >
-            Update Data
+            Update
           </Button>
         </Box>
       </div>
