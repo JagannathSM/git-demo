@@ -7,8 +7,8 @@ router.post("/register", registerUser);
 
 router.post("/login", loginUser);
 
-router.post("/resetPass", resetPassToken);
+router.post("/reset-pass", resetPassToken);
 
-router.post("/verifyPass/:token",verifyResetPassToken)
+router.post("/verify-pass/:token",verifyResetPassToken)
 
 module.exports = router;

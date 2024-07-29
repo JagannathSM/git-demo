@@ -11,13 +11,13 @@ const router = express.Router();
 router.get("/tasks", auth, getTasks);
 
 // Route to create a new task
-router.post("/tasks", auth, createTask);
+router.post("/add-task", auth, createTask);
 
 // Route to update an existing task
-router.put("/tasks/:id", auth, updateTask);
+router.put("/update-task/:id", auth, updateTask);
 
 // Route to delete an existing task
-router.delete("/tasks/:id", auth, deleteTask);
+router.delete("/delete-task/:id", auth, deleteTask);
 
 
 module.exports = router;
