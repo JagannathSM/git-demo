@@ -1,4 +1,3 @@
-const User = require("../Models/User");
 const Task = require("../Models/Tasks");
 
 // exports.getUserData = async (req, res) => {
@@ -36,8 +35,8 @@ exports.updateTask = async (req, res) => {
 
   task.title = title || task.title;
   task.description = description || task.description;
-  const updatedTask = await task.save();
-  res.json(updatedTask);
+  await task.save();
+  res.status(201).json({ message: "Update Success" });
 };
 
 exports.deleteTask = async (req, res) => {
@@ -52,5 +51,5 @@ exports.deleteTask = async (req, res) => {
     throw new Error("Unauthorized");
   }
   await task.deleteOne();
-  res.json({ message: "Task deleted" });
+  res.status(205).json({ message: "Task deleted" });
 };

@@ -87,8 +87,6 @@ exports.verifyResetPassToken = async (req, res) => {
   if(!user){
     return res.status(404).json({message:"Invalid Password reset Token"})
   }
-  console.log("mongoDb",Date.parse(user.passResetTokenExp));
-  console.log("current",Date.now());
 
   if((Date.parse(user.passResetTokenExp)) < Date.now()){
     return res.status(500).json({message:"Reset Token Expires!"})

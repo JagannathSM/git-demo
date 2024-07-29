@@ -4,7 +4,7 @@ require("dotenv").config();
 require("./DB/ConnectMongoDB");
 const bodyParser = require("body-parser");
 const authRoutes = require("./Routes/authRoute")
-const userRoutes = require("./Routes/userDataRoute")
+const taskRoutes = require("./Routes/taskRoute")
 
 
 const app = express();
@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 
 
 app.use("/api/auth", authRoutes);
-app.use("/api/user", userRoutes);
+app.use("/api/user", taskRoutes);
 
 app.listen(PORT,()=>{
     console.log(`Server Running on Port - ${PORT}`)
