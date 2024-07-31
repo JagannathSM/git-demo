@@ -58,12 +58,12 @@ exports.resetPassToken = async (req, res) => {
   const userData = await User.findOne({ email });
 
   if (!userData) {
-    return res.status(404).json({ message: "Email Not found" });
+    return res.status(404).send( "Email Not found" );
   }
 
   const passResetToken = Math.random().toString(36).slice(-8);
   userData.passResetToken = passResetToken;
-  userData.passResetTokenExp = Date.now()+ 3600000 //Validate for 1hr
+  userData.passResetTokenExp = Date.now() + 3600000; //Validate for 1hr
 
   await userData.save();
 
@@ -80,29 +80,44 @@ exports.resetPassToken = async (req, res) => {
 };
 
 exports.verifyResetPassToken = async (req, res) => {
+  const {passResetToken} = req.params;
+  const user = await User.findOne({ passResetToken });
+
+  if (!user) {
+    return res
+      .status(404)
+      .json({ status: false, message: "Invalid Password reset Token" });
+  }
+
+  if (Date.parse(user.passResetTokenExp) < Date.now()) {
+    return res.status(500).json({status: false, message: "Reset Token Expires!" });
+  }
+
+  res
+    .status(201)
+    .json({ status: true, message: "Password Update Request Success" });
+};
+
+exports.createNewPass = async (req, res) => {
   const passResetToken = req.params.token;
-  const { new_password } = req.body;
-  const user = await User.findOne({passResetToken})
+  const { newPassword } = req.body;
+  const user = await User.findOne({ passResetToken });
 
-  if(!user){
-    return res.status(404).json({message:"Invalid Password reset Token"})
+  //might be fail??
+  if (Date.parse(user.passResetTokenExp) < Date.now()) {
+    return res.status(500).send("Reset Token Expires!" );
   }
 
-  if((Date.parse(user.passResetTokenExp)) < Date.now()){
-    return res.status(500).json({message:"Reset Token Expires!"})
-  }
-
-  if(!new_password){
-    return res.status(400).json({message:"Required Field new_password"})
+  if (!newPassword) {
+    return res.status(400).json({ message: "Required Field new_password" });
   }
 
   const salt = parseInt(process.env.SALT);
-  const hasedPassword = await bcrypt.hash(new_password, salt);
+  const hasedPassword = await bcrypt.hash(newPassword, salt);
 
-  user.password = hasedPassword;
-  user.passResetToken = null;
-  user.passResetTokenExp = null;
-
-  await user.save();
-  res.status(201).json({message:"Updated password Succesfully"})
-}
+  await User.updateOne(
+    { _id: user._id },
+    { password: hasedPassword, passResetToken: null, passResetTokenExp: null }
+  );
+  res.status(201).json({ message: "Updated password Succesfully" });
+};

@@ -1,5 +1,5 @@
 const express = require("express");
-const { registerUser, loginUser, resetPassToken, verifyResetPassToken } = require("../Controllers/authController");
+const { registerUser, loginUser, resetPassToken, verifyResetPassToken, createNewPass } = require("../Controllers/authController");
 
 const router = express.Router();
 
@@ -9,6 +9,8 @@ router.post("/login", loginUser);
 
 router.post("/reset-pass", resetPassToken);
 
-router.post("/verify-pass/:token",verifyResetPassToken)
+router.get("/verify-pass/:passResetToken",verifyResetPassToken)
+
+router.put("/update-pass", createNewPass)
 
 module.exports = router;

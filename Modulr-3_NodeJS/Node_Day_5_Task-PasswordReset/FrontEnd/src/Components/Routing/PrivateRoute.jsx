@@ -1,10 +1,15 @@
-import React from 'react'
+import React from 'react';
+import { Navigate, Outlet } from 'react-router-dom';
+import { useToken } from '../TokenContext/TokenProvider';
 
 function PrivateRoute() {
+ 
+  const user = useToken();
+
+  console.log("private",user)
+
   return (
-    <div>
-      PrivateRoute
-    </div>
+     user ? <Outlet/> : <Navigate to="/"/>
   )
 }
 
