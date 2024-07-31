@@ -20,6 +20,7 @@ function PasswordReset() {
   const [success, setSuccess] = useState(false);
 
   const [open, setOpen] = useState(false);
+  const [openVerify,setOpenVerify] = useState(false);
 
 
   const handleClose = (event, reason) => {
@@ -27,7 +28,16 @@ function PasswordReset() {
         return;
     }
     setOpen(false);
-    setSuccess(true);
+    setGetToken(true);
+};
+
+const handleCloseVerify = (event, reason) => {
+  if (reason === 'clickaway') {
+      return;
+  }
+  setOpenVerify(false);
+  navigate(`/password-reset/${passResetToken}`);
+  
 };
 
   const handleSubmit = async (e) => {
@@ -39,7 +49,8 @@ function PasswordReset() {
         const res = await http.post("/auth/reset-pass", { email });
         console.log(res);
         if (res.data.message) {
-          setGetToken(true);
+          setOpen(true);
+          // setGetToken(true);
         } else {
           setError("Something went wrong please try again later!");
         }
@@ -63,11 +74,10 @@ function PasswordReset() {
         const res = await http.get(`/auth/verify-pass/${passResetToken}`);
         console.log(res.data.status);
         if (res.data.status) {
-          setOpen(true);
+          setOpenVerify(true)
           // setSuccess(true);
         }
       } catch (err) {
-        console.log(typeof err.response.data.status);
         if (err.message == "Network Error") {
           setTokenError("Request timeout! DB not responding");
         } else if (!err.response.data.status) {
@@ -81,7 +91,7 @@ function PasswordReset() {
 
   return (
     <>
-      {!getToken && (
+      {!getToken && !success ? (
         <div className="Password_Reset_Form">
           <Box
             className="Password_Reset_Box"
@@ -143,9 +153,19 @@ function PasswordReset() {
             <Button size="medium" onClick={() => setGetToken(true)}>
               Already got token?
             </Button>
+            <Snackbar open={open} autoHideDuration={5000} onClose={handleClose}>
+                    <Alert
+                        onClose={handleClose}
+                        severity="success"
+                        variant="filled"
+                        sx={{ width: '100%' }}
+                    >
+                        Password Reset Token sent to your email Successfully. Please verify your token in next step
+                    </Alert>
+                </Snackbar>
           </Box>
         </div>
-      )}
+      ): ""}
 
       {getToken && !success ? (
         <>
@@ -206,20 +226,21 @@ function PasswordReset() {
               >
                 verify token
               </Button>
-              <Snackbar open={open} autoHideDuration={5000} onClose={handleClose}>
+              <Snackbar open={openVerify} autoHideDuration={5000} onClose={handleCloseVerify}>
                     <Alert
-                        onClose={handleClose}
+                        onClose={handleCloseVerify}
                         severity="success"
                         variant="filled"
                         sx={{ width: '100%' }}
                     >
-                        Password Reset Token sent to your email Successfully
+                        Verify Successful!!! Please wait While we redirect to you to Password Change Page.
                     </Alert>
                 </Snackbar>
             </Box>
           </div>
         </>
-      ) : (
+      ) : ""}
+      {getToken && success ?(
         <>
           <div className="Password_Reset_Form">
             <Box
@@ -233,7 +254,7 @@ function PasswordReset() {
                 sx={{ fontWeight: "700", fontSize: "18px" }}
                 gutterBottom
               >
-                successfully verifyed please{" "}
+                successfully verifyed, if you are not redirected please{" "}
                 <Button
                   sx={{
                     fontWeight: "700",
@@ -250,7 +271,7 @@ function PasswordReset() {
             </Box>
           </div>
         </>
-      )}
+      ):""}
     </>
   );
 }
