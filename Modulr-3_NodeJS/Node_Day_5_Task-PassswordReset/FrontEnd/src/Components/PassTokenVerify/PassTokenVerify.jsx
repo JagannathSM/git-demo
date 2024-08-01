@@ -37,7 +37,6 @@ function PassTokenVerify() {
       setLoading(false);
     } catch (err) {
       setLoading(false);
-      console.log(err);
       if (err.response.status == 404) {
         setError(err.response.data || "Token already used");
       } else if (err.response.status == 500) {
