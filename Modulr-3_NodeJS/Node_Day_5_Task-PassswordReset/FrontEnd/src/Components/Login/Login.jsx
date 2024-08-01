@@ -6,6 +6,7 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import CircularProgress from '@mui/material/CircularProgress';
 import "./Login.css";
 
 function Login() {
@@ -15,6 +16,8 @@ function Login() {
     password: "",
   });
   const [error, setError] = useState("");
+  const [animation,setAnimation] = useState(false);
+
   let navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -30,12 +33,13 @@ function Login() {
       setError("Credentials required for login");
       return;
     } else {
+      setAnimation(true);
       try {
         const { data } = await http.post("/auth/login", loginDetails);
         localStorage.setItem("token", data.token);
         window.location = "/";
       } catch (err) {
-        console.log(err);
+        setAnimation(false)
         if (err.message == "Network Error") {
           setError("Connection timeout! / DB not responding");
         } else if (err.response.data) {
@@ -108,7 +112,7 @@ function Login() {
             type="submit"
             color="success"
           >
-            Login
+            {!animation ? "Login" : <CircularProgress size={24}/>}
           </Button>
         </Box>
       </div>

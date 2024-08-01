@@ -42,6 +42,7 @@ function Navbar() {
               <div className="Navbar_Container">
                 <div>
                   <Button variant="outlined" sx={{color:"white"}} onClick={()=>{navigate('/')}}>Home</Button>
+                  <Button variant="outlined" sx={{color:"white"}} onClick={()=>{navigate('/user')}}>User Detail</Button>
                 </div>
                 <div>
                   <Button variant="outlined" sx={{color:"red"}} onClick={()=>{navigate('/logout')}} endIcon={<LogoutIcon />}>

@@ -6,6 +6,7 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { useToken } from "../TokenContext/TokenProvider";
+import CircularProgress from '@mui/material/CircularProgress';
 import './Register.css'
 
 function Register() {
@@ -19,6 +20,7 @@ function Register() {
   });
   const [error, setError] = useState("");
   const [register,setRegister] = useState(false);
+  const [animation,setAnimation] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -32,13 +34,14 @@ function Register() {
     if (!userDetails.userName || !userDetails.password || !userDetails.email) {
       setError("Credentials are required to register");
     } else {
+      setAnimation(true)
       try {
         const { data } = await http.post("/auth/register", userDetails);
         if(data.message == "Successfully Registered"){
           setRegister(true);
         }
       } catch (err) {
-        console.log(err);
+        setAnimation(false);
         if(err.message){
           setError("Connection Timeout! DB not responding");
         } else {
@@ -117,7 +120,7 @@ function Register() {
             type="submit"
             color="success"
           >
-            Register
+            {!animation ? "Register": <CircularProgress size={24}/>}
           </Button>
         </Box>}
 

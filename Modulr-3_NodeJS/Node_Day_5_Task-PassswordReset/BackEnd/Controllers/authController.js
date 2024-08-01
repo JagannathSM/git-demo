@@ -67,9 +67,12 @@ exports.resetPassToken = async (req, res) => {
 
   await userData.save();
 
-  const message = `<div style="width:100%;heigth:300;box-shadow:1px 2px 2px white">
-  <p>Use this token <span style="font-weight:900;color:white">${passResetToken}</span> to reset your password</p><br>
-  <p style="color:red">Token is  will expire in 1hr.</p>
+  const message = `<div style="diaplay:flex;flex-direction:column;justify-content:center;text-align: center;background-color: lightblue;border: 5px outset black;color:black">
+  <div style="padding:10px;margin:5px">
+  <h3 style="margin:0px">Password Reset Request</h3>
+  <p>Your Password reset token - ${passResetToken}. Click on the below link to reset your password, this link expires in 1hr.</p>
+  <a style="text-decoration:none; border:1px solid black; background-color:black;color:white;padding:4px;border-radius:5px" type="button" href="http://localhost:5173/password-reset/${passResetToken}" target="_blank">Reset Password</a>
+  </div>
   </div>`;
   sendPassResetEmail({
     email: userData.email,
@@ -79,37 +82,24 @@ exports.resetPassToken = async (req, res) => {
   });
 };
 
-exports.verifyResetPassToken = async (req, res) => {
-  const {passResetToken} = req.params;
-  const user = await User.findOne({ passResetToken });
-
-  if (!user) {
-    return res
-      .status(404)
-      .json({ status: false, message: "Invalid Password reset Token" });
-  }
-
-  if (Date.parse(user.passResetTokenExp) < Date.now()) {
-    return res.status(500).json({status: false, message: "Reset Token Expires!" });
-  }
-
-  res
-    .status(201)
-    .json({ status: true, message: "Password Update Request Success" });
-};
 
 exports.createNewPass = async (req, res) => {
-  const passResetToken = req.params.token;
+  const { passResetToken } = req.params;
   const { newPassword } = req.body;
   const user = await User.findOne({ passResetToken });
 
-  //might be fail??
+  if (!user) {
+        return res
+          .status(404)
+          .send("Invalid Password reset Token");
+      }
+
   if (Date.parse(user.passResetTokenExp) < Date.now()) {
     return res.status(500).send("Reset Token Expires!" );
   }
 
   if (!newPassword) {
-    return res.status(400).json({ message: "Required Field new_password" });
+    return res.status(400).send("Required Field new_password");
   }
 
   const salt = parseInt(process.env.SALT);

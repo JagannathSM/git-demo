@@ -6,8 +6,6 @@ function PrivateRoute() {
  
   const user = useToken();
 
-  console.log("private",user)
-
   return (
      user ? <Outlet/> : <Navigate to="/"/>
   )

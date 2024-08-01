@@ -6,10 +6,8 @@ import Login from "../Login/Login";
 import Home from "../Home/Home";
 import PasswordReset from "../PasswordReset/PasswordReset";
 import NewPassword from "../NewPassword/NewPassword";
-import GetTask from "../GetTask/GetTask";
-import AddTask from "../AddTask/AddTask";
-import UpdateTask from '../UpdateTask/UpdateTask';
 import PrivateRoute from './PrivateRoute';
+import GetUser from '../GetUser/GetUser';
 import Logout from '../Logout/Logout';
 
 function Routing() {
@@ -20,11 +18,9 @@ function Routing() {
         <Route path='/register' element={<Register/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/password-reset' element={<PasswordReset/>}/>
-        <Route path='/password-reset/:resetToken' element={<NewPassword/>}/>
+        <Route path='/password-reset/:passResetToken' element={<NewPassword/>}/>
         <Route element={<PrivateRoute />}>
-          <Route path='/user/tasks' element={<GetTask/>}/>
-          <Route path='/user/addtask' element={<AddTask/>}/>
-          <Route path='/user/updatetask/:taskID' element={<UpdateTask/>}/>
+          <Route path='/user' element={<GetUser/>}/>
           <Route path='/logout' element={<Logout/>}/>
         </Route>
       </Routes>
