@@ -35,7 +35,7 @@ function NewPassword() {
       } catch (err){
         setAnimation(false)
         if(err.response.status == 404){
-          setError("Invalid Token")
+          setError("Invalid Token / Reset Token Expires!")
         } else if (err.response.status == 500){
           setError("Reset Token Expires!")
         } else {
