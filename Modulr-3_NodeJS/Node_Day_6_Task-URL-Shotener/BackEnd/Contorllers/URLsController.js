@@ -2,8 +2,8 @@ const UrlData = require("../Models/Urls");
 
 exports.getAllURLs = async (req, res) => {
   try {
-    const userData = await UrlData.find({ _id: req.user });
-    res.status(200).json({ userData });
+    const userURLs = await UrlData.find({ user: req.user });
+    res.status(200).json({ userURLs });
   } catch (err) {
     res.status(400).send("Error Getting user's URL");
   }
@@ -31,7 +31,6 @@ exports.createShortURL = async (req, res) => {
       }
 
       const shortURL = generateShortId(7);
-      console.log(req.user);
       const new_URL = new UrlData({ longURL, shortURL, user: req.user });
       await new_URL.save();
       res.status(200).json({ new_URL });
@@ -45,8 +44,7 @@ exports.countAndRedirect = async (req, res) => {
   const { shortURL } = req.params;
   try {
     const Data = await UrlData.findOne({ shortURL });
-    const User_id = "HEELLOO";
-    // const User_id = Data.user.toString();
+    const User_id = Data.user.toString();
     if (!Data) {
       return res.status(400).send("URL not found");
     }
@@ -54,7 +52,6 @@ exports.countAndRedirect = async (req, res) => {
       return res.status(400).send("Not Authorized User");
     }
     Data.clickCount = Data.clickCount + 1;
-    console.log(Data.clickCount);
     await Data.save();
     res.status(200).json({ longURL: Data.longURL });
   } catch (err) {

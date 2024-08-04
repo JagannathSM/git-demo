@@ -8,7 +8,7 @@ dotenv.config();
 
 const generateToken = (user) => {
   const jwtData = { _id: user._id, firstname: user.firstname, lastname: user.lastname, email: user.email };
-  return jwt.sign(jwtData, process.env.JWTSECRET, { expiresIn: "1h" });
+  return jwt.sign(jwtData, process.env.JWTSECRET, { expiresIn: "1d" });
 };
 
 exports.sendRegisterMail = async (req, res) => {
@@ -39,7 +39,7 @@ exports.sendRegisterMail = async (req, res) => {
   <div style="padding:10px;margin:5px">
   <h3 style="margin:0px">Verify Account to login!</h3>
   <p>Account Created successfully, please follow the instructions to register your account. Click on the below link to register your account, this link expires in 1hr. <br>  If you did not request this, please ignore this email.</p>
-  <a style="text-decoration:none; border:1px solid black; background-color:black;color:white;padding:4px;border-radius:5px" type="button" href="${process.env.NETLIFY}/${registerToken}" target="_blank">Register To login!</a>
+  <a style="text-decoration:none; border:1px solid black; background-color:black;color:white;padding:4px;border-radius:5px" type="button" href="${process.env.NETLIFY_REGISTOR}${registerToken}" target="_blank">Verify Now!</a>
   </div>
   </div>`;
 
@@ -56,7 +56,7 @@ exports.checkRegisterUser = async (req, res) => {
   try {
     const user = await User.findOne({ registerToken });
     if (!user) {
-      return res.status(400).send("User not found! Data not found");
+      return res.status(400).send("Registration Url error");
     }
     if (Date.parse(user.registerTokenExp) < Date.now()) {
       return res.status(400).send("Register Verify token expires!");
@@ -113,7 +113,7 @@ exports.resetPassToken = async (req, res) => {
     <div style="padding:10px;margin:5px">
     <h3 style="margin:0px">Password Reset Request</h3>
     <p>Your Password reset token - ${passResetToken}. Click on the below link to reset your password, this link expires in 1hr. <br>  If you did not request this, please ignore this email and your password will remain unchanged.</p>
-    <a style="text-decoration:none; border:1px solid black; background-color:black;color:white;padding:4px;border-radius:5px" type="button" href="${process.env.NETLIFY}${passResetToken}" target="_blank">Reset Password</a>
+    <a style="text-decoration:none; border:1px solid black; background-color:black;color:white;padding:4px;border-radius:5px" type="button" href="${process.env.NETLIFY_PASSWORD}${passResetToken}" target="_blank">Reset Password</a>
     </div>
     </div>`;
     sendEmail({

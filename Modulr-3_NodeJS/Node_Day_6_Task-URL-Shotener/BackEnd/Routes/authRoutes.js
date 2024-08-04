@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.post("/sendRegisterMail", sendRegisterMail);
 
-router.get('/checkRegisterUser', checkRegisterUser);
+router.get('/checkRegisterUser/:registerToken', checkRegisterUser);
 
 router.post("/login", userlogin);
 
