@@ -128,7 +128,7 @@ function Dashboard() {
               <CardActionArea>
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div" sx={{width: "150px"}}>
-                    Total URL's Created
+                    Total URL's
                   </Typography>
                   <Typography variant="body2" sx={{fontSize:"3rem", marginTop:"15px", fontWeight:900, color:"rgb(159, 62, 32)"}} color="text.secondary">
                     {totalUrl}
