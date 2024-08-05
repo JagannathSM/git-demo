@@ -28,7 +28,7 @@ function Navbar() {
                   </div>
                   <div>
                     <Button variant="outlined" sx={{color:"white"}} onClick={()=>navigate('/register')} startIcon={<AppRegistrationIcon />}>
-                      Register
+                      Sign Up
                     </Button>
                     <Button variant="outlined" sx={{color:"yellow"}} onClick={()=>{navigate('/login')}} startIcon={<LoginIcon />}>
                       Log In

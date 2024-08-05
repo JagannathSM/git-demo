@@ -69,22 +69,22 @@ function Register() {
   },[])
   return (
     <>
-        <div className="Form">
+        <div className="Register_Form">
         <Box
-          className="Box"
+          className="Register_Box"
           component="form"
-          sx={{ m: 1, width: "35ch" }}
+          sx={{ m: 1, maxWidth: "300px" }}
           noValidate
           onSubmit={handleSubmit}
           autoComplete="off"
         >
           <Typography
             variant="body2"
-            className="Login_header"
+            className="Register_header"
             sx={{
-              textShadow: " -2px 0px 2px gray",
+              textShadow: "-2px 0px 2px gray",
               fontWeight: "600",
-              marginTop: " 5px",
+              margin: "10px",
             }}
             gutterBottom
           >
@@ -134,7 +134,7 @@ function Register() {
           />
           {error && (
             <>
-              <Typography variant="body2" className="Error" gutterBottom>
+              <Typography variant="body2" className="Register_Error" gutterBottom>
                 {error}
               </Typography>
             </>
@@ -145,7 +145,7 @@ function Register() {
             type="submit"
             color="success"
           >
-            {!animation ? "Register" : <CircularProgress size={24}/>}
+            {!animation ? "Sign Up" : <CircularProgress size={24}/>}
           </Button>
         </Box>
       </div>

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import http from '../../../utils/http'
 import CircularProgress from "@mui/material/CircularProgress";
-
+import './Redirect.css'
 
 function Redirect() {
     const {shortURL} = useParams();
@@ -29,10 +29,17 @@ function Redirect() {
         redirectURL();
     },[])
   return (
-    <div>
-      Redirect - {shortURL}
-      {error && <div>Error - {error}</div>}
-      {loading && <div><CircularProgress size={50}/><br></br><p>Redirecting to your site please wait!!</p></div>}
+    <div className='Redirect_Container'>
+      <h2>Redirect link - {shortURL}</h2>
+      {error && 
+      <div className='Redirect_Error'>
+        <h2>Error</h2>
+         <p>{error}</p>
+      </div>}
+      {loading && <div className='Redirect_Loading'>
+        <CircularProgress size={50}/><br></br>
+        <p>Redirecting to your site please wait!!</p>
+        </div>}
     </div>
   )
 }

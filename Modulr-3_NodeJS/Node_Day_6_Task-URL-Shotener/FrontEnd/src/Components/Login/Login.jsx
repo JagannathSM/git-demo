@@ -59,22 +59,22 @@ function Login() {
 
   return (
     <>
-      <div className="Form">
+      <div className="Login_Form">
         <Box
-          className="Box"
+          className="Login_Box"
           component="form"
-          sx={{ m: 1, width: "35ch" }}
+          sx={{ m: 1,  maxWidth: "360px" }}
           noValidate
           onSubmit={handleSubmit}
           autoComplete="off"
         >
           <Typography
             variant="body2"
-            className="header"
+            className="Login_header"
             sx={{
-              textShadow: " -2px 0px 2px gray",
+              textShadow: "-2px 0px 2px gray",
               fontWeight: "600",
-              marginTop: " 5px",
+              margin: " 10px"
             }}
             gutterBottom
           >
@@ -100,12 +100,12 @@ function Login() {
           />
           {error && (
             <>
-              <Typography variant="body2" className="Error" gutterBottom>
+              <Typography variant="body2" className="Login_Error" gutterBottom>
                 {error}
               </Typography>
             </>
           )}
-          <Button size="medium" onClick={()=>navigate('/password-reset')}>Forgot Password?</Button>
+          <Button size="medium" className='Login_Forgot' onClick={()=>navigate('/password-reset')}>Forgot Password?</Button>
           <Button
             variant="contained"
             sx={{ marginTop: "10px", marginBottom: "20px" }}

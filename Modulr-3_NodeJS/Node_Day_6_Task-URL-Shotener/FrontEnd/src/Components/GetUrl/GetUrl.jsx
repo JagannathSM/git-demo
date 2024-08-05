@@ -25,8 +25,9 @@ function GetUrl() {
   const [changes, setChanges] = useState("ALL");
   const [mainData, setMainData] = useState([]);
 
-  const copyContent = async (text) => {
+  const copyContent = async (text,data) => {
     await navigator.clipboard.writeText(text);
+    alert(`Successfully Copied URL - ${data}`)
   };
 
   const deleteURL = async (_id) => {
@@ -52,7 +53,8 @@ function GetUrl() {
   const getUserURL = async () => {
     try {
       const { data } = await http.get("/url/get");
-      data.userURLs.sort((a, b) => a._id.localeCompare(b._id));
+      // data.userURLs.sort((a, b) => a._id.localeCompare(b._id));
+      data.userURLs.sort((a,b)=>Date.parse(b.createdAt) - Date.parse(a.createdAt))
       setData(data.userURLs);
       setLoading(false);
     } catch (err) {
@@ -123,32 +125,45 @@ function GetUrl() {
     <>
       {loading && !error ? (
         <>
-          <div>
+        <div className="GetUrl_Container">
+          <div className="GetUrl_Loading">
             <CircularProgress size={50} />
             <br></br>
-            <p>Loading Users URLs</p>
+            <p style={{marginTop:"10px"}}>Loading Users URLs</p>
           </div>
+        </div>
         </>
       ) : (
         ""
       )}
       {!loading && error ? (
         <>
-          <div>Error while getting user URLs - {error}</div>
+        <div className="GetUrl_Container">
+          <div className="GetUrl_Error">
+            <h3 style={{marginTop:"5px",fontWeight:"900",color:"#f1f1f1"}}>Error while getting user URLs</h3>
+            <p style={{marginTop:"5px"}}>{error}</p>
+          </div>
+        </div>
         </>
       ) : (
         ""
       )}
       {!loading && !error && data.length == 0 ? (
         <>
-          <div>No data to show!</div>
+        <div className="GetUrl_Container">
+          <div className="GetUrl_NoData">
+            <h3 style={{marginTop:"5px",fontWeight:"900",color:"#f1f1f1"}}>No data to show!</h3>
+          </div>
+        </div>
         </>
       ) : (
         ""
       )}
       {!loading && !error && data.length > 0 ? (
         <>
-          <div>
+        <div className="GetUrl_Container">
+          <div className="GetUrl_Filter">
+            <div><h3>Table showing all URL's</h3></div>
             <Box sx={{ minWidth: 120 }}>
               <FormControl fullWidth>
                 <InputLabel variant="standard" htmlFor="uncontrolled-native">
@@ -227,14 +242,16 @@ function GetUrl() {
                       <TableCell align="center">{ele.clickCount}</TableCell>
                       <TableCell align="center">
                         <IconButton
+                          color="primary"
                           aria-label="copyURL"
                           onClick={() =>
-                            copyContent(`http://localhost:5173/${ele.shortURL}`)
+                            copyContent(`http://localhost:5173/${ele.shortURL}`,ele.shortURL)
                           }
                         >
                           <ContentCopyIcon />
                         </IconButton>
                         <IconButton
+                          color="error"
                           aria-label="delete"
                           onClick={() => deleteURL(ele._id)}
                         >
@@ -247,6 +264,7 @@ function GetUrl() {
               </Table>
             </TableContainer>
           </div>
+        </div>
         </>
       ) : (
         ""

@@ -43,16 +43,16 @@ function PasswordReset() {
   return (
     <>
      {!getToken && (
-        <div className="Form">
+        <div className="PasswordReset_Form">
           <Box
-            className="Box"
+            className="PasswordReset_Box"
             component="form"
-            sx={{ m: 1, width: "35ch" }}
+            sx={{ m: 1, maxWidth:"300px" }}
             noValidate
             onSubmit={handleSubmit}
             autoComplete="off"
           >
-            <div className="Back">
+            <div className="PasswordReset_Back">
               <Button
                 onClick={() => navigate(-1)}
                 startIcon={<ArrowBackIcon />}
@@ -62,12 +62,12 @@ function PasswordReset() {
             </div>
             <Typography
               variant="body2"
-              className="header"
+              className="PasswordReset_header"
               sx={{
-                textShadow: "-3px 0px 3px gray",
-                fontWeight: "600",
-                marginTop: "5px",
-                padding: "0px 5px",
+                textShadow: "1px 1px 3px gray",
+                fontWeight: "800",
+                margin: "5px",
+                padding: "5px",
               }}
               gutterBottom
             >
@@ -86,7 +86,7 @@ function PasswordReset() {
               <>
                 <Typography
                   variant="body2"
-                  className="Error"
+                  className="PasswordReset_Error"
                   gutterBottom
                 >
                   {error}
@@ -107,9 +107,9 @@ function PasswordReset() {
 
       {getToken && (
         <>
-          <div className="Form">
+          <div className="PasswordReset_Form">
             <Box
-              className="Box"
+              className="PasswordReset_Box"
               component="div"
               sx={{ m: 1, width: "40ch", height: "35vh" }}
             >
@@ -119,7 +119,7 @@ function PasswordReset() {
                 sx={{ fontWeight: "700", fontSize: "18px" }}
                 gutterBottom
               >
-                reset pasword mail sent to <span style={{color:"blue",textDecoration:"underline",textTransform:"lowercase"}}>{email}</span> Successfully. Verify mail and follow the link to reset your password.
+                Reset pasword mail sent to <span style={{color:"blue",textDecoration:"underline",textTransform:"lowercase"}}>{email}</span> Successfully. Verify mail and follow the link to reset your password.
               </Typography>
             </Box>
           </div>

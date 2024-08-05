@@ -32,10 +32,27 @@ function RegisterCheck() {
 
   return (
     <>
-      <div>
-        {animation && !error ? <CircularProgress /> : ""}
-        {!animation && !error ? "Verification Success" : ""}
-        {!animation && error ? `${error}` : ""}
+      <div className="RegisterCheck_Container">
+        {animation && !error ? (
+          <>
+          <div className="RegisterCheck_Loading">
+            <CircularProgress />
+            </div>
+          </>) : ""}
+        {!animation && !error ? (
+          <>
+          <div className="RegisterCheck_Success">
+          <h2>Verification Success</h2>
+          <p>Please login with your email and password</p>
+          </div>
+          </>) : ""}
+        {!animation && error ? (
+          <>
+          <div className="RegisterCheck_Error">
+            <h2>Error Verifying Register</h2>
+            <p>{error}</p>
+          </div>
+          </>) : ""}
       </div>
     </>
   );

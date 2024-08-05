@@ -52,7 +52,6 @@ function PassTokenVerify() {
 
   return (
     <>
-      <div>
       <Snackbar open={open} autoHideDuration={5000} onClose={handleClose}>
         <Alert
           onClose={handleClose}
@@ -64,11 +63,11 @@ function PassTokenVerify() {
         </Alert>
       </Snackbar>
       {loading && !error ? (
-        <div>
+        <div className="PassVerify_Container">
           <Box
-            className="Box"
+            className="PassVerify_Box_loading"
             component="div"
-            sx={{ m: 1, width: "30ch", height: "30vh" }}
+            sx={{ m: 1, maxWidth:"300px", height: "30vh" }}
           >
             <CircularProgress />
             <Typography
@@ -84,14 +83,13 @@ function PassTokenVerify() {
       ) : (
         ""
       )}
-      <div>
+      <div className="PassVerify_Container">
         {!loading && error ? (
           <>
-            <div>
               <Box
-                className="Box"
+                className="PassVerify_Box_Error"
                 component="div"
-                sx={{ m: 1, width: "30ch", height: "30vh" }}
+                sx={{ m: 1, maxWidth:"300px", height: "30vh" }}
               >
                 <Typography
                   variant="body2"
@@ -102,18 +100,16 @@ function PassTokenVerify() {
                   {error}
                 </Typography>
               </Box>
-            </div>
           </>
         ) : (
           ""
         )}
         {!loading && !error ? (
           <>
-            <div className="Verify">
               <Box
-                className="Box"
+                className="PassVerify_Box_Msg"
                 component="div"
-                sx={{ m: 1, width: "30ch", height: "30vh" }}
+                sx={{ m: 1, maxWidth:"300px", height: "30vh" }}
               >
                 <Typography
                   variant="body2"
@@ -130,13 +126,11 @@ function PassTokenVerify() {
                   Click here
                 </Button>
               </Box>
-            </div>
           </>
         ) : (
           ""
         )}
       </div>
-    </div>
     </>
   )
 }

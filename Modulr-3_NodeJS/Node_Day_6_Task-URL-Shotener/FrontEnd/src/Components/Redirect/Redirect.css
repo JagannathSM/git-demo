@@ -1,14 +1,14 @@
-.GetUrl_Container{
-    min-height: 80vh;
+.Redirect_Container{
     display: flex;
+    min-height: 80vh;
     flex-direction: column;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    padding: 5px;
+    margin-top: 10px;
 }
 
-.GetUrl_Loading{
+.Redirect_Loading{
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -21,9 +21,10 @@
     outline: none;
     border-radius: 10px;
     box-shadow: 2px 2px 3px gray;
+
 }
 
-.GetUrl_Error{
+.Redirect_Error{
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -36,28 +37,5 @@
     outline: none;
     border-radius: 10px;
     box-shadow: 2px 2px 3px gray;
-}
 
-.GetUrl_NoData{
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    background-color: rgba(128, 128, 128, 0.205);
-    margin: 5px;
-    padding: 15px;
-    border: none;
-    outline: none;
-    border-radius: 10px;
-    box-shadow: 2px 2px 3px gray;
-}
-
-.GetUrl_Filter{
-    margin-bottom: 5px;
-    padding: 5px;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    flex-wrap: wrap;
 }

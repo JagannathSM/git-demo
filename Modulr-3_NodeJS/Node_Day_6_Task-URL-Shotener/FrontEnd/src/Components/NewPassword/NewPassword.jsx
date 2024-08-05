@@ -48,22 +48,22 @@ function NewPassword() {
     <>
       <>
       {!open ? (
-        <div>
+        <div className="NewPassword_Form">
           <Box
-            className="Box"
+            className="NewPassword_Box"
             component="form"
-            sx={{ m: 1, width: "35ch" }}
+            sx={{ m: 1, maxWidth: "360px" }}
             noValidate
             onSubmit={updatePassword}
             autoComplete="off"
           >
             <Typography
               variant="body2"
-              className="header"
+              className="NewPassword_header"
               sx={{
-                textShadow: " -2px 0px 2px gray",
-                fontWeight: "600",
-                marginTop: " 5px",
+                textShadow: "-2px 0px 2px gray",
+                fontWeight: "800",
+                marginTop: "5px",
               }}
               gutterBottom
             >
@@ -91,7 +91,7 @@ function NewPassword() {
               <>
                 <Typography
                   variant="body2"
-                  className="New_Password_Error"
+                  className="NewPassword_Error"
                   gutterBottom
                 >
                   {error}
@@ -110,15 +110,15 @@ function NewPassword() {
         </div>
       ) : (
         <>
-          <div>
+          <div className="NewPassword_Container">
             <Box
-              className="Box"
+              className="NewPassword_Box"
               component="div"
-              sx={{ m: 1, width: "38ch", height: "33vh" }}
+              sx={{ m: 1, maxWidth: "360px", height: "33vh" }}
             >
               <Typography
                 variant="body2"
-                className="Msg"
+                className="NewPassword_Msg"
                 sx={{ fontWeight: "700", fontSize: "18px" }}
                 gutterBottom
               >

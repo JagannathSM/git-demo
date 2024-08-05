@@ -23,6 +23,10 @@ function AddUrl() {
   const handleSubmit = async (e) => {
     setAnimation(true);
     e.preventDefault();
+    if(!longURL){
+      setAnimation(false);
+      setError("URL required to shorthen")
+    }else{
     try {
       const res = await http.post("/url/create", { longURL });
       setData(res.data.new_URL);
@@ -38,6 +42,7 @@ function AddUrl() {
         setError(err.message);
       }
     }
+  }
   };
 
   const pasteText = async () => {
@@ -56,28 +61,28 @@ function AddUrl() {
 
   return (
     <>
-      <div className="Form">
+      <div className="Add_Url_Container">
         <Box
-          className="Box"
+          className="Add_Url_Box"
           component="form"
-          sx={{ m: 1, width: "35ch" }}
+          sx={{ m: 1, width:"80%" }}
           noValidate
           onSubmit={handleSubmit}
           autoComplete="off"
         >
           <Typography
             variant="body2"
-            className="header"
+            className="Add_Url_header"
             sx={{
-              textShadow: " -2px 0px 2px gray",
-              fontWeight: "600",
-              marginTop: " 5px",
+              textShadow: "1px 1px 2px gray",
+              fontWeight: "800",
+              marginTop: "5px",
             }}
             gutterBottom
           >
             Paste the URL to be shortened
           </Typography>
-          <div>
+          <div className="Paste_Div">
             <TextField
               type="text"
               name="longURL"
@@ -93,12 +98,12 @@ function AddUrl() {
               aria-label="content_paste"
               onClick={() => pasteText()}
             >
-              <ContentPasteRoundedIcon />
+              <ContentPasteRoundedIcon sx={{fontSize:"35px"}}/>
             </IconButton>
           </div>
           {error && (
             <>
-              <Typography variant="body2" className="Error" gutterBottom>
+              <Typography variant="body2" className="Add_Url_Error" gutterBottom>
                 {error}
               </Typography>
             </>
@@ -113,7 +118,8 @@ function AddUrl() {
           </Button>
           {data && (
             <>
-              <p>longURL - {data.longURL}</p>
+            <div className="Result_Url">
+              <p className="LongUrl_Result">longURL - {data.longURL}</p>
               <p>
                 shortURL -{" "}
                 <Link
@@ -135,6 +141,7 @@ function AddUrl() {
                   <ContentCopyIcon />
                 </IconButton>
               </p>
+              </div>
             </>
           )}
           <Snackbar
