@@ -123,6 +123,7 @@ function AddUrl() {
               <p>
                 shortURL -{" "}
                 <Link
+                  style={{curser:'pointer'}}
                   target="_blank"
                   to={`https://sparkling-snickerdoodle-5bba03.netlify.app/${data.shortURL}`}
                 >
