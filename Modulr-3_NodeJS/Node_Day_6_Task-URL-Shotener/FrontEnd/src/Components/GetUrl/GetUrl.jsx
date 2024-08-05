@@ -245,7 +245,7 @@ function GetUrl() {
                           color="primary"
                           aria-label="copyURL"
                           onClick={() =>
-                            copyContent(`http://localhost:5173/${ele.shortURL}`,ele.shortURL)
+                            copyContent(`https://sparkling-snickerdoodle-5bba03.netlify.app/${ele.shortURL}`,ele.shortURL)
                           }
                         >
                           <ContentCopyIcon />

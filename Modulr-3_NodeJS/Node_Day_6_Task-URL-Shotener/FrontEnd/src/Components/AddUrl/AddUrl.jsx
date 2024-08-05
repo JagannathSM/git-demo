@@ -124,7 +124,7 @@ function AddUrl() {
                 shortURL -{" "}
                 <Link
                   target="_blank"
-                  to={`http://localhost:5173/${data.shortURL}`}
+                  to={`https://sparkling-snickerdoodle-5bba03.netlify.app/${data.shortURL}`}
                 >
                   {data.shortURL}
                 </Link>
@@ -135,7 +135,7 @@ function AddUrl() {
                   color="primary"
                   aria-label="content_paste"
                   onClick={() =>
-                    copyText(`http://localhost:5173/${data.shortURL}`)
+                    copyText(`https://sparkling-snickerdoodle-5bba03.netlify.app/${data.shortURL}`)
                   }
                 >
                   <ContentCopyIcon />
