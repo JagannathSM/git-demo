@@ -1,0 +1,108 @@
+.Card_Container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.Cards{
+    max-width: 17rem;
+    background-color: #f1f1f1;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1rem;
+    margin: 2rem 1rem;
+    border:none;
+    outline: none;
+    border-radius: 1rem;
+    /* box-shadow: 1px 1px 1px gray; */
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.Card_Img{
+    width: 100%;
+    height: 40vh;
+}
+
+.Card_Text{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+.Card_desc{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(93, 93, 93);
+    text-align: justify;
+}
+
+.Card_amount{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.Cards:hover{
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section {
+    background-color: #f1f1f1;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:black;
+    text-align: center;
+    padding: 20px;
+    margin-top: 2rem;
+    width: 100%;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 0px 0px 10px #2980b9;
+  }
+  
+  .hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    font-weight: 600;
+    text-shadow: 0px 0px 10px gray;
+  }
+  
+  .hero-button {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+  }
+
+.Home_Header_Servies{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background: none;
+}
+
+.Home_Header_Servies h3{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #46b5ff;
+    text-shadow: 2px 2px 5px rgb(57, 242, 85);
+}

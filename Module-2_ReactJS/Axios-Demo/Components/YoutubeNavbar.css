@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 5rem;
+    background-color: #00828c;
+    color: white;
+}
+
+.logo{
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    width: 75%;
+}
+
+.home,
+.user-notifications,
+.about,
+.contact,
+.user-profile,
+.user-bookings,
+.login,
+.register,
+.logout{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    padding: 10px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.mobile-menu-icon{
+    display: none;
+}
+
+@media screen and (max-width:780px) {
+    .logo{
+        display: flex;
+        position: absolute;
+        top:1rem;
+        left:2.1rem;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    .nav-links-mobile{
+        position: absolute;
+        display: block;
+        list-style: none;
+        background-color: #005469;
+        left:0;
+        top:4.6rem;
+        transition: all 0.5s ease-out;
+        width: 100%;
+    }
+
+    .home,
+    .user-profile,
+    .user-notifications,
+    .about,
+    .contact,
+    .user-bookings,
+    .login,
+    .register,
+    .logout{
+        color: white;
+        text-align: center;
+        padding: 1.5rem;
+        width: 100%;
+        transition: all 0.5 ease;
+    }
+
+    .mobile-menu-icon{
+        display: block;
+        position: absolute;
+        font-size: 2rem;
+        color: white;
+        background-color: #00828c;
+        border:none;
+        outline: none;
+        top:1.2rem;
+        right: 1.5rem;
+    }
+}
