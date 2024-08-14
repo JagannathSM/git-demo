@@ -6,12 +6,15 @@ import { forgotPassSchema } from'../../Schema/Schema';
 import { useFormik } from 'formik';
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { useNavigate } from 'react-router-dom';
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import CircularProgress from "@mui/material/CircularProgress";
 
 
 function ForgotPassword() {
   const navigate = useNavigate();
-  const [error,setError] = useState('')
-  const [successMessage, setSuccessMessage] = useState('');
+  // const [successMessage, setSuccessMessage] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const formik = useFormik({
     initialValues: { email:"" },
@@ -22,19 +25,33 @@ function ForgotPassword() {
   });
 
 
-
   const handleForgotPassSubmit = async (values) => {
     try{
+      setLoading(true);
       await http.post('/auth/resetPass',values);
-      setSuccessMessage('A password reset link has been sent to your email address. Please follow the link to reset Password');
+      toast.success('A password reset link has been sent to your email address. Please follow the link to reset Password',{
+        position: "top-right",
+        autoClose: 5000,
+      });
+
       setEmail('');
     } catch(err){
-      if (err.message == "Network Error") {
-        setError("Connection timeout! / DB not responding");
-      } else if (err.response.status == 400) {
-        setError(err.response.data);
+      setLoading(false);
+      if (err.message === "Network Error") {
+        toast.error("Connection timeout! DB not responding", {
+          position: "top-right",
+          autoClose: 5000,
+        });
+      } else if (err.response && err.response.status === 400) {
+        toast.error(err.response.data, {
+          position: "top-right",
+          autoClose: 5000,
+        });
       } else {
-        setError(err.message);
+        toast.error(`Error while login. Try again later: ${err.message}`, {
+          position: "top-right",
+          autoClose: 5000,
+        });
       }
     }
   };
@@ -105,24 +122,15 @@ function ForgotPassword() {
               {formik.touched.email && formik.errors.email ? formik.errors.email : ""}
           </Typography>
 
-
-          {error && (
-              <Typography
-                variant="subtitle2"
-                sx={{color: "#d32f2f", textAlign: "center" }}
-              >
-                {error}
-              </Typography>
-            )}
           <Button
             type="submit"
             fullWidth
             variant="contained"
             sx={{mt: 2, mb: 2,color: "#333", backgroundColor: "#fff"  }}
           >
-            Send Reset Link
+          {!loading ? "Send Reset Link" : <CircularProgress size={24}/>}                          
           </Button>
-          {successMessage && <Alert severity="success" sx={{ mt: 2 }}>{successMessage}</Alert>}
+          {/* {successMessage && <Alert severity="success" sx={{ mt: 2 }}>{successMessage}</Alert>} */}
         </Box>
       </Box>
     </Container>

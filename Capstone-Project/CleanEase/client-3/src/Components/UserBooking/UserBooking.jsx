@@ -29,8 +29,6 @@ function UserBooking() {
   const [filterByStatus, setFilterByStatus] = useState("All");
   const [mainData, setMainData] = useState([]);
 
-  console.log(mainData);
-
   useEffect(() => {
     getUserBookings();
   }, []);

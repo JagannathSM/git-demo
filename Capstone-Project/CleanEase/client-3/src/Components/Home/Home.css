@@ -80,15 +80,6 @@
     text-shadow: 0px 0px 10px gray;
   }
   
-  .hero-button {
-    background-color: #3498db;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: background-color 0.3s;
-  }
 
 .Home_Header_Servies{
     margin-top: 2rem;
@@ -106,3 +97,25 @@
     color: #46b5ff;
     text-shadow: 2px 2px 5px rgb(57, 242, 85);
 }
+
+.sub-hero-section {
+    background:linear-gradient(120deg, #a2c2e4, #004d99);
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:black;
+    text-align: center;
+    padding: 20px;
+    margin-top: 2rem;
+    width: 100%;
+  }
+  
+  .sub-hero-content h1 {
+    padding-top: 20px;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 0px 0px 10px #000000;
+  }
+  

@@ -22,6 +22,10 @@ import UserReviewTabel from '../UserReviewTabel/UserReviewTabel';
 import AddReview from '../AddReview/AddReview';
 import UpdateReview from '../UpdateReview/UpdateReview';
 import UserCheckList from '../ChecklistCompo/UserChecklist';
+import AdminRoute from './AdminRoute';
+import AdminUserBookingsDetails from '../AdminCompo/AdminUserBookingsDetails/AdminUserBookingsDetails';
+import AdminUserBookingEdit from '../AdminCompo/AdminUserBookingEdit/AdminUserBookingEdit';
+import AdminLogOut from '../AdminCompo/AdminLogOut/AdminLogOut';
 
 
 function Routing() {
@@ -49,10 +53,16 @@ function Routing() {
           <Route path='/user-cehcklist' element={<UserCheckList/>}/>
           <Route path='/user-update-review/:_id' element={<UpdateReview/>}/>
           <Route path='/logout' element={<Logout/>}/>
-        </Route> 
+        </Route>
+        <Route element={<AdminRoute/>}>
+          <Route path="/admin-managebooking" element={<AdminUserBookingsDetails/>}/>
+          <Route path="/admin-updatebooking/:bookingID" element={<AdminUserBookingEdit/>}/>
+          <Route path='/admin-logout' element={<AdminLogOut/>}/>
+        </Route>
       </Routes>
     </>
   )
 }
+
 
 export default Routing

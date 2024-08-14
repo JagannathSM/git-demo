@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   AppBar,
   Typography,
@@ -24,9 +24,11 @@ import ChecklistIcon from '@mui/icons-material/Checklist';
 
 function Navbar({value,setValue}) {
     const { loginUser } = useGlobal();
+    console.log(loginUser);
     const navigate = useNavigate();
     const theme = useTheme();
     const isMatch = useMediaQuery(theme.breakpoints.down("md"));
+
 
     const userNavigatePath = [
         {icon:<HomeIcon/>,name:"Home",path:"/"},
@@ -43,6 +45,13 @@ function Navbar({value,setValue}) {
         {icon:<InfoIcon/>,name:"About",path:"/about"},
         {icon:<PermContactCalendarIcon/>,name:"Contact",path:"/contact"},
     ]
+
+    const AdminNavigatePath = [
+      {icon:<HomeIcon/>,name:"Home",path:"/"},
+      {icon:<CollectionsBookmarkIcon/>,name:"Manage Bookings", path:"/admin-managebooking"},
+      {icon:<InfoIcon/>,name:"About",path:"/about"},
+      {icon:<PermContactCalendarIcon/>,name:"Contact",path:"/contact"},
+    ]
     
     return (
         <>
@@ -54,7 +63,8 @@ function Navbar({value,setValue}) {
 
           {isMatch ? (
             <>
-              <DrawerCompo data = {loginUser? userNavigatePath : noUserNavigatePath}/>
+              {/* <DrawerCompo data = {loginUser? userNavigatePath : noUserNavigatePath}/> */}
+              <DrawerCompo data = {!loginUser ? noUserNavigatePath : loginUser.role == "User" ? userNavigatePath : AdminNavigatePath }/>
             </>
           ) : (
             <>
@@ -68,13 +78,22 @@ function Navbar({value,setValue}) {
                 }}
                 indicatorColor="secondary"
               >
-                {loginUser ? userNavigatePath.map((ele)=>(
+                {/* {loginUser ? userNavigatePath.map((ele)=>(
                     <Tab sx={{fontSize:"12px"}} key={ele.name} value={`${ele.path}`} icon={ele.icon} label={ele.name}/>
                 )) : 
                 noUserNavigatePath.map((ele)=>(
                     <Tab sx={{fontSize:"12px"}} key={ele.name} value={`${ele.path}`} icon={ele.icon} label={ele.name} />
                 ))
-            }
+            } */}
+                {!loginUser ?  noUserNavigatePath.map((ele)=>(
+                    <Tab sx={{fontSize:"12px"}} key={ele.name} value={`${ele.path}`} icon={ele.icon} label={ele.name}/>
+                )) : loginUser.role == "User" ? userNavigatePath.map((ele)=>( 
+                        <Tab sx={{fontSize:"12px"}} key={ele.name} value={`${ele.path}`} icon={ele.icon} label={ele.name} />
+                )) : AdminNavigatePath.map((ele)=>( 
+                  <Tab sx={{fontSize:"12px"}} key={ele.name} value={`${ele.path}`} icon={ele.icon} label={ele.name} />
+                ))
+              }
+
              </Tabs>
              {!loginUser ? <>
              <Button sx={{ marginLeft: "auto" }} onClick={()=>{setValue('');navigate('/login')}} variant="contained">
@@ -83,9 +102,14 @@ function Navbar({value,setValue}) {
               <Button sx={{ marginLeft: "10px" }} onClick={()=>{setValue('');navigate('/register')}} variant="contained">
                 SignUp
               </Button>
-             </> :
+             </> : loginUser.role == "User" ?
              <>
-               <Button sx={{ marginLeft: "auto" }} onClick={()=>{setValue('/');navigate('/logout')}} variant="contained">
+              <Button sx={{ marginLeft: "auto" }} onClick={()=>{setValue('/');navigate('/logout')}} variant="contained">
+                Logout
+              </Button>
+             </> : 
+             <>
+              <Button sx={{ marginLeft: "auto" }} onClick={()=>{setValue('/');navigate('/admin-logout')}} variant="contained">
                 Logout
               </Button>
              </>

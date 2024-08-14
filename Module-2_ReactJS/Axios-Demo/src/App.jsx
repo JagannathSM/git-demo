@@ -13,6 +13,7 @@ import Youtube22Nav from '../Components/Youtube22Nav'
 import Footer from '../Components/Footer'
 import CardsCompo from '../Components/CardsCompo'
 import ExampleCHECKLIST from '../Components/ExampleCHECKLIST';
+import LoadingAnimation from '../Components/LoadingAnimation'
 
 const theme = createTheme();
 
@@ -32,7 +33,8 @@ function App() {
     {/* <MuiYoutubeNavbar/> */}
     {/* <Youtube22Nav/>
     <Footer/> */}
-    <ExampleCHECKLIST/>
+    {/* <ExampleCHECKLIST/> */}
+    <LoadingAnimation/>
     </>
   )
 }

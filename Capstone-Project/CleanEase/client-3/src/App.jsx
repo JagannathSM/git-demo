@@ -6,7 +6,8 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import "./App.css";
 import Footer from "./Components/Helpers/Footer";
 import { useState } from "react";
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const theme = createTheme();
@@ -22,6 +23,7 @@ function App() {
           <Footer setValue={setValue}/>
         </GlobalProvider>
       </ThemeProvider>
+      <ToastContainer/>
     </>
   );
 }

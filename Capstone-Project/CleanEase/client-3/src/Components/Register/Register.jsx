@@ -5,11 +5,16 @@ import http from "../../../utils/http";
 import { useNavigate } from "react-router-dom";
 import { registerSchema } from "../../Schema/Schema";
 import { useFormik } from "formik";
+import { toast } from 'react-toastify'; 
+import 'react-toastify/dist/ReactToastify.css'; 
+import CircularProgress from '@mui/material/CircularProgress';
+
 
 function Register() {
   const navigate = useNavigate();
   const { loginUser } = useGlobal();
-  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+
 
   const formik = useFormik({
     initialValues: { firstname: "", lastname: "", email: "", password: "" },
@@ -21,19 +26,21 @@ function Register() {
 
   const handleRegisterSubmit = async (values) => {
     try {
+      setLoading(true);
       const res = await http.post("/auth/register", values);
       if (res.status == 200) {
         alert(`Account Verification link sent to your email - ${values.email}`);
       }
     } catch (err) {
-      if (err.message == "Network Error") {
-        setError("Connection timeout! / DB not responding");
-      } else if (err.response.status == 400) {
-        setError(err.response.data);
-      } else {
-        setError(err.message);
-      }
+      setLoading(false);
+      if (err.message === "Network Error") {
+        toast.error("Connection timeout! DB not responding", { position: "top-right", autoClose: 5000 });
+    } else if (err.response && err.response.status === 400) {
+        toast.error(err.response.data, { position: "top-right", autoClose: 5000 });
+    } else {
+        toast.error(`Error while login. Try again later: ${err.message}`, { position: "top-right", autoClose: 5000 });
     }
+}
   };
 
   useEffect(() => {
@@ -55,8 +62,6 @@ function Register() {
           sx={{
             marginTop: "3rem",
             marginBottom: "3rem",
-            // marginRight: "10px",
-            // marginLeft: "10px",
             padding: "1rem",
             borderRadius: "10px",
             color: "#fff",
@@ -277,22 +282,13 @@ function Register() {
                   : ""}
               </Typography>
 
-              {error && (
-                <Typography
-                  variant="subtitle2"
-                  sx={{ color: "#d32f2f", textAlign: "center" }}
-                >
-                  {error}
-                </Typography>
-              )}
-
               <Button
                 type="submit"
                 fullWidth
                 variant="contained"
                 sx={{ mt: 2, mb: 2, color: "#333", backgroundColor: "#fff" }}
               >
-                Register
+              {!loading ? "Register" : <CircularProgress size={24}/>}           
               </Button>
             </Box>
           </Box>

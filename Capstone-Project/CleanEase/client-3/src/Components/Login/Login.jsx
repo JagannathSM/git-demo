@@ -4,9 +4,12 @@ import { Container, TextField, Button, Box, Typography } from '@mui/material';
 import http from '../../../utils/http';
 import { loginSchema } from '../../Schema/Schema';
 import { useFormik } from 'formik';
+import CircularProgress from '@mui/material/CircularProgress';
+import { toast } from 'react-toastify'; 
+import 'react-toastify/dist/ReactToastify.css'; 
 
 function Login() {
-    const [error,setError]= useState('');
+    const [loading, setLoading] = useState(false);
 
     const navigate = useNavigate();
 
@@ -20,19 +23,22 @@ function Login() {
 
     const handleLoginSubmit = async(values)=>{
         try {
+          setLoading(true);
           const { data } = await http.post("/auth/login", values);
           localStorage.setItem("token", data.token);
-          window.location = "/";
+          // window.location = "/";
+          navigate("/");
         } catch(err){
-            if(err.message == "Network Error"){
-                setError("Connection timeOut! DB not responding")
-            } else if(err.response.status == 400){
-                setError(err.response.data)
-            }else{
-                setError(`Error while login. Try agin later ${err.message}`);
-            }
-        }
-    }
+          setLoading(false);
+            if (err.message === "Network Error") {
+                  toast.error("Connection timeout! DB not responding", { position: "top-right", autoClose: 5000 });
+              } else if (err.response && err.response.status === 400) {
+                  toast.error(err.response.data, { position: "top-right", autoClose: 5000 });
+              } else {
+                  toast.error(`Error while login. Try again later: ${err.message}`, { position: "top-right", autoClose: 5000 });
+              }
+          }
+      }
 
     const styleErrorMsg = {
       color:"red",
@@ -57,7 +63,6 @@ function Login() {
         </Typography>
         <Box component="form" 
           onSubmit={formik.handleSubmit}
-        // onSubmit={handleSubmit} 
         sx={{ mt: 1 }}>
           <TextField
             margin="normal"
@@ -68,8 +73,6 @@ function Login() {
             name="email"
             autoComplete="email"
             autoFocus
-            // value={email}
-            // onChange={(e)=>setEmail(e.target.value)}
             value={formik.values.email} onChange={formik.handleChange} onBlur={formik.handleBlur}
             //
             InputLabelProps={{
@@ -107,8 +110,6 @@ function Login() {
             type="password"
             id="password"
             autoComplete="current-password"
-            // value={password}
-            // onChange={(e)=>setPassword(e.target.value)}
             value={formik.values.password} onChange={formik.handleChange} onBlur={formik.handleBlur}
             //
             InputLabelProps={{
@@ -136,14 +137,13 @@ function Login() {
                 {formik.touched.password && formik.errors.password ? formik.errors.password : ""}
           </Typography>
           
-          {error && <Typography variant="subtitle2" sx={{color:"#d32f2f",textAlign:"center"}}>{error}</Typography>}
           <Button
             type="submit"
             fullWidth
             variant="contained"
             sx={{ mt: 2, mb: 2,color: "#333", backgroundColor: "#fff" }}
           >
-            Sign In
+            {!loading ? "Login" : <CircularProgress size={24}/>}
           </Button>
           <Box display="flex" justifyContent="space-between">
           <Button variant="text" onClick={()=>navigate('/forgot-password')} sx={{textDecoration:"underline",textTransform:"none",color: "#fff"}}>Forgot Password?</Button>
@@ -158,15 +158,3 @@ function Login() {
 }
 
 export default Login;
-
-
-//sx={{ textDecoration: "underline", textTransform: "none", color: "#fff" }}
-
-
-//backgroundColor: "lightgreen", // Change background color to light green
-//color: "#fff", // Set text color to white
-//sx={{
-// fontWeight: "700",
-//  textAlign: "center",
-//  color: "#fff", // Set header text color to white
-//  textShadow: "1px 1px 3px rgba(0, 0, 0, 0.2)",

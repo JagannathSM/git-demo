@@ -3,7 +3,10 @@ import setAuthToken from "../../utils/setAuthToken";
 import http from "../../utils/http";
 import { useNavigate } from "react-router-dom";
 import { jwtDecode } from "jwt-decode";
-
+//
+import { io } from "socket.io-client";
+import { toast } from "react-toastify";
+//
 
 const GlobalContext = createContext();
 
@@ -17,6 +20,10 @@ function GlobalProvider({ children }) {
   const [userReviews,setUserReviews] = useState([]);
   const [updateUserReviews, setUpdateUserReviews] = useState('');
   const [checkListTask, setCheckListTask] = useState([]);
+  const [allBookings,setAllBookings] = useState([]);
+  const [userId, setUserId] = useState('');
+  // const [loginUser,setLoginUser] = useState('');
+  // const [token,setToken] = useState(localStorage.token)
 
   // useEffect(() => {
   //   if (token) {
@@ -25,6 +32,7 @@ function GlobalProvider({ children }) {
   //       .get("/user/getProfile")
   //       .then((res) => {
   //         setLoginUser(res.data.user);
+  //         setUserId(res.data.user._id);
   //       })
   //       .catch((err) => {
   //         setToken(null);
@@ -33,6 +41,7 @@ function GlobalProvider({ children }) {
   //       });
   //   }
   // }, [token]);
+
 
   let loginUser;
   if(localStorage.token){
@@ -45,6 +54,45 @@ function GlobalProvider({ children }) {
         navigate('/logout');
       }
   }
+
+  useEffect(()=>{
+    if(loginUser){
+      setUserId(loginUser._id);
+    }
+  },[loginUser])
+
+
+  // let loginUser;
+  // if(localStorage.token){
+  //     const jwt = localStorage.getItem('token');
+  //     setAuthToken(jwt);
+  //     loginUser = jwtDecode(jwt)
+  //     if(Date.now() < loginUser.exp*1000){
+  //       setAuthToken(jwt);
+  //     } else {
+  //       alert("Token Expired/ Session Time Out! Please login again!");
+  //       navigate('/logout');
+  //     }
+  // }
+
+  // useEffect(() => {
+  //   if (token) {
+  //     const jwt = localStorage.getItem('token');
+  //     setAuthToken(jwt);
+  //     const decoded = jwtDecode(jwt);
+  //     setLoginUser(decoded)
+  //     if (Date.now() < decoded.exp * 1000) {
+  //       setAuthToken(jwt);
+  //       setUserId(decoded.id);
+  //     } else {
+  //       setLoginUser('');
+  //       setToken('');
+  //       alert("Token Expired/ Session Time Out! Please login again!");
+  //       navigate('/logout');
+  //     }
+  //   }
+  // }, [token, navigate]);
+
 
   const getUserProfile = async () => {
     const { data } = await http.get("/user/getProfile");
@@ -189,6 +237,49 @@ function GlobalProvider({ children }) {
     getUserChecklist();
   }
 
+
+  //ADMIN
+  const getAllUserBookings = async () => {
+    const {data} = await http.get('/admin/get-bookings');
+    setAllBookings(data.All_Users_Bookings)
+};
+
+  const updateUserBooking = async(_id,UpdatedData) => {
+    await http.put(`/admin/update-booking/${_id}`,UpdatedData);
+    getAllUserBookings();
+  }
+
+
+//   //NOTIFICATION
+
+useEffect(() => {
+  console.log("Notification Socket")
+  const socket = io("http://localhost:3000", {
+    transports: ["websocket", "polling"],
+    withCredentials: true,
+  });
+
+  // Join room using userId
+  if (userId) {
+    console.log(userId);
+    socket.emit("joinRoom", userId);
+  }
+
+  // Handle booking status updates
+  socket.on("bookingStatusUpdated", ({ bookingId, status }) => {
+    console.log(11);
+    toast.info(`Booking ${bookingId} status updated to: ${status}`, {
+      position: "top-right",
+      autoClose: 5000,
+    });
+  });
+
+  // Cleanup function to disconnect socket when component unmounts
+  return () => {
+    socket.disconnect();
+  };
+}, [userId]);
+
   return (
     <GlobalContext.Provider
       value={{
@@ -219,7 +310,10 @@ function GlobalProvider({ children }) {
         setCheckListTask,
         addUserCehckList,
         deleteUserCheckList,
-        editUserCheckList
+        editUserCheckList,
+        allBookings,
+        getAllUserBookings,
+        updateUserBooking,
       }}
     >
       {children}

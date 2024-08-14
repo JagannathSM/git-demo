@@ -1,0 +1,26 @@
+.MainPart {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.loading-overlay {
+    display: flex;
+    width: 100%;
+    background-color: rgba(122, 45, 45, 0.8);
+    align-items: center;
+    justify-content: center;
+}
+
+.loader {
+    border: 8px solid rgba(145, 155, 58, 0.1);
+    border-left: 8px solid #3498db;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

@@ -7,7 +7,7 @@ function AdminRoute() {
   const {loginUser} = useGlobal();
   console.log(loginUser)
   return (
-    loginUser.role == "Admin" ? <Outlet/> : <Navigate to="/"/>
+    !loginUser ? <Navigate to="/login"/> : loginUser.role == "Admin" ? <Outlet/> : <Navigate to="/"/>
   )
 }
 

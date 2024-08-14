@@ -45,6 +45,16 @@ function DrawerCompo({ data }) {
                 </ListItem>
               ))}
 
+            {data.length == 4 &&
+              data.map((ele) => (
+                <ListItem key={ele.name} disablePadding>
+                  <ListItemButton onClick={() => navigate(`${ele.path}`)}>
+                    <ListItemIcon sx={{color:"white"}}>{ele.icon}</ListItemIcon>
+                    <ListItemText primary={ele.name} />
+                  </ListItemButton>
+                </ListItem>
+              ))}
+
             {data.length == 7 &&
               data.map((ele) => (
                 <ListItem key={ele.name} disablePadding>
@@ -80,6 +90,19 @@ function DrawerCompo({ data }) {
             <List>
               <ListItem disablePadding>
                 <ListItemButton onClick={() => navigate(`/logout`)}>
+                  <ListItemIcon sx={{color:"white"}}>
+                    <LogoutIcon />
+                  </ListItemIcon>
+                  <ListItemText primary="Log Out" />
+                </ListItemButton>
+              </ListItem>
+            </List>
+          )}
+
+          {data.length == 4 && (
+            <List>
+              <ListItem disablePadding>
+                <ListItemButton onClick={() => navigate(`/admin-logout`)}>
                   <ListItemIcon sx={{color:"white"}}>
                     <LogoutIcon />
                   </ListItemIcon>
