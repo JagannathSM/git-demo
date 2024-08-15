@@ -288,7 +288,9 @@ const generateNotification = async(data) => {
 }
 
 useEffect(()=>{
-  getUserNotifications();
+  if(loginUser){
+    getUserNotifications();
+  }
 },[])
 
 const getUserNotifications = async() => {

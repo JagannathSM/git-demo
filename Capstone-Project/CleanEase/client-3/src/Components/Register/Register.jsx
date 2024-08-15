@@ -25,11 +25,12 @@ function Register() {
   });
 
   const handleRegisterSubmit = async (values) => {
-    try {
-      setLoading(true);
+    setLoading(true);
+    try {  
       const res = await http.post("/auth/register", values);
       if (res.status == 200) {
         alert(`Account Verification link sent to your email - ${values.email}`);
+        setLoading(false);
       }
     } catch (err) {
       setLoading(false);

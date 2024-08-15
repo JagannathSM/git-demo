@@ -1,4 +1,5 @@
 const UserBookings = require("../Models/UserBookings");
+const User = require('../Models/User');
 
 exports.getUserBookingsAdmin = async (req, res) => {
     try {
@@ -27,7 +28,32 @@ exports.updateUserBookingsAdmin = async (req,res) => {
         res.status(200).send("User Booking Successfully Updated for a User");
 
     } catch (err){
-        console.log(err);
         res.status(400).send("Error while updating User data");
     }
   };
+
+//NEW FOR ADMIN DASHBOARD
+
+exports.getTotalUsersAdmin = async (req,res) => {
+  try{
+    const All_Users = await User.find();
+    const TotalUsersDetail = All_Users.filter((ele)=> ele.role == "User");
+    res.status(200).json({TotalUsersDetail});
+  } catch(err){
+    res.status(400).send("Error while getting Users");
+  }
+}
+
+exports.getUsersAndThereTotalBookings = async (req,res) => {
+  try{
+    const UsersWithBookingData = await UserBookings.aggregate([
+      {$group:{
+        _id:"$username",
+        total_bookings:{$sum:1}
+      }}
+    ])
+    res.status(200).json({UsersWithBookingData});
+  } catch(err){
+    res.status(400).send("Error while getting Users with there total bookings data");
+  }
+}
