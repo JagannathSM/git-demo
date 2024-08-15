@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-    baseURL:`http://localhost:3000/api`
+    baseURL:`https://cleanease-backend-780q.onrender.com/api`
     // timeout:1000
 })
 

@@ -181,7 +181,7 @@ function UserBooking() {
               <TableCell align="center">Actions</TableCell>
             </TableRow>
           </TableHead>
-          {mainData.length > 0 ? (
+          {bookingData.length > 0 ? (
             <TableBody>
               {mainData.map((row) => (
                 <TableRow
@@ -240,7 +240,7 @@ function UserBooking() {
           )}
         </Table>
       </TableContainer>
-      {mainData.length == 0 && (
+      {bookingData.length == 0 && (
         <>
           <div className="UserBooking_Error">
             <h3>No Booking Data To Show</h3>

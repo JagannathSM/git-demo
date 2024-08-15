@@ -256,7 +256,7 @@ function GlobalProvider({ children }) {
 // SOCKET.IO  //NOTIFICATION
 useEffect(() => {
   console.log("Notification Socket")
-  const socket = io("http://localhost:3000", {
+  const socket = io("https://cleanease-backend-780q.onrender.com", {
     transports: ["websocket", "polling"],
     withCredentials: true,
   });
