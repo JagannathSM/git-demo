@@ -16,6 +16,7 @@ import "./BookingPage.css";
 import { bookingSchema } from "../../Schema/Schema";
 import { useFormik } from "formik";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { toast } from "react-toastify";
 
 
 function BookingPage() {
@@ -29,7 +30,6 @@ function BookingPage() {
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [serviceType, setServiceType] = useState("one-time");
-  const [error, setError] = useState("");
 
   const formik = useFormik({
     initialValues: { houseNo: "", streetName: "", district: "", landmark: "" },
@@ -56,29 +56,42 @@ function BookingPage() {
 
     const bookData = {
       username:`${loginUser.firstname}, ${loginUser.lastname}`,
+      email:loginUser.email,
       address,
       serviceType,
       startDate,
       cleanSubCategoriesID,
       uniqueBookingID,
     };
-    console.log(bookData);
 
     if (startDate < Date.now()) {
-      setError("Cant book on past date");
+      toast.error("Cant book on past date",{
+        position:"top-right",
+        duration:5000,
+      });
     } else if (startDate < Date.now() + 3600000) {
-      setError("Cant able to book services with-in 1hr");
+      toast.error("Cant able to book services with-in 1hr",{
+        position:"top-right",
+        duration:5000,
+      });
     } else {
       try {
         const amount = parseInt(serviceAmount);
         await bookservice(bookData);
+
+        toast.success("Booking Successfull",{
+          position:"top-right",
+          duration:5000,
+        })
         await razorPayBooking(amount, uniqueBookingID);
       } catch (err) {
-        if (err.response.status == 400) {
-          setError(err.response.data);
-        } else {
-          setError(err.message);
-        }
+        if (err.message === "Network Error") {
+          toast.error("Connection timeout! DB not responding", { position: "top-right", autoClose: 5000 });
+      } else if (err.response && err.response.status === 400) {
+          toast.error(err.response.data, { position: "top-right", autoClose: 5000 });
+      } else {
+          toast.error(`Error while Payment. Try again later: ${err.message}`, { position: "top-right", autoClose: 5000 });
+      }
       }
     }
   };
@@ -128,9 +141,7 @@ function BookingPage() {
               <TextField
                 fullWidth
                 label="House No."
-                // value={addressData.houseNo}
                 name="houseNo"
-                // onChange={handleChange}
                 required
                 value={formik.values.houseNo}
                 onChange={formik.handleChange}
@@ -152,9 +163,7 @@ function BookingPage() {
               <TextField
                 fullWidth
                 label="Street"
-                // value={addressData.streetName}
                 name="streetName"
-                // onChange={handleChange}
                 required
                 value={formik.values.streetName}
                 onChange={formik.handleChange}
@@ -176,9 +185,7 @@ function BookingPage() {
               <TextField
                 fullWidth
                 label="District"
-                // value={addressData.district}
                 name="district"
-                // onChange={handleChange}
                 required
                 value={formik.values.district}
                 onChange={formik.handleChange}
@@ -200,9 +207,7 @@ function BookingPage() {
               <TextField
                 fullWidth
                 label="Landmark"
-                // value={addressData.landmark}
                 name="landmark"
-                // onChange={handleChange}
                 value={formik.values.landmark}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
@@ -259,16 +264,6 @@ function BookingPage() {
                   onChange={(e) => setTime(e.target.value)}
                 />
               </div>
-            </Grid>
-            <Grid item xs={12} sx={{ textAlign: "center" }}>
-              {error && (
-                <Typography
-                  variant="subtitle2"
-                  sx={{ color: "#d32f2f", textAlign: "center" }}
-                >
-                  {error}
-                </Typography>
-              )}
             </Grid>
             <Grid item xs={12}>
               <Button

@@ -20,11 +20,12 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import CollectionsBookmarkIcon from '@mui/icons-material/CollectionsBookmark';
 import { useGlobal } from '../../GlobalContext/GlobalProvider';
 import ChecklistIcon from '@mui/icons-material/Checklist';
+import IconButton from '@mui/material/IconButton';
+import Badge from '@mui/material/Badge';
 
 
 function Navbar({value,setValue}) {
-    const { loginUser } = useGlobal();
-    console.log(loginUser);
+    const { loginUser, globalUserNotifications } = useGlobal();
     const navigate = useNavigate();
     const theme = useTheme();
     const isMatch = useMediaQuery(theme.breakpoints.down("md"));
@@ -35,7 +36,6 @@ function Navbar({value,setValue}) {
         {icon:<InfoIcon/>,name:"About",path:"/about"},
         {icon:<PermContactCalendarIcon/>,name:"Contact",path:"/contact"},
         {icon:<AccountCircleIcon/>,name:"User",path:"/user-profile"},
-        {icon:<NotificationsIcon/>,name:"Notifications",path:"/user-notifications"},
         {icon:<CollectionsBookmarkIcon/>,name:"Bookings",path:"/user-bookings"},
         {icon:<ChecklistIcon/>,name:"CheckList",path:"/user-cehcklist"}
     ]
@@ -63,7 +63,6 @@ function Navbar({value,setValue}) {
 
           {isMatch ? (
             <>
-              {/* <DrawerCompo data = {loginUser? userNavigatePath : noUserNavigatePath}/> */}
               <DrawerCompo data = {!loginUser ? noUserNavigatePath : loginUser.role == "User" ? userNavigatePath : AdminNavigatePath }/>
             </>
           ) : (
@@ -78,13 +77,7 @@ function Navbar({value,setValue}) {
                 }}
                 indicatorColor="secondary"
               >
-                {/* {loginUser ? userNavigatePath.map((ele)=>(
-                    <Tab sx={{fontSize:"12px"}} key={ele.name} value={`${ele.path}`} icon={ele.icon} label={ele.name}/>
-                )) : 
-                noUserNavigatePath.map((ele)=>(
-                    <Tab sx={{fontSize:"12px"}} key={ele.name} value={`${ele.path}`} icon={ele.icon} label={ele.name} />
-                ))
-            } */}
+
                 {!loginUser ?  noUserNavigatePath.map((ele)=>(
                     <Tab sx={{fontSize:"12px"}} key={ele.name} value={`${ele.path}`} icon={ele.icon} label={ele.name}/>
                 )) : loginUser.role == "User" ? userNavigatePath.map((ele)=>( 
@@ -104,7 +97,12 @@ function Navbar({value,setValue}) {
               </Button>
              </> : loginUser.role == "User" ?
              <>
-              <Button sx={{ marginLeft: "auto" }} onClick={()=>{setValue('/');navigate('/logout')}} variant="contained">
+              <IconButton sx={{ marginLeft: "auto", color:"inherit" }} onClick={()=>{setValue('');navigate('/user-notifications')}} aria-label="notification" size="large">
+                <Badge badgeContent={globalUserNotifications.length} color="secondary">
+                  <NotificationsIcon fontSize="inherit" />
+                </Badge>   
+              </IconButton>
+              <Button sx={{ marginLeft: "10px" }} onClick={()=>{setValue('/');navigate('/logout')}} variant="contained">
                 Logout
               </Button>
              </> : 

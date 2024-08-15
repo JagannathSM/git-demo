@@ -5,7 +5,6 @@ import { useGlobal } from '../../GlobalContext/GlobalProvider';
 function PrivateRoute() {
  
   const {loginUser} = useGlobal();
-  console.log(loginUser)
   return (
     !loginUser ? <Navigate to="/login"/> : loginUser.role == "User" ? <Outlet/> : <Navigate to="/"/>
   )

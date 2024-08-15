@@ -10,6 +10,10 @@ const userBookingSchema = new mongoose.Schema({
         type:String,
         required:true,
     },
+    email:{
+        type:String,
+        required:true,
+    },
     subServiceName:{
         type:String,
         required:true

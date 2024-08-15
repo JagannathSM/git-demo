@@ -13,12 +13,12 @@ import {
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { useNavigate, useParams } from "react-router-dom";
 import { useGlobal } from "../../GlobalContext/GlobalProvider";
+import { toast } from "react-toastify";
 
 function UpdateReview() {
     const navigate = useNavigate();
     const {_id} = useParams();
     const {updateUserReviews, UpdateReviewFunction} = useGlobal();
-    const [addUpdateReviewError,setAddUpdateReviewError] = useState('');
 
     const [username, setUsername] = useState(updateUserReviews.username);
     const [text, setText] = useState(updateUserReviews.text);
@@ -29,7 +29,10 @@ function UpdateReview() {
     const handleSubmit = async(e) => {
         e.preventDefault();
         if(!username || !rating ){
-           return setAddUpdateReviewError("Required Fields User Name, Rating")
+           return toast.warning("Required Fields User Name, Rating",{
+            position:"top-right",
+            duration:5000,
+           })
         }
         try{
             const reviewID = updateUserReviews._id;
@@ -51,13 +54,22 @@ function UpdateReview() {
             }, 4000);
     
         } catch (err){
-            if (err.message == "Network Error") {
-                setAddReviewError("Connection timeout! / DB not responding");
-              } else if (err.response.status == 400) {
-                setAddReviewError(err.response.data);
-              } else {
-                setAddReviewError(err.message);
-              }    
+          if (err.message === "Network Error") {
+            toast.error("Connection timeout! DB not responding", {
+              position: "top-right",
+              autoClose: 5000,
+            });
+          } else if (err.response && err.response.status === 400) {
+            toast.error(err.response.data, {
+              position: "top-right",
+              autoClose: 5000,
+            });
+          } else {
+            toast.error(`Error while Update Review. Try again later: ${err.message}`, {
+              position: "top-right",
+              autoClose: 5000,
+            });
+          } 
         }
       };
 
@@ -120,15 +132,6 @@ function UpdateReview() {
                   size="large"
                   sx={{ ml: 2 }}
                 />
-                {addUpdateReviewError && (
-                    <Typography
-                        variant="subtitle2"
-                        sx={{ color: "#d32f2f", textAlign: "center" }}
-                    >
-                        {addUpdateReviewError}
-                    </Typography>
-                )}
-
               </Grid>
               <Grid item xs={12}>
                 <Button

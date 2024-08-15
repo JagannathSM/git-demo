@@ -22,6 +22,8 @@ function GlobalProvider({ children }) {
   const [checkListTask, setCheckListTask] = useState([]);
   const [allBookings,setAllBookings] = useState([]);
   const [userId, setUserId] = useState('');
+  const [globalUserNotifications,setGlobalUserNotifications] = useState([]);
+
   // const [loginUser,setLoginUser] = useState('');
   // const [token,setToken] = useState(localStorage.token)
 
@@ -122,6 +124,7 @@ function GlobalProvider({ children }) {
       address: bookData.address,
       uniqueBookingID: bookData.uniqueBookingID,
       username:bookData.username,
+      email:bookData.email,
     });
   };
 
@@ -250,8 +253,7 @@ function GlobalProvider({ children }) {
   }
 
 
-//   //NOTIFICATION
-
+// SOCKET.IO  //NOTIFICATION
 useEffect(() => {
   console.log("Notification Socket")
   const socket = io("http://localhost:3000", {
@@ -267,7 +269,6 @@ useEffect(() => {
 
   // Handle booking status updates
   socket.on("bookingStatusUpdated", ({ bookingId, status }) => {
-    console.log(11);
     toast.info(`Booking ${bookingId} status updated to: ${status}`, {
       position: "top-right",
       autoClose: 5000,
@@ -279,6 +280,27 @@ useEffect(() => {
     socket.disconnect();
   };
 }, [userId]);
+
+
+// NOTIFICATION GENERATE BY ADMIN
+const generateNotification = async(data) => {
+  await http.post('/notification/create',data);
+}
+
+useEffect(()=>{
+  getUserNotifications();
+},[])
+
+const getUserNotifications = async() => {
+  const {data} = await http.get('/notification/get');
+  setGlobalUserNotifications(data.notification);
+}
+
+const deleteUserNotification = async(_id) => {
+  await http.delete(`/notification/delete/${_id}`);
+  getUserNotifications();
+}
+
 
   return (
     <GlobalContext.Provider
@@ -314,6 +336,10 @@ useEffect(() => {
         allBookings,
         getAllUserBookings,
         updateUserBooking,
+        generateNotification,
+        getUserNotifications,
+        globalUserNotifications,
+        deleteUserNotification
       }}
     >
       {children}

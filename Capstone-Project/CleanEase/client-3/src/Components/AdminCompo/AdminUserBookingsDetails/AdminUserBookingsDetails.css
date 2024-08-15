@@ -6,3 +6,15 @@
 .MuiButton-root {
     margin-right: 8px;
 }
+
+.UserBookingList_Error{
+    background: #f1f1f1;
+    display: flex;
+    width: 100%;
+    min-height: 25vh;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    color: gray;
+    margin-bottom: 1rem;
+}

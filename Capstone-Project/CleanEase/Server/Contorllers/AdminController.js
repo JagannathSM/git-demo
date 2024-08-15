@@ -22,7 +22,7 @@ exports.updateUserBookingsAdmin = async (req,res) => {
 
         await singleUserBooking.save();
         //
-        io.to(userId).emit('bookingStatusUpdated', { bookingId: _id, status });
+        io.to(userId).emit('StatusUpdatedNotification', { bookingId: _id, status });
         //
         res.status(200).send("User Booking Successfully Updated for a User");
 

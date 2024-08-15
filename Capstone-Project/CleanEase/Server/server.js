@@ -41,7 +41,8 @@ io.on('connection', (socket) => {
         console.log('user disconnected: ', socket.id);
     });
 
-    socket.on('bookingStatusUpdated', (data) => {
+    socket.on('StatusUpdatedNotification', (data) => {
+        console.log(data);
         // Broadcast the updated booking status to the specific user
         io.to(data.userId).emit('bookingStatusUpdated', data);
     });

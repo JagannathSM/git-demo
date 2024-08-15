@@ -5,38 +5,39 @@ import { useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useGlobal } from '../../../GlobalContext/GlobalProvider';
+import http from '../../../../utils/http';
 
 
 const AdminUserBookingsDetails = () => {
   const navigate = useNavigate();
-  const {allBookings, getAllUserBookings} = useGlobal();
+  const {getAllUserBookings} = useGlobal();
     const [bookings,setBookings] = useState([]);
-    const [adminGetBookingError,setAdminGetBookingError] = useState('')
 
     useEffect(() => {
         getAllUserBookings();
+        getUsersBookingForAdmin();
       }, []);
 
-    useState(()=>{
-      if(allBookings.length > 0){
-        setBookings(allBookings);
+    const getUsersBookingForAdmin = async()=>{
+        try{
+            const {data} = await http.get('/admin/get-bookings');
+            setBookings(data.All_Users_Bookings)
+        } catch(err){
+            if (err.message === "Network Error") {
+                toast.error("Connection timeout! DB not responding", { position: "top-right", autoClose: 5000 });
+            } else if (err.response && err.response.status === 400) {
+                toast.error(err.response.data, { position: "top-right", autoClose: 5000 });
+            } else {
+                toast.error(`Error while getting user bookings. Try again later: ${err.message}`, { position: "top-right", autoClose: 5000 });
+            }
       }
-    },[allBookings])
+    }
 
 
     const formatDateTime = (timestamp) => {
       const date = new Date(timestamp);
       return date.toLocaleString();
     };
-
-    useEffect(()=>{
-        if(adminGetBookingError){
-          toast.error(adminGetBookingError, {
-            position: "top-rigth",
-            autoClose: 5000, // Automatically close after 5 seconds
-            });
-        }
-      },[adminGetBookingError])
 
     return (
         <Container maxWidth="lg" sx={{marginBottom:"1rem"}}>
@@ -57,7 +58,7 @@ const AdminUserBookingsDetails = () => {
                             <TableCell>Actions</TableCell>
                         </TableRow>
                     </TableHead>
-                    <TableBody>
+                    {bookings.length > 0 && <TableBody>
                         {bookings.map((booking) => (
                             <TableRow key={booking._id}>
                                 <TableCell>{booking.username}</TableCell>
@@ -80,10 +81,17 @@ const AdminUserBookingsDetails = () => {
                                 </TableCell>
                             </TableRow>
                         ))}
-                    </TableBody>
+                    </TableBody>}
                 </Table>
             </TableContainer>
             <ToastContainer />
+            {bookings.length == 0 && (
+                <>
+                    <div className="UserBookingList_Error">
+                        <h3>No Booking Data To Show</h3>
+                    </div>
+                </>
+            )}
         </Container>
     );
 };

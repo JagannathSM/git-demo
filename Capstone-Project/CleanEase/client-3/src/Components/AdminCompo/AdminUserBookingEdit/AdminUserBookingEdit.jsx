@@ -10,20 +10,12 @@ function AdminUserBookingEdit() {
     const navigate = useNavigate();
     const { bookingID } = useParams();
 
-    const {allBookings, updateUserBooking} = useGlobal();
+    const {allBookings, updateUserBooking, generateNotification} = useGlobal();
     const [bookingToEdit,setBookingToEdit] = useState('');
     const [isConfirmed, setIsConfirmed] = useState('');
     const [status, setStatus] = useState('');
-    const [adminUpdateBookingError, setAdminUpdateBookingError] = useState('');
+    const [subServiceName,setSubServiceName] = useState('');
 
-    useEffect(()=>{
-        if(adminUpdateBookingError){
-            toast.error(adminUpdateBookingError, {
-                position: "top-right",
-                autoClose: 5000, // Automatically close after 5 seconds
-            });
-        }
-      },[adminUpdateBookingError])
 
     useEffect(()=>{
         if(allBookings.length > 0){
@@ -31,12 +23,12 @@ function AdminUserBookingEdit() {
             setBookingToEdit(returnData[0]);
             setStatus(returnData[0].status);
             setIsConfirmed(returnData[0].isConfirmed);
+            setSubServiceName(returnData[0].subServiceName);
         }
     },[allBookings])
 
     const handleSubmit = async (e) =>{
         e.preventDefault();
-        console.log(bookingToEdit);
         const UpdatedData = {
             userId: bookingToEdit.user,
             isConfirmed,
@@ -48,14 +40,24 @@ function AdminUserBookingEdit() {
                 position: "top-right",
                 autoClose: 5000,
             });
+            const msg = `Your Booking is ${isConfirmed ? "Confirmed" : "Not Confirmed"} and booking status is ${status == "Completed" ? "Review is enabled, please provide your valuable review" : status}`
+            const heading = `Update On Booking ${subServiceName}`
+            const NotifyDetails = {
+                user: bookingToEdit.user,
+                msg,
+                heading,
+                email: bookingToEdit.email,
+            }
+            await generateNotification(NotifyDetails);
         } catch (err){
-            if (err.message == "Network Error") {
-                setAdminUpdateBookingError("Connection timeout! / DB not responding");
-              } else if (err.response.status == 400) {
-                setAdminUpdateBookingError(err.response.data);
-              } else {
-                setAdminUpdateBookingError(err.message);
-              }    
+            console.log(err);
+            if (err.message === "Network Error") {
+                toast.error("Connection timeout! DB not responding", { position: "top-right", autoClose: 5000 });
+            } else if (err.response && err.response.status === 400) {
+                toast.error(err.response.data, { position: "top-right", autoClose: 5000 });
+            } else {
+                toast.error(`Error while updating user booking. Try again later: ${err.message}`, { position: "top-right", autoClose: 5000 });
+            }
         }
     }
 

@@ -3,7 +3,7 @@ const CleanSubCategories = require("../Models/CleanSubCategories");
 
 exports.createBooking = async (req, res) => {
   const { cleanSubCategoriesID } = req.params;
-  const { startDate, serviceType, address, uniqueBookingID, username } = req.body;
+  const { startDate, serviceType, address, uniqueBookingID, username, email } = req.body;
   try {
     const subCategories = await CleanSubCategories.findOne({
       _id: cleanSubCategoriesID,
@@ -24,6 +24,7 @@ exports.createBooking = async (req, res) => {
         user: req.user,
         serviceID: cleanSubCategoriesID,
         username,
+        email,
         address,
         startDate,
         endDate,
@@ -49,6 +50,9 @@ exports.createBooking = async (req, res) => {
       const newUserBookings = new UserBookings({
         user: req.user,
         serviceID: cleanSubCategoriesID,
+        username,
+        email,
+        address,
         startDate,
         endDate,
         serviceType,
@@ -145,13 +149,6 @@ exports.editBookings = async (req, res) => {
       res.status(200).send("Successfully Edited booking data!");
     }
 
-    // bookedData.startDate = date || bookedData.startDate;
-    // bookedData.endDate =
-    //   bookedData.startDate + subCategories.duration || bookedData.endDate;
-    // bookedData.serviceType = serviceType || bookedData.serviceType;
-
-    // await bookedData.save();
-    // res.status(200).send("Successfully Edited booking data!");
   } catch (err) {
     res.status(400).send("Error while editing UserBooking");
   }

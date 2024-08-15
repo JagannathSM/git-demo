@@ -12,8 +12,13 @@ import { useNavigate } from "react-router-dom";
 import LoginIcon from "@mui/icons-material/Login";
 import AppRegistrationIcon from "@mui/icons-material/AppRegistration";
 import LogoutIcon from "@mui/icons-material/Logout";
+import NotificationsIcon from '@mui/icons-material/Notifications';
+import Badge from '@mui/material/Badge';
+import { useGlobal } from "../../GlobalContext/GlobalProvider";
+
 
 function DrawerCompo({ data }) {
+  const { globalUserNotifications } = useGlobal();
   const navigate = useNavigate();
   const [openDrawer, setOpenDrawer] = useState(false);
   return (
@@ -55,7 +60,7 @@ function DrawerCompo({ data }) {
                 </ListItem>
               ))}
 
-            {data.length == 7 &&
+            {data.length == 6 &&
               data.map((ele) => (
                 <ListItem key={ele.name} disablePadding>
                   <ListItemButton onClick={() => navigate(`${ele.path}`)}>
@@ -86,8 +91,18 @@ function DrawerCompo({ data }) {
               </ListItem>
             </List>
           )}
-          {data.length == 7 && (
+          {data.length == 6 && (
             <List>
+              <ListItem disablePadding>
+                <ListItemButton onClick={() => navigate(`/user-notifications`)}>
+                  <ListItemIcon sx={{color:"white"}}>
+                    <Badge badgeContent={globalUserNotifications.length} color="secondary">
+                      <NotificationsIcon />
+                    </Badge>   
+                  </ListItemIcon>
+                  <ListItemText primary="Notifications" />
+                </ListItemButton>
+              </ListItem>
               <ListItem disablePadding>
                 <ListItemButton onClick={() => navigate(`/logout`)}>
                   <ListItemIcon sx={{color:"white"}}>

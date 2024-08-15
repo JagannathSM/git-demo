@@ -10,10 +10,12 @@ import {
   Typography,
   IconButton,
   Checkbox,
+  duration,
 } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 import SaveIcon from "@mui/icons-material/Save";
+import { toast } from "react-toastify";
 import { useGlobal } from "../../GlobalContext/GlobalProvider";
 
 const UserChecklist = () => {
@@ -42,18 +44,30 @@ const UserChecklist = () => {
 
   const handleAddTask = async () => {
     if (!text) {
-      setCheckListError("Required Field New-Task");
+      toast.error("Required Field New-Task",{
+        position:"top-rigth",
+        duration:5000,
+      });
     }
     try {
       const newCheckListData = { text };
       await addUserCehckList(newCheckListData);
     } catch (err) {
       if (err.message == "Network Error") {
-        setCheckListError("Connection timeout! / DB not responding");
+        toast.error("Connection timeout! / DB not responding",{
+          position:"top-right",
+          duration:5000,
+        });
       } else if (err.response.status == 400) {
-        setCheckListError(err.response.data);
+        toast.error(err.response.data,{
+          position:"top-right",
+          duration:5000,
+        });
       } else {
-        setCheckListError(err.message);
+        toast.error(`Error while add new task ${err.message}`,{
+          position:"top-right",
+          duration:5000,
+        });
       }
     }
   };
@@ -64,11 +78,20 @@ const UserChecklist = () => {
       setTasks([]);
     } catch (err) {
       if (err.message == "Network Error") {
-        setCheckListError("Connection timeout! / DB not responding");
+        toast.error("Connection timeout! / DB not responding",{
+          position:"top-right",
+          duration:5000,
+        });
       } else if (err.response.status == 400) {
-        setCheckListError(err.response.data);
+        toast.error(err.response.data,{
+          position:"top-right",
+          duration:5000,
+        });
       } else {
-        setCheckListError(err.message);
+        toast.error(`Error while deleting task ${err.message}`,{
+          position:"top-right",
+          duration:5000,
+        });
       }
     }
   };
@@ -101,11 +124,20 @@ const UserChecklist = () => {
       }
     } catch (err) {
       if (err.message == "Network Error") {
-        setCheckListError("Connection timeout! / DB not responding");
+        toast.error("Connection timeout! / DB not responding",{
+          position:"top-right",
+          duration:5000,
+        });
       } else if (err.response.status == 400) {
-        setCheckListError(err.response.data);
+        toast.error(err.response.data,{
+          position:"top-right",
+          duration:5000,
+        });
       } else {
-        setCheckListError(err.message);
+        toast.error(`Error while Creating task ${err.message}`,{
+          position:"top-right",
+          duration:5000,
+        });
       }
     }
   };

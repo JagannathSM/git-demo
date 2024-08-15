@@ -5,7 +5,6 @@ import { useGlobal } from '../../GlobalContext/GlobalProvider';
 function AdminRoute() {
  
   const {loginUser} = useGlobal();
-  console.log(loginUser)
   return (
     !loginUser ? <Navigate to="/login"/> : loginUser.role == "Admin" ? <Outlet/> : <Navigate to="/"/>
   )

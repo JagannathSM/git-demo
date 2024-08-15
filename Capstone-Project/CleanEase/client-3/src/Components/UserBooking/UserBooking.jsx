@@ -165,7 +165,6 @@ function UserBooking() {
           </FormControl>
         </Box>
       </div>
-      {/* User Bookings to get all user bookings differece according to its status - {bookingData.length} */}
       <TableContainer sx={{marginBottom:"1rem"}} component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="responsive table">
           <TableHead sx={{ backgroundColor: "lightgray" }}>

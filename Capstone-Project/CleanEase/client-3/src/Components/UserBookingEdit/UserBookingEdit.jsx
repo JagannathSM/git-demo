@@ -14,7 +14,8 @@ import {
   InputLabel,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import './UserBookingEdit.css'
+import "./UserBookingEdit.css";
+import { toast } from "react-toastify";
 
 function UserBookingEdit() {
   const navigate = useNavigate();
@@ -34,8 +35,6 @@ function UserBookingEdit() {
   const [editDate, setEditDate] = useState("");
   const [editServiceType, setEditServiceType] = useState("");
   const [editServicStatus, setEditServiceStatus] = useState("");
-
-  const [editError, setEditError] = useState("");
 
   useEffect(() => {
     const newData = bookingData.filter((ele) => ele._id == id);
@@ -64,8 +63,11 @@ function UserBookingEdit() {
   const handleEditClick = async (e) => {
     e.preventDefault();
 
-    if(!editData.houseNo || ! editData.streetName || !editData.district){
-      setEditError("Required House No, Street Name, District");
+    if (!editData.houseNo || !editData.streetName || !editData.district) {
+      return toast.warning("Required House No, Street Name, District", {
+        position: "top-right",
+        duration: 5000,
+      });
     }
 
     const editBookingDate = `${editDate}T${editTime}`;
@@ -75,23 +77,39 @@ function UserBookingEdit() {
 
     const updatedContent = {
       address,
-      date:editStartDate,
-      serviceType:editServiceType, 
-      status:editServicStatus,
-      userBookingID:editData.userBookingID
-    }
+      date: editStartDate,
+      serviceType: editServiceType,
+      status: editServicStatus,
+      userBookingID: editData.userBookingID,
+    };
 
     if (editStartDate < Date.now()) {
-      setEditError("Cant Edit to past date");
-    } else{
-      try{
+      toast.error("Cant Edit to past date", {
+        position: "top-right",
+        duration: 5000,
+      });
+    } else {
+      try {
         await editUserBooking(updatedContent);
-      } catch(err){
-        console.log(err);
-        if (err.response.status == 400) {
-          setEditError(err.response.data);
+      } catch (err) {
+        if (err.message === "Network Error") {
+          toast.error("Connection timeout! DB not responding", {
+            position: "top-right",
+            autoClose: 5000,
+          });
+        } else if (err.response && err.response.status === 400) {
+          toast.error(err.response.data, {
+            position: "top-right",
+            autoClose: 5000,
+          });
         } else {
-          setEditError(err.message);
+          toast.error(
+            `Error while Edit Booking. Try again later: ${err.message}`,
+            {
+              position: "top-right",
+              autoClose: 5000,
+            }
+          );
         }
       }
     }
@@ -106,18 +124,24 @@ function UserBookingEdit() {
 
   return (
     <>
-    <div className="UserBookingEdit_Heading">
+      <div className="UserBookingEdit_Heading">
         <h2>User Reviwes</h2>
-    </div>
-    <div className="UserBookingEdit_BackButton">
-        <Button startIcon={<ArrowBackIcon />} onClick={()=>navigate(-1)} variant="contained">Back</Button>
-    </div>
+      </div>
+      <div className="UserBookingEdit_BackButton">
+        <Button
+          startIcon={<ArrowBackIcon />}
+          onClick={() => navigate(-1)}
+          variant="contained"
+        >
+          Back
+        </Button>
+      </div>
 
       <Box
         sx={{
           maxWidth: 600,
           mx: "auto",
-          marginBottom:"1rem",
+          marginBottom: "1rem",
           p: 3,
           mt: 5,
           borderRadius: 2,
@@ -125,7 +149,12 @@ function UserBookingEdit() {
           backgroundColor: "#fff",
         }}
       >
-        <Typography textAlign="center" sx={{fontSize:"2rem", fontWeight:"600"}} variant="h4" gutterBottom>
+        <Typography
+          textAlign="center"
+          sx={{ fontSize: "2rem", fontWeight: "600" }}
+          variant="h4"
+          gutterBottom
+        >
           Edit Booked Service
         </Typography>
         <form onSubmit={handleEditClick}>
@@ -224,7 +253,7 @@ function UserBookingEdit() {
               </label>
               <div className="Date">
                 <input
-                  style={{cursor:"pointer"}}
+                  style={{ cursor: "pointer" }}
                   id="Date"
                   type="date"
                   required
@@ -239,7 +268,7 @@ function UserBookingEdit() {
               </label>
               <div className="Time">
                 <input
-                  style={{cursor:"pointer"}}
+                  style={{ cursor: "pointer" }}
                   id="Time"
                   type="time"
                   required
@@ -249,14 +278,7 @@ function UserBookingEdit() {
               </div>
             </Grid>
             <Grid item xs={12} sx={{ textAlign: "center" }}>
-              {editError && (
-                <Typography
-                  variant="subtitle2"
-                  sx={{ color: "#d32f2f", textAlign: "center" }}
-                >
-                  {editError}
-                </Typography>
-              )}
+              
             </Grid>
             <Grid item xs={12}>
               <Button

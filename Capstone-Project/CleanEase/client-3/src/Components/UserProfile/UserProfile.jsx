@@ -15,6 +15,7 @@ import BootCard from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import './UserProfile.css'
+import { toast } from 'react-toastify';
 
 function UserProfile() {
   const {getUserProfile, user, updateUserProfile, getUserBookings, bookingData } = useGlobal();
@@ -27,7 +28,6 @@ function UserProfile() {
   const [userOngoingBooking,setUserOngoingBooking] = useState(0);
   const [userCompletedBooking,setUserCompletedBooking] = useState(0);
   const [userPendingBooking,setUserPendingBooking] = useState(0);
-  const [errorUpdateUserProfile, setErrorUpdateUserProfile]= useState('');
 
   useEffect(()=>{
     getUserProfile();
@@ -59,19 +59,34 @@ function UserProfile() {
 
   const handleSave = async() => {
     if(!firstname || !lastname || !email){
-      return setErrorUpdateUserProfile("Required Fields First Name, Last Name, Email")
+      return toast.warning("Required Fields First Name, Last Name, Email",{
+        position:"top-right",
+        duration:5000,
+      })
     }
     try{
       await updateUserProfile(firstname, lastname, email);
     } catch(err){
-      if (err.message == "Network Error") {
-        setError("Connection timeout! DB not responding");
-      } else if (err.response.status == 400) {
-        setError(err.response.data);
+      if (err.message === "Network Error") {
+        toast.error("Connection timeout! DB not responding", {
+          position: "top-right",
+          autoClose: 5000,
+        });
+      } else if (err.response && err.response.status === 400) {
+        toast.error(err.response.data, {
+          position: "top-right",
+          autoClose: 5000,
+        });
       } else {
-        setError(err.message);
+        toast.error(
+          `Error while Update User Profile. Try again later: ${err.message}`,
+          {
+            position: "top-right",
+            autoClose: 5000,
+          }
+        );
       }
-    }
+  }
     setIsEditing(false);
   };
 
@@ -204,8 +219,6 @@ function UserProfile() {
             />
           </Box>
         </CardContent>
-
-        {errorUpdateUserProfile && <Typography variant="subtitle2" sx={{color:"#d32f2f",textAlign:"center"}}>{errorUpdateUserProfile}</Typography>}
 
         {/* Action Buttons */}
         <CardActions>

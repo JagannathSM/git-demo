@@ -10,17 +10,18 @@ import {
   Grid,
   Paper,
   Alert,
+  duration,
 } from "@mui/material";
 import { useParams } from "react-router-dom";
 import { useGlobal } from "../../GlobalContext/GlobalProvider";
-import './Addreview.css'
+import "./Addreview.css";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 function AddReview() {
   const navigate = useNavigate();
   const { _id } = useParams();
   const { loginUser, createReview } = useGlobal();
-  const [addReviewError,setAddReviewError] = useState('');
 
   const [username, setUsername] = useState(
     `${loginUser.firstname}, ${loginUser.lastname}`
@@ -29,45 +30,62 @@ function AddReview() {
   const [rating, setRating] = useState(0);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if(!username || !rating ){
-       return setAddReviewError("Required Fields User Name, Rating")
+    if (!username || !rating) {
+      return toast.warning("Required Fields User Name, Rating", {
+        position: "top-rigth",
+        duration: 5000,
+      });
     }
-    try{
-        const userReview = {
-            username,
-            text,
-            rating
-        }
-        await createReview(_id,userReview)
-        setSubmitted(true);
+    try {
+      const userReview = {
+        username,
+        text,
+        rating,
+      };
+      await createReview(_id, userReview);
+      setSubmitted(true);
 
-        setUsername(`${loginUser.firstname}, ${loginUser.lastname}`);
-        setText("");
-        setRating(0);
-    
-        setTimeout(() => setSubmitted(false), 3000);    
+      setUsername(`${loginUser.firstname}, ${loginUser.lastname}`);
+      setText("");
+      setRating(0);
 
-    } catch (err){
-        if (err.message == "Network Error") {
-            setAddReviewError("Connection timeout! / DB not responding");
-          } else if (err.response.status == 400) {
-            setAddReviewError(err.response.data);
-          } else {
-            setAddReviewError(err.message);
-          }    
+      setTimeout(() => setSubmitted(false), 3000);
+    } catch (err) {
+      if (err.message === "Network Error") {
+        toast.error("Connection timeout! DB not responding", {
+          position: "top-right",
+          autoClose: 5000,
+        });
+      } else if (err.response && err.response.status === 400) {
+        toast.error(err.response.data, {
+          position: "top-right",
+          autoClose: 5000,
+        });
+      } else {
+        toast.error(`Error while Adding Review. Try again later: ${err.message}`, {
+          position: "top-right",
+          autoClose: 5000,
+        });
+      }
     }
   };
 
   return (
     <>
-    <div className="UserAddReview_Heading">
+      <div className="UserAddReview_Heading">
         <h2>User Reviwes</h2>
-    </div>
-    <div className="UserAddReview_BackButton">
-        <Button startIcon={<ArrowBackIcon />} onClick={()=>navigate(-1)} variant="contained">Back</Button>
-    </div>
+      </div>
+      <div className="UserAddReview_BackButton">
+        <Button
+          startIcon={<ArrowBackIcon />}
+          onClick={() => navigate(-1)}
+          variant="contained"
+        >
+          Back
+        </Button>
+      </div>
 
       <Container maxWidth="sm" sx={{ mt: 4, mb: 4 }}>
         <Paper elevation={3} sx={{ p: 3 }}>
@@ -125,15 +143,6 @@ function AddReview() {
                   size="large"
                   sx={{ ml: 2 }}
                 />
-                {addReviewError && (
-                    <Typography
-                        variant="subtitle2"
-                        sx={{ color: "#d32f2f", textAlign: "center" }}
-                    >
-                        {addReviewError}
-                    </Typography>
-                )}
-
               </Grid>
               <Grid item xs={12}>
                 <Button

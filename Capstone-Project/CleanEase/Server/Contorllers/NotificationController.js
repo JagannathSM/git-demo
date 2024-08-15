@@ -1,20 +1,30 @@
 const Notification = require("../Models/Notification");
 const UserBookings = require("../Models/UserBookings");
+const sendEmail = require("../Utils/EmailServises");
 
 exports.createNotification = async (req, res) => {
-  const { heading, msg } = req.body;
-  try {
+  const { user, heading, msg, email } = req.body;
     const newNotification = new Notification({
-      user: req.user,
+      user,
       heading,
       msg,
     });
 
     await newNotification.save();
-    res.status(200).send("Notification created Successfully");
-  } catch (err) {
-    res.status(400).send("Error while creating notifications");
-  }
+
+    const message = `<div style="diaplay:flex;flex-direction:column;justify-content:center;text-align: center;background-color: lightgreen;border: 5px outset black;color:black">
+    <div style="padding:10px;margin:5px">
+    <h3 style="margin:0px">${heading}</h3>
+    <p>${msg}</p>
+    </div>
+    </div>`;
+  
+    sendEmail({
+      email: email,
+      subject: "Updated Booking Status",
+      message,
+      res,
+    });  
 };
 
 exports.getNotification = async (req, res) => {
@@ -36,6 +46,8 @@ exports.deleteNotification = async (req, res) => {
   }
 };
 
+
+//not in use right now
 exports.autoEditUserBookings = async (req,res) => {
   const { serviceID } = req.params;
   const { status } = req.body;
