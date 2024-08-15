@@ -19,7 +19,7 @@ import UserBookingEdit from '../UserBookingEdit/UserBookingEdit';
 import AboutUsPage from '../AboutUsPage/AboutUsPage';
 import ContactPage from '../ContactPage/ContactPage';
 import UserReviewTabel from '../UserReviewTabel/UserReviewTabel';
-import AddReview from '../AddReview/AddReview';
+import AddReview from '../AddReview/Addreview';
 import UpdateReview from '../UpdateReview/UpdateReview';
 import UserCheckList from '../ChecklistCompo/UserChecklist';
 import AdminRoute from './AdminRoute';
