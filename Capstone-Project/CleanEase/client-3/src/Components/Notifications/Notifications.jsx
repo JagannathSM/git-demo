@@ -39,7 +39,7 @@ function Notifications() {
     <>
       <div className="notifications-container">
       <h2>User Notifications</h2>
-      {notificationData.length === 0 ? (
+      {globalUserNotifications.length === 0 ? (
         <p>No notifications available</p>
       ) : (
         <div className="notifications-list">

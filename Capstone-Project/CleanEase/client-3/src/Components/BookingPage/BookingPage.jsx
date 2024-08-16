@@ -18,7 +18,6 @@ import { useFormik } from "formik";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { toast } from "react-toastify";
 
-
 function BookingPage() {
   const navigate = useNavigate();
   const { cleanSubCategoriesID } = useParams();
@@ -30,6 +29,7 @@ function BookingPage() {
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [serviceType, setServiceType] = useState("one-time");
+  const [loading, setLoading] = useState(false);
 
   const formik = useFormik({
     initialValues: { houseNo: "", streetName: "", district: "", landmark: "" },
@@ -55,8 +55,8 @@ function BookingPage() {
     const uniqueBookingID = Math.random().toString(36).slice(-8);
 
     const bookData = {
-      username:`${loginUser.firstname}, ${loginUser.lastname}`,
-      email:loginUser.email,
+      username: `${loginUser.firstname}, ${loginUser.lastname}`,
+      email: loginUser.email,
       address,
       serviceType,
       startDate,
@@ -65,33 +65,44 @@ function BookingPage() {
     };
 
     if (startDate < Date.now()) {
-      toast.error("Cant book on past date",{
-        position:"top-right",
-        duration:5000,
+      toast.error("Cant book on past date", {
+        position: "top-right",
+        duration: 5000,
       });
     } else if (startDate < Date.now() + 3600000) {
-      toast.error("Cant able to book services with-in 1hr",{
-        position:"top-right",
-        duration:5000,
+      toast.error("Cant able to book services with-in 1hr", {
+        position: "top-right",
+        duration: 5000,
       });
     } else {
       try {
+        setLoading(true);
         const amount = parseInt(serviceAmount);
         await bookservice(bookData);
-
-        toast.success("Booking Successfull",{
-          position:"top-right",
-          duration:5000,
-        })
         await razorPayBooking(amount, uniqueBookingID);
+        toast.success("Booking Successfull", {
+          position: "top-right",
+          duration: 3000,
+        });
+        setLoading(false);
       } catch (err) {
+        setLoading(false);
         if (err.message === "Network Error") {
-          toast.error("Connection timeout! DB not responding", { position: "top-right", autoClose: 5000 });
-      } else if (err.response && err.response.status === 400) {
-          toast.error(err.response.data, { position: "top-right", autoClose: 5000 });
-      } else {
-          toast.error(`Error while Payment. Try again later: ${err.message}`, { position: "top-right", autoClose: 5000 });
-      }
+          toast.error("Connection timeout! DB not responding", {
+            position: "top-right",
+            autoClose: 5000,
+          });
+        } else if (err.response && err.response.status === 400) {
+          toast.error(err.response.data, {
+            position: "top-right",
+            autoClose: 5000,
+          });
+        } else {
+          toast.error(`Error while Payment. Try again later: ${err.message}`, {
+            position: "top-right",
+            autoClose: 5000,
+          });
+        }
       }
     }
   };
@@ -114,7 +125,14 @@ function BookingPage() {
           backgroundColor: "#fff",
         }}
       >
-        <Button sx={{mt: 2, mb: 2,color: "#333", backgroundColor: "#fff"  }} startIcon={<ArrowBackIcon />} onClick={()=>navigate(-1)} variant="contained">Back</Button>
+        <Button
+          sx={{ mt: 2, mb: 2, color: "#333", backgroundColor: "#fff" }}
+          startIcon={<ArrowBackIcon />}
+          onClick={() => navigate(-1)}
+          variant="contained"
+        >
+          Back
+        </Button>
 
         <Typography variant="h4" gutterBottom>
           Book a Service
@@ -271,8 +289,7 @@ function BookingPage() {
                 variant="contained"
                 color="primary"
                 fullWidth
-              >
-                Book Now
+              >{ !loading ? "Book Now" : <CircularProgress/>}
               </Button>
             </Grid>
           </Grid>

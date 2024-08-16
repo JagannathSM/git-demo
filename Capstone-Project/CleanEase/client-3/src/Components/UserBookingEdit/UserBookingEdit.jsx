@@ -38,7 +38,7 @@ function UserBookingEdit() {
 
   useEffect(() => {
     const newData = bookingData.filter((ele) => ele._id == id);
-    const datetime = new Date(newData[0].startDate).toISOString();
+    const datetime = new Date(newData[0].startDate + 19800000).toISOString();
     const datetimeArr = datetime.split("T");
     setEditDate(datetimeArr[0]);
     setEditTime(datetimeArr[1].slice(0, 5));
@@ -125,7 +125,7 @@ function UserBookingEdit() {
   return (
     <>
       <div className="UserBookingEdit_Heading">
-        <h2>User Reviwes</h2>
+        <h2>User Booking Edit</h2>
       </div>
       <div className="UserBookingEdit_BackButton">
         <Button

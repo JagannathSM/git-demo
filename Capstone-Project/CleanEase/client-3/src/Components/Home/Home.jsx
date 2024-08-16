@@ -126,7 +126,6 @@ const AdminDashboard = () => {
 
   const getUsersWithBookings = async () => {
     const {data} = await http.get('/admin/get-users-with-booking');
-    console.log(data.UsersWithBookingData);
     setUserBookingsDetails(data.UsersWithBookingData);
   }
 

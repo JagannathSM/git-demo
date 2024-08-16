@@ -14,6 +14,7 @@ import Footer from '../Components/Footer'
 import CardsCompo from '../Components/CardsCompo'
 import ExampleCHECKLIST from '../Components/ExampleCHECKLIST';
 import LoadingAnimation from '../Components/LoadingAnimation'
+import DownloadBills from '../Components/DownloadBills'
 
 const theme = createTheme();
 
@@ -34,7 +35,8 @@ function App() {
     {/* <Youtube22Nav/>
     <Footer/> */}
     {/* <ExampleCHECKLIST/> */}
-    <LoadingAnimation/>
+    {/* <LoadingAnimation/> */}
+    <DownloadBills/>
     </>
   )
 }

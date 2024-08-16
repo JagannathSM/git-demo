@@ -19,11 +19,13 @@ import FormControl from "@mui/material/FormControl";
 import NativeSelect from "@mui/material/NativeSelect";
 import ReviewsIcon from "@mui/icons-material/Reviews";
 import { useNavigate } from "react-router-dom";
+import Button from '@mui/material/Button';
+
 
 function UserBooking() {
   const navigate = useNavigate();
 
-  const { getUserBookings, bookingData, deleteBooking } = useGlobal();
+  const { getUserBookings, razorPayBooking, bookingData, deleteBooking } = useGlobal();
 
   const [sortByServiceType, setSortByServiceType] = useState("All");
   const [filterByStatus, setFilterByStatus] = useState("All");
@@ -119,6 +121,21 @@ function UserBooking() {
     }
   }, [bookingData, sortByServiceType, filterByStatus]);
 
+  const UpdateRazorPayBooking = async (amount, uniqueBookingID) => {
+    try{
+      await razorPayBooking(amount, uniqueBookingID);
+      getUserBookings();
+    } catch (err){
+      if (err.message === "Network Error") {
+        toast.error("Connection timeout! DB not responding", { position: "top-right", autoClose: 5000 });
+    } else if (err.response && err.response.status === 400) {
+        toast.error(err.response.data, { position: "top-right", autoClose: 5000 });
+    } else {
+        toast.error(`Error while Payment. Try again later: ${err.message}`, { position: "top-right", autoClose: 5000 });
+    }
+    }
+  }
+
   return (
     <>
     <div className="UserBooking_Heading">
@@ -178,6 +195,7 @@ function UserBooking() {
               <TableCell align="center">Is Paid</TableCell>
               <TableCell align="center">Is Confirmed</TableCell>
               <TableCell align="center">Status</TableCell>
+              <TableCell align="center">Pay Now</TableCell>
               <TableCell align="center">Actions</TableCell>
             </TableRow>
           </TableHead>
@@ -205,6 +223,7 @@ function UserBooking() {
                   </TableCell>
                   <TableCell align="center">{row.isConfirmed ? "Yes" : "No" }</TableCell>
                   <TableCell align="center">{row.status}</TableCell>
+                  <TableCell align="center"><Button variant="contained" disabled={row.isAmountPaid ? true : false} onClick={()=>UpdateRazorPayBooking(row.amount,row.uniqueBookingID)} >Pay Now!</Button></TableCell>
                   <TableCell align="center">
                     <IconButton
                       color="primary"

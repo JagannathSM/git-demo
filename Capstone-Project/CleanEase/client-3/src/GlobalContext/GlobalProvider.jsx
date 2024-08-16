@@ -23,26 +23,8 @@ function GlobalProvider({ children }) {
   const [allBookings,setAllBookings] = useState([]);
   const [userId, setUserId] = useState('');
   const [globalUserNotifications,setGlobalUserNotifications] = useState([]);
-
-  // const [loginUser,setLoginUser] = useState('');
-  // const [token,setToken] = useState(localStorage.token)
-
-  // useEffect(() => {
-  //   if (token) {
-  //     setAuthToken(token);
-  //     http
-  //       .get("/user/getProfile")
-  //       .then((res) => {
-  //         setLoginUser(res.data.user);
-  //         setUserId(res.data.user._id);
-  //       })
-  //       .catch((err) => {
-  //         setToken(null);
-  //         localStorage.removeItem("token");
-  //         setAuthToken(null);
-  //       });
-  //   }
-  // }, [token]);
+  const [messageSocket, setMessageSocket] = useState('');
+  const [initiateSocket,setInitiateSocket] = useState(false);
 
 
   let loginUser;
@@ -63,37 +45,6 @@ function GlobalProvider({ children }) {
     }
   },[loginUser])
 
-
-  // let loginUser;
-  // if(localStorage.token){
-  //     const jwt = localStorage.getItem('token');
-  //     setAuthToken(jwt);
-  //     loginUser = jwtDecode(jwt)
-  //     if(Date.now() < loginUser.exp*1000){
-  //       setAuthToken(jwt);
-  //     } else {
-  //       alert("Token Expired/ Session Time Out! Please login again!");
-  //       navigate('/logout');
-  //     }
-  // }
-
-  // useEffect(() => {
-  //   if (token) {
-  //     const jwt = localStorage.getItem('token');
-  //     setAuthToken(jwt);
-  //     const decoded = jwtDecode(jwt);
-  //     setLoginUser(decoded)
-  //     if (Date.now() < decoded.exp * 1000) {
-  //       setAuthToken(jwt);
-  //       setUserId(decoded.id);
-  //     } else {
-  //       setLoginUser('');
-  //       setToken('');
-  //       alert("Token Expired/ Session Time Out! Please login again!");
-  //       navigate('/logout');
-  //     }
-  //   }
-  // }, [token, navigate]);
 
 
   const getUserProfile = async () => {
@@ -255,31 +206,34 @@ function GlobalProvider({ children }) {
 
 // SOCKET.IO  //NOTIFICATION
 useEffect(() => {
-  console.log("Notification Socket")
   const socket = io("https://cleanease-backend-780q.onrender.com", {
     transports: ["websocket", "polling"],
     withCredentials: true,
   });
 
+  setMessageSocket(socket);
+
   // Join room using userId
   if (userId) {
-    console.log(userId);
     socket.emit("joinRoom", userId);
   }
 
   // Handle booking status updates
-  socket.on("bookingStatusUpdated", ({ bookingId, status }) => {
-    toast.info(`Booking ${bookingId} status updated to: ${status}`, {
-      position: "top-right",
-      autoClose: 5000,
-    });
+  socket.on("bookingStatusUpdated", (data) => {
+    getUserNotifications();
+    if(data.userId == userId){
+      toast.info(`Booking ${data.bookingId} is conformed and status updated to: ${data.status}`, {
+        position: "top-right",
+        autoClose: 5000,
+      });  
+    }
   });
 
   // Cleanup function to disconnect socket when component unmounts
   return () => {
     socket.disconnect();
   };
-}, [userId]);
+}, [userId, initiateSocket]);
 
 
 // NOTIFICATION GENERATE BY ADMIN
@@ -302,7 +256,6 @@ const deleteUserNotification = async(_id) => {
   await http.delete(`/notification/delete/${_id}`);
   getUserNotifications();
 }
-
 
   return (
     <GlobalContext.Provider
@@ -341,7 +294,10 @@ const deleteUserNotification = async(_id) => {
         generateNotification,
         getUserNotifications,
         globalUserNotifications,
-        deleteUserNotification
+        deleteUserNotification,
+        messageSocket,
+        setInitiateSocket,
+        initiateSocket
       }}
     >
       {children}

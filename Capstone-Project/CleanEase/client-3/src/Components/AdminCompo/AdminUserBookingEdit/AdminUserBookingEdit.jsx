@@ -10,12 +10,11 @@ function AdminUserBookingEdit() {
     const navigate = useNavigate();
     const { bookingID } = useParams();
 
-    const {allBookings, updateUserBooking, generateNotification} = useGlobal();
+    const {allBookings, updateUserBooking, generateNotification, messageSocket, initiateSocket, setInitiateSocket} = useGlobal();
     const [bookingToEdit,setBookingToEdit] = useState('');
     const [isConfirmed, setIsConfirmed] = useState('');
     const [status, setStatus] = useState('');
     const [subServiceName,setSubServiceName] = useState('');
-
 
     useEffect(()=>{
         if(allBookings.length > 0){
@@ -49,8 +48,10 @@ function AdminUserBookingEdit() {
                 email: bookingToEdit.email,
             }
             await generateNotification(NotifyDetails);
+            await messageSocket.emit("StatusUpdatedNotification",{userId:bookingToEdit.user, bookingId:subServiceName, status:status});
+            await setInitiateSocket(!initiateSocket)
+
         } catch (err){
-            console.log(err);
             if (err.message === "Network Error") {
                 toast.error("Connection timeout! DB not responding", { position: "top-right", autoClose: 5000 });
             } else if (err.response && err.response.status === 400) {

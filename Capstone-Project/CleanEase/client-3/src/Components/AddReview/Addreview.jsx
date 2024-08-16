@@ -75,7 +75,7 @@ function AddReview() {
   return (
     <>
       <div className="UserAddReview_Heading">
-        <h2>User Reviwes</h2>
+        <h2>User Reviews</h2>
       </div>
       <div className="UserAddReview_BackButton">
         <Button
