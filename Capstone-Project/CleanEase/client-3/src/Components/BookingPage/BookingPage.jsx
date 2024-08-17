@@ -290,7 +290,7 @@ function BookingPage() {
                 variant="contained"
                 color="primary"
                 fullWidth
-              >{ !loading ? "Book Now" : <CircularProgress/>}
+              >{ !loading ? "Book Now" : <CircularProgress sx={{color:"white"}}/>}
               </Button>
             </Grid>
           </Grid>
