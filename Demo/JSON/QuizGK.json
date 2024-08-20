@@ -1,0 +1,324 @@
+[
+  {
+    "Question": "What is the capital city of France?",
+    "Option1": "Rome",
+    "Option2": "Paris",
+    "Option3": "Berlin",
+    "Option4": "Madrid",
+    "Answer": 2
+  },
+  {
+    "Question": "Who wrote the play 'Romeo and Juliet'?",
+    "Option1": "William Shakespeare",
+    "Option2": "Charles Dickens",
+    "Option3": "Jane Austen",
+    "Option4": "Mark Twain",
+    "Answer": 1
+  },
+  {
+    "Question": "What is the largest continent by land area?",
+    "Option1": "Africa",
+    "Option2": "Europe",
+    "Option3": "Asia",
+    "Option4": "North America",
+    "Answer": 3
+  },
+  {
+    "Question": "Which element has the chemical symbol 'O'?",
+    "Option1": "Oxygen",
+    "Option2": "Osmium",
+    "Option3": "Oganesson",
+    "Option4": "Oxalate",
+    "Answer": 1
+  },
+  {
+    "Question": "Which planet is known as the 'Blue Planet'?",
+    "Option1": "Mars",
+    "Option2": "Earth",
+    "Option3": "Neptune",
+    "Option4": "Uranus",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the longest river in the world?",
+    "Option1": "Nile",
+    "Option2": "Amazon",
+    "Option3": "Yangtze",
+    "Option4": "Mississippi",
+    "Answer": 1
+  },
+  {
+    "Question": "In what year did the Titanic sink?",
+    "Option1": "1905",
+    "Option2": "1912",
+    "Option3": "1920",
+    "Option4": "1915",
+    "Answer": 2
+  },
+  {
+    "Question": "Who was the first President of the United States?",
+    "Option1": "Thomas Jefferson",
+    "Option2": "John Adams",
+    "Option3": "George Washington",
+    "Option4": "Abraham Lincoln",
+    "Answer": 3
+  },
+  {
+    "Question": "Which country is known as the Land of the Rising Sun?",
+    "Option1": "China",
+    "Option2": "India",
+    "Option3": "Japan",
+    "Option4": "South Korea",
+    "Answer": 3
+  },
+  {
+    "Question": "What is the smallest ocean in the world?",
+    "Option1": "Atlantic Ocean",
+    "Option2": "Indian Ocean",
+    "Option3": "Arctic Ocean",
+    "Option4": "Southern Ocean",
+    "Answer": 3
+  },
+  {
+    "Question": "What is the largest mammal in the world?",
+    "Option1": "Elephant",
+    "Option2": "Blue Whale",
+    "Option3": "Giraffe",
+    "Option4": "Hippopotamus",
+    "Answer": 2
+  },
+  {
+    "Question": "Which country gifted the Statue of Liberty to the United States?",
+    "Option1": "Germany",
+    "Option2": "France",
+    "Option3": "Spain",
+    "Option4": "Italy",
+    "Answer": 2
+  },
+  {
+    "Question": "Which language is the most widely spoken in the world?",
+    "Option1": "Spanish",
+    "Option2": "English",
+    "Option3": "Mandarin Chinese",
+    "Option4": "Hindi",
+    "Answer": 3
+  },
+  {
+    "Question": "Who developed the theory of relativity?",
+    "Option1": "Isaac Newton",
+    "Option2": "Galileo Galilei",
+    "Option3": "Albert Einstein",
+    "Option4": "Nikola Tesla",
+    "Answer": 3
+  },
+  {
+    "Question": "What is the currency of Japan?",
+    "Option1": "Yuan",
+    "Option2": "Won",
+    "Option3": "Yen",
+    "Option4": "Rupee",
+    "Answer": 3
+  },
+  {
+    "Question": "Which is the tallest mountain in the world?",
+    "Option1": "Mount Kilimanjaro",
+    "Option2": "Mount Everest",
+    "Option3": "K2",
+    "Option4": "Mount Elbrus",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the hardest natural substance on Earth?",
+    "Option1": "Gold",
+    "Option2": "Iron",
+    "Option3": "Diamond",
+    "Option4": "Platinum",
+    "Answer": 3
+  },
+  {
+    "Question": "Which planet is closest to Earth?",
+    "Option1": "Mars",
+    "Option2": "Venus",
+    "Option3": "Mercury",
+    "Option4": "Jupiter",
+    "Answer": 2
+  },
+  {
+    "Question": "Who is known as the 'Father of Computers'?",
+    "Option1": "Alan Turing",
+    "Option2": "Bill Gates",
+    "Option3": "Charles Babbage",
+    "Option4": "Steve Jobs",
+    "Answer": 3
+  },
+  {
+    "Question": "Which famous physicist wrote 'A Brief History of Time'?",
+    "Option1": "Richard Feynman",
+    "Option2": "Niels Bohr",
+    "Option3": "Stephen Hawking",
+    "Option4": "Max Planck",
+    "Answer": 3
+  },
+  {
+    "Question": "Which country is known as the 'Land Down Under'?",
+    "Option1": "Australia",
+    "Option2": "New Zealand",
+    "Option3": "South Africa",
+    "Option4": "Brazil",
+    "Answer": 1
+  },
+  {
+    "Question": "Who painted the Mona Lisa?",
+    "Option1": "Vincent van Gogh",
+    "Option2": "Pablo Picasso",
+    "Option3": "Leonardo da Vinci",
+    "Option4": "Claude Monet",
+    "Answer": 3
+  },
+  {
+    "Question": "What is the smallest planet in our solar system?",
+    "Option1": "Venus",
+    "Option2": "Mars",
+    "Option3": "Mercury",
+    "Option4": "Pluto",
+    "Answer": 3
+  },
+  {
+    "Question": "Which ocean is the largest by surface area?",
+    "Option1": "Atlantic Ocean",
+    "Option2": "Indian Ocean",
+    "Option3": "Arctic Ocean",
+    "Option4": "Pacific Ocean",
+    "Answer": 4
+  },
+  {
+    "Question": "What is the main ingredient in guacamole?",
+    "Option1": "Tomato",
+    "Option2": "Avocado",
+    "Option3": "Onion",
+    "Option4": "Pepper",
+    "Answer": 2
+  },
+  {
+    "Question": "Which organ in the human body is primarily responsible for filtering blood?",
+    "Option1": "Lungs",
+    "Option2": "Heart",
+    "Option3": "Liver",
+    "Option4": "Kidneys",
+    "Answer": 4
+  },
+  {
+    "Question": "In which year did World War II end?",
+    "Option1": "1939",
+    "Option2": "1942",
+    "Option3": "1945",
+    "Option4": "1948",
+    "Answer": 3
+  },
+  {
+    "Question": "Who discovered penicillin?",
+    "Option1": "Marie Curie",
+    "Option2": "Alexander Fleming",
+    "Option3": "Louis Pasteur",
+    "Option4": "Thomas Edison",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the largest desert in the world?",
+    "Option1": "Sahara Desert",
+    "Option2": "Gobi Desert",
+    "Option3": "Arabian Desert",
+    "Option4": "Antarctic Desert",
+    "Answer": 4
+  },
+  {
+    "Question": "Who was the first person to walk on the Moon?",
+    "Option1": "Yuri Gagarin",
+    "Option2": "Buzz Aldrin",
+    "Option3": "Neil Armstrong",
+    "Option4": "Michael Collins",
+    "Answer": 3
+  },
+  {
+    "Question": "What is the chemical formula for water?",
+    "Option1": "CO2",
+    "Option2": "H2O",
+    "Option3": "O2",
+    "Option4": "NaCl",
+    "Answer": 2
+  },
+  {
+    "Question": "Which planet is known for having a prominent ring system?",
+    "Option1": "Jupiter",
+    "Option2": "Saturn",
+    "Option3": "Neptune",
+    "Option4": "Uranus",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the longest bone in the human body?",
+    "Option1": "Femur",
+    "Option2": "Humerus",
+    "Option3": "Tibia",
+    "Option4": "Fibula",
+    "Answer": 1
+  },
+  {
+    "Question": "Which country is famous for inventing pizza?",
+    "Option1": "France",
+    "Option2": "Spain",
+    "Option3": "Greece",
+    "Option4": "Italy",
+    "Answer": 4
+  },
+  {
+    "Question": "What is the capital city of Canada?",
+    "Option1": "Toronto",
+    "Option2": "Vancouver",
+    "Option3": "Ottawa",
+    "Option4": "Montreal",
+    "Answer": 3
+  },
+  {
+    "Question": "What is the primary language spoken in Brazil?",
+    "Option1": "Spanish",
+    "Option2": "Portuguese",
+    "Option3": "French",
+    "Option4": "English",
+    "Answer": 2
+  },
+  {
+    "Question": "Who is known as the 'Father of Modern Physics'?",
+    "Option1": "Albert Einstein",
+    "Option2": "Galileo Galilei",
+    "Option3": "Isaac Newton",
+    "Option4": "Niels Bohr",
+    "Answer": 2
+  },
+  {
+    "Question": "Which planet is known as the 'Morning Star' or 'Evening Star'?",
+    "Option1": "Mercury",
+    "Option2": "Mars",
+    "Option3": "Venus",
+    "Option4": "Jupiter",
+    "Answer": 3
+  },
+  {
+    "Question": "What vitamin is primarily produced when human skin is exposed to sunlight?",
+    "Option1": "Vitamin A",
+    "Option2": "Vitamin C",
+    "Option3": "Vitamin D",
+    "Option4": "Vitamin B12",
+    "Answer": 3
+},
+
+{
+    "Question": "What part of the cell contains the genetic material?",
+    "Option1": "Cytoplasm",
+    "Option2": "Nucleus",
+    "Option3": "Mitochondria",
+    "Option4": "Ribosome",
+    "Answer": 2
+}
+
+]

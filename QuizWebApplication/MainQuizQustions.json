@@ -1,0 +1,1660 @@
+[
+  {
+    "Question": "What is the chemical symbol for water?",
+    "Option1": "H2O",
+    "Option2": "O2",
+    "Option3": "CO2",
+    "Option4": "H2",
+    "Answer": 1
+  },
+  {
+    "Question": "What planet is known as the Red Planet?",
+    "Option1": "Earth",
+    "Option2": "Venus",
+    "Option3": "Mars",
+    "Option4": "Jupiter",
+    "Answer": 3
+  },
+  {
+    "Question": "What gas do plants absorb from the atmosphere?",
+    "Option1": "Oxygen",
+    "Option2": "Carbon Dioxide",
+    "Option3": "Nitrogen",
+    "Option4": "Hydrogen",
+    "Answer": 2
+  },
+  {
+    "Question": "How many bones are in the adult human body?",
+    "Option1": "206",
+    "Option2": "210",
+    "Option3": "195",
+    "Option4": "250",
+    "Answer": 1
+  },
+  {
+    "Question": "What is the largest planet in our solar system?",
+    "Option1": "Saturn",
+    "Option2": "Earth",
+    "Option3": "Jupiter",
+    "Option4": "Neptune",
+    "Answer": 3
+  },
+  {
+    "Question": "Which element has the atomic number 1?",
+    "Option1": "Oxygen",
+    "Option2": "Helium",
+    "Option3": "Hydrogen",
+    "Option4": "Nitrogen",
+    "Answer": 3
+  },
+  {
+    "Question": "What is the powerhouse of the cell?",
+    "Option1": "Nucleus",
+    "Option2": "Ribosome",
+    "Option3": "Mitochondria",
+    "Option4": "Chloroplast",
+    "Answer": 3
+  },
+  {
+    "Question": "What force keeps us on the ground?",
+    "Option1": "Magnetism",
+    "Option2": "Friction",
+    "Option3": "Gravity",
+    "Option4": "Inertia",
+    "Answer": 3
+  },
+  {
+    "Question": "Which gas is most abundant in the Earth's atmosphere?",
+    "Option1": "Oxygen",
+    "Option2": "Nitrogen",
+    "Option3": "Carbon Dioxide",
+    "Option4": "Argon",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the chemical formula for table salt?",
+    "Option1": "NaCl",
+    "Option2": "KCl",
+    "Option3": "CaCl2",
+    "Option4": "MgCl2",
+    "Answer": 1
+  },
+  {
+    "Question": "What part of the human body is primarily responsible for filtering blood?",
+    "Option1": "Heart",
+    "Option2": "Lungs",
+    "Option3": "Liver",
+    "Option4": "Kidneys",
+    "Answer": 4
+  },
+  {
+    "Question": "What type of rock is formed from cooled lava?",
+    "Option1": "Sedimentary",
+    "Option2": "Igneous",
+    "Option3": "Metamorphic",
+    "Option4": "Fossil",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the main gas found in the air we breathe?",
+    "Option1": "Oxygen",
+    "Option2": "Hydrogen",
+    "Option3": "Nitrogen",
+    "Option4": "Carbon Dioxide",
+    "Answer": 3
+  },
+  {
+    "Question": "Which organ in the human body is responsible for producing insulin?",
+    "Option1": "Liver",
+    "Option2": "Pancreas",
+    "Option3": "Kidney",
+    "Option4": "Stomach",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the boiling point of water in Celsius?",
+    "Option1": "90°C",
+    "Option2": "100°C",
+    "Option3": "110°C",
+    "Option4": "120°C",
+    "Answer": 2
+  },
+  {
+    "Question": "Which planet is closest to the Sun?",
+    "Option1": "Earth",
+    "Option2": "Mars",
+    "Option3": "Venus",
+    "Option4": "Mercury",
+    "Answer": 4
+  },
+  {
+    "Question": "What is the most common blood type in humans?",
+    "Option1": "A",
+    "Option2": "B",
+    "Option3": "AB",
+    "Option4": "O",
+    "Answer": 4
+  },
+  {
+    "Question": "What metal is liquid at room temperature?",
+    "Option1": "Mercury",
+    "Option2": "Gold",
+    "Option3": "Silver",
+    "Option4": "Iron",
+    "Answer": 1
+  },
+  {
+    "Question": "Which of the following is a primary color?",
+    "Option1": "Green",
+    "Option2": "Purple",
+    "Option3": "Yellow",
+    "Option4": "Red",
+    "Answer": 4
+  },
+  {
+    "Question": "What is the center of an atom called?",
+    "Option1": "Electron",
+    "Option2": "Neutron",
+    "Option3": "Proton",
+    "Option4": "Nucleus",
+    "Answer": 4
+  },
+  {
+    "Question": "Which organ is responsible for pumping blood throughout the human body?",
+    "Option1": "Liver",
+    "Option2": "Heart",
+    "Option3": "Lungs",
+    "Option4": "Kidneys",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the largest organ in the human body?",
+    "Option1": "Liver",
+    "Option2": "Heart",
+    "Option3": "Skin",
+    "Option4": "Lungs",
+    "Answer": 3
+  },
+  {
+    "Question": "How many chambers does the human heart have?",
+    "Option1": "2",
+    "Option2": "4",
+    "Option3": "3",
+    "Option4": "5",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the primary function of red blood cells?",
+    "Option1": "To fight infection",
+    "Option2": "To carry oxygen",
+    "Option3": "To clot blood",
+    "Option4": "To produce hormones",
+    "Answer": 2
+  },
+  {
+    "Question": "Which part of the human brain is responsible for regulating balance and coordination?",
+    "Option1": "Cerebrum",
+    "Option2": "Cerebellum",
+    "Option3": "Brainstem",
+    "Option4": "Hypothalamus",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the smallest bone in the human body?",
+    "Option1": "Stapes",
+    "Option2": "Femur",
+    "Option3": "Humerus",
+    "Option4": "Tibia",
+    "Answer": 1
+  },
+  {
+    "Question": "What is the main function of the kidneys?",
+    "Option1": "To produce bile",
+    "Option2": "To filter blood",
+    "Option3": "To digest food",
+    "Option4": "To store fat",
+    "Answer": 2
+  },
+  {
+    "Question": "Which muscle is primarily responsible for breathing?",
+    "Option1": "Biceps",
+    "Option2": "Triceps",
+    "Option3": "Diaphragm",
+    "Option4": "Gluteus maximus",
+    "Answer": 3
+  },
+  {
+    "Question": "What is the name of the bone that protects the brain?",
+    "Option1": "Femur",
+    "Option2": "Ribcage",
+    "Option3": "Pelvis",
+    "Option4": "Skull",
+    "Answer": 4
+  },
+  {
+    "Question": "How many pairs of ribs does a human have?",
+    "Option1": "10",
+    "Option2": "12",
+    "Option3": "14",
+    "Option4": "16",
+    "Answer": 2
+  },
+  {
+    "Question": "What substance gives skin and hair its color?",
+    "Option1": "Keratin",
+    "Option2": "Collagen",
+    "Option3": "Melanin",
+    "Option4": "Hemoglobin",
+    "Answer": 3
+  },
+  {
+    "Question": "Which part of the eye controls the amount of light that enters?",
+    "Option1": "Cornea",
+    "Option2": "Retina",
+    "Option3": "Iris",
+    "Option4": "Lens",
+    "Answer": 3
+  },
+  {
+    "Question": "What is the strongest muscle in the human body based on its size?",
+    "Option1": "Gluteus maximus",
+    "Option2": "Biceps",
+    "Option3": "Masseter (jaw muscle)",
+    "Option4": "Heart",
+    "Answer": 3
+  },
+  {
+    "Question": "What is the name of the structure that connects muscles to bones?",
+    "Option1": "Ligaments",
+    "Option2": "Cartilage",
+    "Option3": "Tendons",
+    "Option4": "Fascia",
+    "Answer": 3
+  },
+  {
+    "Question": "Which part of the digestive system is primarily responsible for nutrient absorption?",
+    "Option1": "Stomach",
+    "Option2": "Large intestine",
+    "Option3": "Small intestine",
+    "Option4": "Esophagus",
+    "Answer": 3
+  },
+  {
+    "Question": "What is the basic structural unit of the nervous system?",
+    "Option1": "Neuron",
+    "Option2": "Axon",
+    "Option3": "Synapse",
+    "Option4": "Dendrite",
+    "Answer": 1
+  },
+  {
+    "Question": "Which type of blood vessel carries blood away from the heart?",
+    "Option1": "Veins",
+    "Option2": "Arteries",
+    "Option3": "Capillaries",
+    "Option4": "Venules",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the primary function of the white blood cells?",
+    "Option1": "To transport oxygen",
+    "Option2": "To fight infections",
+    "Option3": "To clot blood",
+    "Option4": "To carry nutrients",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the name of the pigment that carries oxygen in the blood?",
+    "Option1": "Myoglobin",
+    "Option2": "Melanin",
+    "Option3": "Hemoglobin",
+    "Option4": "Chlorophyll",
+    "Answer": 3
+  },
+  {
+    "Question": "Which part of the ear is responsible for maintaining balance?",
+    "Option1": "Cochlea",
+    "Option2": "Eardrum",
+    "Option3": "Semicircular canals",
+    "Option4": "Auditory nerve",
+    "Answer": 3
+  },
+  {
+    "Question": "Which planet is known as the Red Planet?",
+    "Option1": "Mars",
+    "Option2": "Jupiter",
+    "Option3": "Saturn",
+    "Option4": "Venus",
+    "Answer": 1
+  },
+  {
+    "Question": "What is the largest planet in our solar system?",
+    "Option1": "Earth",
+    "Option2": "Neptune",
+    "Option3": "Saturn",
+    "Option4": "Jupiter",
+    "Answer": 4
+  },
+  {
+    "Question": "What is the name of Earth's natural satellite?",
+    "Option1": "The Moon",
+    "Option2": "Europa",
+    "Option3": "Phobos",
+    "Option4": "Titan",
+    "Answer": 1
+  },
+  {
+    "Question": "What galaxy is Earth located in?",
+    "Option1": "Andromeda Galaxy",
+    "Option2": "Milky Way Galaxy",
+    "Option3": "Whirlpool Galaxy",
+    "Option4": "Sombrero Galaxy",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the second smallest planet in our solar system?",
+    "Option1": "Mercury",
+    "Option2": "Mars",
+    "Option3": "Venus",
+    "Option4": "Pluto",
+    "Answer": 2
+  },
+  {
+    "Question": "Which planet has the most moons?",
+    "Option1": "Saturn",
+    "Option2": "Jupiter",
+    "Option3": "Uranus",
+    "Option4": "Neptune",
+    "Answer": 1
+  },
+  {
+    "Question": "What is the name of the first manned mission to land on the Moon?",
+    "Option1": "Apollo 11",
+    "Option2": "Gemini 12",
+    "Option3": "Vostok 1",
+    "Option4": "Apollo 13",
+    "Answer": 1
+  },
+  {
+    "Question": "Which planet is famous for its large, beautiful rings?",
+    "Option1": "Saturn",
+    "Option2": "Jupiter",
+    "Option3": "Neptune",
+    "Option4": "Uranus",
+    "Answer": 1
+  },
+  {
+    "Question": "What is the name of the largest moon of Saturn?",
+    "Option1": "Ganymede",
+    "Option2": "Titan",
+    "Option3": "Io",
+    "Option4": "Europa",
+    "Answer": 2
+  },
+  {
+    "Question": "How long does it take for light from the Sun to reach Earth?",
+    "Option1": "1 minute",
+    "Option2": "8 minutes",
+    "Option3": "20 minutes",
+    "Option4": "1 hour",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the name of the force that keeps planets in orbit around the Sun?",
+    "Option1": "Magnetism",
+    "Option2": "Gravity",
+    "Option3": "Electromagnetism",
+    "Option4": "Inertia",
+    "Answer": 2
+  },
+  {
+    "Question": "Which planet is known for its Great Red Spot?",
+    "Option1": "Mars",
+    "Option2": "Saturn",
+    "Option3": "Jupiter",
+    "Option4": "Neptune",
+    "Answer": 3
+  },
+  {
+    "Question": "What is the name of the first artificial satellite launched into space?",
+    "Option1": "Sputnik 1",
+    "Option2": "Explorer 1",
+    "Option3": "Luna 2",
+    "Option4": "Vanguard 1",
+    "Answer": 1
+  },
+  {
+    "Question": "Which planet has the shortest day, completing a rotation on its axis in just about 10 hours?",
+    "Option1": "Mars",
+    "Option2": "Jupiter",
+    "Option3": "Saturn",
+    "Option4": "Uranus",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the closest star to Earth?",
+    "Option1": "Alpha Centauri",
+    "Option2": "Betelgeuse",
+    "Option3": "Sirius",
+    "Option4": "The Sun",
+    "Answer": 4
+  },
+  {
+    "Question": "What phenomenon is responsible for the twinkling of stars in the night sky?",
+    "Option1": "Reflection",
+    "Option2": "Refraction",
+    "Option3": "Diffraction",
+    "Option4": "Interference",
+    "Answer": 2
+  },
+  {
+    "Question": "Which planet is the hottest in the solar system?",
+    "Option1": "Mercury",
+    "Option2": "Venus",
+    "Option3": "Mars",
+    "Option4": "Jupiter",
+    "Answer": 2
+  },
+  {
+    "Question": "What is a light-year a measure of?",
+    "Option1": "Time",
+    "Option2": "Brightness",
+    "Option3": "Distance",
+    "Option4": "Speed",
+    "Answer": 3
+  },
+  {
+    "Question": "Which planet is known as the Earth's twin?",
+    "Option1": "Mars",
+    "Option2": "Venus",
+    "Option3": "Mercury",
+    "Option4": "Neptune",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the farthest planet from the Sun in our solar system?",
+    "Option1": "Neptune",
+    "Option2": "Uranus",
+    "Option3": "Pluto",
+    "Option4": "Saturn",
+    "Answer": 1
+  },
+  {
+    "Question": "Which of the following is one of the Seven Wonders of the Ancient World?",
+    "Option1": "Eiffel Tower",
+    "Option2": "Great Pyramid of Giza",
+    "Option3": "Statue of Liberty",
+    "Option4": "Sydney Opera House",
+    "Answer": 2
+  },
+  {
+    "Question": "Where is the Taj Mahal located?",
+    "Option1": "India",
+    "Option2": "China",
+    "Option3": "Egypt",
+    "Option4": "Brazil",
+    "Answer": 1
+  },
+  {
+    "Question": "Which wonder is known for its giant stone heads on Easter Island?",
+    "Option1": "Machu Picchu",
+    "Option2": "Christ the Redeemer",
+    "Option3": "Moai Statues",
+    "Option4": "Great Wall of China",
+    "Answer": 3
+  },
+  {
+    "Question": "The Great Wall of China was built to protect against invasions from which direction?",
+    "Option1": "East",
+    "Option2": "West",
+    "Option3": "North",
+    "Option4": "South",
+    "Answer": 3
+  },
+  {
+    "Question": "Which wonder is located in Jordan and known for its rock-cut architecture?",
+    "Option1": "Petra",
+    "Option2": "Chichen Itza",
+    "Option3": "Machu Picchu",
+    "Option4": "Colosseum",
+    "Answer": 1
+  },
+  {
+    "Question": "Which wonder is a large statue in Rio de Janeiro, Brazil?",
+    "Option1": "Christ the Redeemer",
+    "Option2": "Colosseum",
+    "Option3": "Eiffel Tower",
+    "Option4": "Machu Picchu",
+    "Answer": 1
+  },
+  {
+    "Question": "Which ancient city is famous for the Temple of Artemis?",
+    "Option1": "Athens",
+    "Option2": "Rome",
+    "Option3": "Ephesus",
+    "Option4": "Cairo",
+    "Answer": 3
+  },
+  {
+    "Question": "Which wonder was a lighthouse built on the island of Pharos?",
+    "Option1": "Lighthouse of Alexandria",
+    "Option2": "Colossus of Rhodes",
+    "Option3": "Mausoleum at Halicarnassus",
+    "Option4": "Great Pyramid of Giza",
+    "Answer": 1
+  },
+  {
+    "Question": "Which wonder is known for its terraced slopes in Peru?",
+    "Option1": "Taj Mahal",
+    "Option2": "Machu Picchu",
+    "Option3": "Petra",
+    "Option4": "Chichen Itza",
+    "Answer": 2
+  },
+  {
+    "Question": "The Colosseum is located in which city?",
+    "Option1": "Paris",
+    "Option2": "Rome",
+    "Option3": "Athens",
+    "Option4": "London",
+    "Answer": 2
+  },
+  {
+    "Question": "Which of these wonders is in Egypt?",
+    "Option1": "Great Wall of China",
+    "Option2": "Great Pyramid of Giza",
+    "Option3": "Machu Picchu",
+    "Option4": "Christ the Redeemer",
+    "Answer": 2
+  },
+  {
+    "Question": "Which wonder was built to honor a Greek goddess and is located in Turkey?",
+    "Option1": "Temple of Artemis",
+    "Option2": "Great Wall of China",
+    "Option3": "Machu Picchu",
+    "Option4": "Petra",
+    "Answer": 1
+  },
+  {
+    "Question": "Which wonder is known for its large stone statues and is located in Mexico?",
+    "Option1": "Christ the Redeemer",
+    "Option2": "Machu Picchu",
+    "Option3": "Chichen Itza",
+    "Option4": "Eiffel Tower",
+    "Answer": 3
+  },
+  {
+    "Question": "What type of structure is the Colosseum?",
+    "Option1": "Temple",
+    "Option2": "Palace",
+    "Option3": "Amphitheater",
+    "Option4": "Statue",
+    "Answer": 3
+  },
+  {
+    "Question": "Which modern wonder is known for its engineering and is located in China?",
+    "Option1": "Great Wall of China",
+    "Option2": "Machu Picchu",
+    "Option3": "Christ the Redeemer",
+    "Option4": "Eiffel Tower",
+    "Answer": 1
+  },
+  {
+    "Question": "Which wonder was built as a tomb for an ancient ruler in Turkey?",
+    "Option1": "Great Pyramid of Giza",
+    "Option2": "Mausoleum at Halicarnassus",
+    "Option3": "Petra",
+    "Option4": "Colossus of Rhodes",
+    "Answer": 2
+  },
+  {
+    "Question": "Which wonder is a large, famous statue located in Brazil?",
+    "Option1": "Christ the Redeemer",
+    "Option2": "Great Pyramid of Giza",
+    "Option3": "Colosseum",
+    "Option4": "Eiffel Tower",
+    "Answer": 1
+  },
+  {
+    "Question": "Which wonder is known for its intricate carvings in Jordan?",
+    "Option1": "Petra",
+    "Option2": "Great Wall of China",
+    "Option3": "Machu Picchu",
+    "Option4": "Colosseum",
+    "Answer": 1
+  },
+  {
+    "Question": "Which wonder was built to protect against invasions in China?",
+    "Option1": "Machu Picchu",
+    "Option2": "Great Wall of China",
+    "Option3": "Colosseum",
+    "Option4": "Christ the Redeemer",
+    "Answer": 2
+  },
+  {
+    "Question": "Which wonder is known for its impressive stone faces and is located in Cambodia?",
+    "Option1": "Angkor Wat",
+    "Option2": "Great Wall of China",
+    "Option3": "Christ the Redeemer",
+    "Option4": "Machu Picchu",
+    "Answer": 1
+  },
+  {
+    "Question": "Which element does the character Amber control?",
+    "Option1": "Hydro",
+    "Option2": "Pyro",
+    "Option3": "Cryo",
+    "Option4": "Anemo",
+    "Answer": 2
+  },
+  {
+    "Question": "Which city in Teyvat is known for its Anemo Archon?",
+    "Option1": "Mondstadt",
+    "Option2": "Liyue",
+    "Option3": "Inazuma",
+    "Option4": "Sumeru",
+    "Answer": 1
+  },
+  {
+    "Question": "What is the name of the Pyro character who wields a claymore and is also the owner of the Dawn Winery?",
+    "Option1": "Klee",
+    "Option2": "Xiangling",
+    "Option3": "Diluc",
+    "Option4": "Beidou",
+    "Answer": 3
+  },
+  {
+    "Question": "Which element does the character Mona control?",
+    "Option1": "Electro",
+    "Option2": "Cryo",
+    "Option3": "Geo",
+    "Option4": "Hydro",
+    "Answer": 4
+  },
+  {
+    "Question": "Who is the Geo Archon in Genshin Impact?",
+    "Option1": "Venti",
+    "Option2": "Raiden Shogun",
+    "Option3": "Zhongli",
+    "Option4": "Nahida",
+    "Answer": 3
+  },
+  {
+    "Question": "Which region is known for its Electro Archon and the Shogun?",
+    "Option1": "Mondstadt",
+    "Option2": "Liyue",
+    "Option3": "Inazuma",
+    "Option4": "Sumeru",
+    "Answer": 3
+  },
+  {
+    "Question": "Which character is known for her ability to control wind and is the leader of the Knights of Favonius?",
+    "Option1": "Amber",
+    "Option2": "Lisa",
+    "Option3": "Jean",
+    "Option4": "Barbara",
+    "Answer": 3
+  },
+  {
+    "Question": "Which of the following is not a playable character in Genshin Impact?",
+    "Option1": "Barbara",
+    "Option2": "Qiqi",
+    "Option3": "Albedo",
+    "Option4": "Kazuya",
+    "Answer": 4
+  },
+  {
+    "Question": "Which character is known for her Geo abilities and has a vision of Geo?",
+    "Option1": "Xiao",
+    "Option2": "Razor",
+    "Option3": "Ningguang",
+    "Option4": "Fischl",
+    "Answer": 3
+  },
+  {
+    "Question": "What is the name of the mysterious organization that the protagonist’s sibling is associated with?",
+    "Option1": "Abyss Order",
+    "Option2": "Fatui",
+    "Option3": "Order of the Phoenix",
+    "Option4": "The Adventurers' Guild",
+    "Answer": 1
+  },
+  {
+    "Question": "Which element does the character Xiao control?",
+    "Option1": "Geo",
+    "Option2": "Electro",
+    "Option3": "Cryo",
+    "Option4": "Anemo",
+    "Answer": 4
+  },
+  {
+    "Question": "Which Genshin Impact character is a librarian and controls the Electro element?",
+    "Option1": "Lisa",
+    "Option2": "Mona",
+    "Option3": "Keqing",
+    "Option4": "Rosaria",
+    "Answer": 1
+  },
+  {
+    "Question": "Which Genshin Impact region is based on Chinese culture and architecture?",
+    "Option1": "Mondstadt",
+    "Option2": "Liyue",
+    "Option3": "Inazuma",
+    "Option4": "Sumeru",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the primary currency used for upgrading weapons and characters in Genshin Impact?",
+    "Option1": "Primogems",
+    "Option2": "Mora",
+    "Option3": "Fates",
+    "Option4": "Enhancement Ores",
+    "Answer": 2
+  },
+  {
+    "Question": "Which character is a 4-star Electro archer from Mondstadt?",
+    "Option1": "Fischl",
+    "Option2": "Razor",
+    "Option3": "Xingqiu",
+    "Option4": "Barbara",
+    "Answer": 1
+  },
+  {
+    "Question": "Which element does the character Beidou control?",
+    "Option1": "Pyro",
+    "Option2": "Hydro",
+    "Option3": "Electro",
+    "Option4": "Geo",
+    "Answer": 3
+  },
+  {
+    "Question": "Who is known as the 'Father of Indian Cinema'?",
+    "Option1": "Satyajit Ray",
+    "Option2": "Raj Kapoor",
+    "Option3": "Dadasaheb Phalke",
+    "Option4": "Guru Dutt",
+    "Answer": 3
+  },
+  {
+    "Question": "Which was the first Indian film to be submitted for the Oscars?",
+    "Option1": "Mother India",
+    "Option2": "Pather Panchali",
+    "Option3": "Lagaan",
+    "Option4": "Salaam Bombay!",
+    "Answer": 1
+  },
+  {
+    "Question": "Which Indian film won the first National Film Award for Best Feature Film in 1953?",
+    "Option1": "Mirza Ghalib",
+    "Option2": "Shyamchi Aai",
+    "Option3": "Do Bigha Zamin",
+    "Option4": "Neecha Nagar",
+    "Answer": 2
+  },
+  {
+    "Question": "Who was the first Indian actress to win the Best Actress award at the Cannes Film Festival?",
+    "Option1": "Aishwarya Rai",
+    "Option2": "Shabana Azmi",
+    "Option3": "Nargis",
+    "Option4": "Smita Patil",
+    "Answer": 2
+  },
+  {
+    "Question": "Which movie marked the debut of Amitabh Bachchan in Indian cinema?",
+    "Option1": "Zanjeer",
+    "Option2": "Anand",
+    "Option3": "Saat Hindustani",
+    "Option4": "Sholay",
+    "Answer": 3
+  },
+  {
+    "Question": "Which is the highest-grossing Indian film of all time?",
+    "Option1": "Baahubali 2: The Conclusion",
+    "Option2": "Dangal",
+    "Option3": "RRR",
+    "Option4": "KGF Chapter 2",
+    "Answer": 1
+  },
+  {
+    "Question": "Which Indian director is known for creating the 'Apu Trilogy'?",
+    "Option1": "Mani Ratnam",
+    "Option2": "Satyajit Ray",
+    "Option3": "Ritwik Ghatak",
+    "Option4": "Bimal Roy",
+    "Answer": 2
+  },
+  {
+    "Question": "Which Bollywood movie was inspired by the Hollywood film 'The Godfather'?",
+    "Option1": "Sarkar",
+    "Option2": "Agneepath",
+    "Option3": "Deewar",
+    "Option4": "Satya",
+    "Answer": 1
+  },
+  {
+    "Question": "Which actor played the role of 'Mogambo' in the film 'Mr. India'?",
+    "Option1": "Amrish Puri",
+    "Option2": "Pran",
+    "Option3": "Anupam Kher",
+    "Option4": "Prem Chopra",
+    "Answer": 1
+  },
+  {
+    "Question": "Which was the first Indian sound film?",
+    "Option1": "Raja Harishchandra",
+    "Option2": "Alam Ara",
+    "Option3": "Sant Tukaram",
+    "Option4": "Devdas",
+    "Answer": 2
+  },
+  {
+    "Question": "Which actress is known as the 'Queen of Indian Cinema'?",
+    "Option1": "Madhubala",
+    "Option2": "Meena Kumari",
+    "Option3": "Sridevi",
+    "Option4": "Madhuri Dixit",
+    "Answer": 3
+  },
+  {
+    "Question": "Which Indian film was the first to win a Golden Globe Award?",
+    "Option1": "Salaam Bombay!",
+    "Option2": "Gandhi",
+    "Option3": "Monsoon Wedding",
+    "Option4": "Slumdog Millionaire",
+    "Answer": 4
+  },
+  {
+    "Question": "Which Indian actor is often referred to as the 'Tragedy King'?",
+    "Option1": "Raj Kapoor",
+    "Option2": "Dev Anand",
+    "Option3": "Dilip Kumar",
+    "Option4": "Guru Dutt",
+    "Answer": 3
+  },
+  {
+    "Question": "Who directed the iconic Bollywood film 'Sholay'?",
+    "Option1": "Ramesh Sippy",
+    "Option2": "Yash Chopra",
+    "Option3": "Raj Kapoor",
+    "Option4": "Manmohan Desai",
+    "Answer": 1
+  },
+  {
+    "Question": "Which actress won the first Filmfare Award for Best Actress?",
+    "Option1": "Nargis",
+    "Option2": "Madhubala",
+    "Option3": "Meena Kumari",
+    "Option4": "Vyjayanthimala",
+    "Answer": 3
+  },
+  {
+    "Question": "Which film is considered India's first feature film?",
+    "Option1": "Raja Harishchandra",
+    "Option2": "Alam Ara",
+    "Option3": "Devdas",
+    "Option4": "Sant Tukaram",
+    "Answer": 1
+  },
+  {
+    "Question": "Who played the role of the iconic character 'Gabbar Singh' in 'Sholay'?",
+    "Option1": "Amjad Khan",
+    "Option2": "Pran",
+    "Option3": "Sanjeev Kumar",
+    "Option4": "Kader Khan",
+    "Answer": 1
+  },
+  {
+    "Question": "Which Indian filmmaker is known for the movie 'Lagaan'?",
+    "Option1": "Rajkumar Hirani",
+    "Option2": "Ashutosh Gowariker",
+    "Option3": "Karan Johar",
+    "Option4": "Farhan Akhtar",
+    "Answer": 2
+  },
+  {
+    "Question": "Which film won the first-ever Filmfare Award for Best Film?",
+    "Option1": "Do Bigha Zamin",
+    "Option2": "Mother India",
+    "Option3": "Mughal-e-Azam",
+    "Option4": "Baiju Bawra",
+    "Answer": 4
+  },
+  {
+    "Question": "Which Bollywood actor is also known as 'Mr. Perfectionist'?",
+    "Option1": "Shah Rukh Khan",
+    "Option2": "Salman Khan",
+    "Option3": "Aamir Khan",
+    "Option4": "Hrithik Roshan",
+    "Answer": 3
+  },
+
+  {
+    "Question": "Which Indian film won the Best Original Song award at the 95th Academy Awards in 2023?",
+    "Option1": "RRR",
+    "Option2": "Gangubai Kathiawadi",
+    "Option3": "Brahmāstra",
+    "Option4": "Pushpa",
+    "Answer": 1
+  },
+  {
+    "Question": "Which actor played the lead role in the 2022 blockbuster film 'Vikram Vedha'?",
+    "Option1": "Ranbir Kapoor",
+    "Option2": "Hrithik Roshan",
+    "Option3": "Ranveer Singh",
+    "Option4": "Shahid Kapoor",
+    "Answer": 2
+  },
+  {
+    "Question": "Which film marked Alia Bhatt’s Hollywood debut in 2023?",
+    "Option1": "The Archies",
+    "Option2": "Heart of Stone",
+    "Option3": "The Gray Man",
+    "Option4": "Citadel",
+    "Answer": 2
+  },
+  {
+    "Question": "Which Indian film received a standing ovation at the Cannes Film Festival in 2023?",
+    "Option1": "Rocketry: The Nambi Effect",
+    "Option2": "The Kerala Story",
+    "Option3": "Kantara",
+    "Option4": "Joyland",
+    "Answer": 1
+  },
+  {
+    "Question": "Which Bollywood film was the highest-grossing film in India in 2022?",
+    "Option1": "Pathaan",
+    "Option2": "KGF Chapter 2",
+    "Option3": "RRR",
+    "Option4": "Brahmāstra",
+    "Answer": 2
+  },
+  {
+    "Question": "Which actor won the National Film Award for Best Actor in 2023?",
+    "Option1": "Allu Arjun",
+    "Option2": "Dhanush",
+    "Option3": "Ranveer Singh",
+    "Option4": "Ajay Devgn",
+    "Answer": 1
+  },
+  {
+    "Question": "Which movie features Deepika Padukone in a cameo as a scientist in 2023?",
+    "Option1": "Jawaan",
+    "Option2": "Fighter",
+    "Option3": "Project K",
+    "Option4": "Brahmāstra",
+    "Answer": 4
+  },
+  {
+    "Question": "Which Indian director was honored with the Dadasaheb Phalke Award in 2023?",
+    "Option1": "Rajamouli",
+    "Option2": "Pradeep Sarkar",
+    "Option3": "Karan Johar",
+    "Option4": "R. Balki",
+    "Answer": 2
+  },
+  {
+    "Question": "Which Bollywood movie is India's official entry for the Best International Feature Film category at the 2024 Oscars?",
+    "Option1": "The Kashmir Files",
+    "Option2": "Gadar 2",
+    "Option3": "The Kerala Story",
+    "Option4": "Ponniyin Selvan: Part 2",
+    "Answer": 1
+  },
+  {
+    "Question": "Which Indian film industry superstar made his digital debut with the series 'Farzi' in 2023?",
+    "Option1": "Shahid Kapoor",
+    "Option2": "Akshay Kumar",
+    "Option3": "Ajay Devgn",
+    "Option4": "Saif Ali Khan",
+    "Answer": 1
+  },
+  {
+    "Question": "Which actress starred in the 2023 biopic 'Sita: The Incarnation'?",
+    "Option1": "Kangana Ranaut",
+    "Option2": "Kiara Advani",
+    "Option3": "Deepika Padukone",
+    "Option4": "Alia Bhatt",
+    "Answer": 1
+  },
+  {
+    "Question": "Which Indian film was the first to cross the ₹1000 crore mark at the global box office in 2023?",
+    "Option1": "RRR",
+    "Option2": "Pathaan",
+    "Option3": "KGF Chapter 2",
+    "Option4": "Ponniyin Selvan: Part 1",
+    "Answer": 2
+  },
+  {
+    "Question": "Which 2023 movie stars Shah Rukh Khan in a double role after a long gap?",
+    "Option1": "Dunki",
+    "Option2": "Jawaan",
+    "Option3": "Pathaan",
+    "Option4": "Zero",
+    "Answer": 2
+  },
+  {
+    "Question": "Which Tamil movie became a sensational hit worldwide in 2023?",
+    "Option1": "Varisu",
+    "Option2": "Thunivu",
+    "Option3": "Ponniyin Selvan: Part 2",
+    "Option4": "Leo",
+    "Answer": 4
+  },
+  {
+    "Question": "Which Indian film from 2023 is based on the life of a real spy?",
+    "Option1": "Mission Majnu",
+    "Option2": "Raazi",
+    "Option3": "IB71",
+    "Option4": "Bell Bottom",
+    "Answer": 3
+  },
+  {
+    "Question": "Which actor made a cameo appearance in the 2023 film 'Rocky Aur Rani Ki Prem Kahani'?",
+    "Option1": "Salman Khan",
+    "Option2": "Shah Rukh Khan",
+    "Option3": "Amitabh Bachchan",
+    "Option4": "Hrithik Roshan",
+    "Answer": 3
+  },
+  {
+    "Question": "Which 2023 Indian film tells the story of a high-stakes heist during the festival of Dussehra?",
+    "Option1": "Jawaan",
+    "Option2": "Thunivu",
+    "Option3": "Gadar 2",
+    "Option4": "Pathaan",
+    "Answer": 2
+  },
+  {
+    "Question": "Which recent Indian movie features a strong anti-corruption theme, starring Vijay?",
+    "Option1": "Master",
+    "Option2": "Leo",
+    "Option3": "Varisu",
+    "Option4": "Beast",
+    "Answer": 3
+  },
+  {
+    "Question": "Which Bollywood actress made her debut in the South Indian film industry with 'Pushpa 2' in 2023?",
+    "Option1": "Kriti Sanon",
+    "Option2": "Sara Ali Khan",
+    "Option3": "Rashmika Mandanna",
+    "Option4": "Kiara Advani",
+    "Answer": 4
+  },
+  {
+    "Question": "Which Indian director is set to make a sci-fi film titled 'Project K' with Prabhas in 2024?",
+    "Option1": "S. Shankar",
+    "Option2": "S. S. Rajamouli",
+    "Option3": "Nag Ashwin",
+    "Option4": "A. R. Murugadoss",
+    "Answer": 3
+  },
+  {
+    "Question": "What is the capital city of France?",
+    "Option1": "Rome",
+    "Option2": "Paris",
+    "Option3": "Berlin",
+    "Option4": "Madrid",
+    "Answer": 2
+  },
+  {
+    "Question": "Who wrote the play 'Romeo and Juliet'?",
+    "Option1": "William Shakespeare",
+    "Option2": "Charles Dickens",
+    "Option3": "Jane Austen",
+    "Option4": "Mark Twain",
+    "Answer": 1
+  },
+  {
+    "Question": "What is the largest continent by land area?",
+    "Option1": "Africa",
+    "Option2": "Europe",
+    "Option3": "Asia",
+    "Option4": "North America",
+    "Answer": 3
+  },
+  {
+    "Question": "Which element has the chemical symbol 'O'?",
+    "Option1": "Oxygen",
+    "Option2": "Osmium",
+    "Option3": "Oganesson",
+    "Option4": "Oxalate",
+    "Answer": 1
+  },
+  {
+    "Question": "Which planet is known as the 'Blue Planet'?",
+    "Option1": "Mars",
+    "Option2": "Earth",
+    "Option3": "Neptune",
+    "Option4": "Uranus",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the longest river in the world?",
+    "Option1": "Nile",
+    "Option2": "Amazon",
+    "Option3": "Yangtze",
+    "Option4": "Mississippi",
+    "Answer": 1
+  },
+  {
+    "Question": "In what year did the Titanic sink?",
+    "Option1": "1905",
+    "Option2": "1912",
+    "Option3": "1920",
+    "Option4": "1915",
+    "Answer": 2
+  },
+  {
+    "Question": "Who was the first President of the United States?",
+    "Option1": "Thomas Jefferson",
+    "Option2": "John Adams",
+    "Option3": "George Washington",
+    "Option4": "Abraham Lincoln",
+    "Answer": 3
+  },
+  {
+    "Question": "Which country is known as the Land of the Rising Sun?",
+    "Option1": "China",
+    "Option2": "India",
+    "Option3": "Japan",
+    "Option4": "South Korea",
+    "Answer": 3
+  },
+  {
+    "Question": "What is the smallest ocean in the world?",
+    "Option1": "Atlantic Ocean",
+    "Option2": "Indian Ocean",
+    "Option3": "Arctic Ocean",
+    "Option4": "Southern Ocean",
+    "Answer": 3
+  },
+  {
+    "Question": "What is the largest mammal in the world?",
+    "Option1": "Elephant",
+    "Option2": "Blue Whale",
+    "Option3": "Giraffe",
+    "Option4": "Hippopotamus",
+    "Answer": 2
+  },
+  {
+    "Question": "Which country gifted the Statue of Liberty to the United States?",
+    "Option1": "Germany",
+    "Option2": "France",
+    "Option3": "Spain",
+    "Option4": "Italy",
+    "Answer": 2
+  },
+  {
+    "Question": "Which language is the most widely spoken in the world?",
+    "Option1": "Spanish",
+    "Option2": "English",
+    "Option3": "Mandarin Chinese",
+    "Option4": "Hindi",
+    "Answer": 3
+  },
+  {
+    "Question": "Who developed the theory of relativity?",
+    "Option1": "Isaac Newton",
+    "Option2": "Galileo Galilei",
+    "Option3": "Albert Einstein",
+    "Option4": "Nikola Tesla",
+    "Answer": 3
+  },
+  {
+    "Question": "What is the currency of Japan?",
+    "Option1": "Yuan",
+    "Option2": "Won",
+    "Option3": "Yen",
+    "Option4": "Rupee",
+    "Answer": 3
+  },
+  {
+    "Question": "Which is the tallest mountain in the world?",
+    "Option1": "Mount Kilimanjaro",
+    "Option2": "Mount Everest",
+    "Option3": "K2",
+    "Option4": "Mount Elbrus",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the hardest natural substance on Earth?",
+    "Option1": "Gold",
+    "Option2": "Iron",
+    "Option3": "Diamond",
+    "Option4": "Platinum",
+    "Answer": 3
+  },
+  {
+    "Question": "Which planet is closest to Earth?",
+    "Option1": "Mars",
+    "Option2": "Venus",
+    "Option3": "Mercury",
+    "Option4": "Jupiter",
+    "Answer": 2
+  },
+  {
+    "Question": "Who is known as the 'Father of Computers'?",
+    "Option1": "Alan Turing",
+    "Option2": "Bill Gates",
+    "Option3": "Charles Babbage",
+    "Option4": "Steve Jobs",
+    "Answer": 3
+  },
+  {
+    "Question": "Which famous physicist wrote 'A Brief History of Time'?",
+    "Option1": "Richard Feynman",
+    "Option2": "Niels Bohr",
+    "Option3": "Stephen Hawking",
+    "Option4": "Max Planck",
+    "Answer": 3
+  },
+  {
+    "Question": "Which country is known as the 'Land Down Under'?",
+    "Option1": "Australia",
+    "Option2": "New Zealand",
+    "Option3": "South Africa",
+    "Option4": "Brazil",
+    "Answer": 1
+  },
+  {
+    "Question": "Who painted the Mona Lisa?",
+    "Option1": "Vincent van Gogh",
+    "Option2": "Pablo Picasso",
+    "Option3": "Leonardo da Vinci",
+    "Option4": "Claude Monet",
+    "Answer": 3
+  },
+  {
+    "Question": "What is the smallest planet in our solar system?",
+    "Option1": "Venus",
+    "Option2": "Mars",
+    "Option3": "Mercury",
+    "Option4": "Pluto",
+    "Answer": 3
+  },
+  {
+    "Question": "Which ocean is the largest by surface area?",
+    "Option1": "Atlantic Ocean",
+    "Option2": "Indian Ocean",
+    "Option3": "Arctic Ocean",
+    "Option4": "Pacific Ocean",
+    "Answer": 4
+  },
+  {
+    "Question": "What is the main ingredient in guacamole?",
+    "Option1": "Tomato",
+    "Option2": "Avocado",
+    "Option3": "Onion",
+    "Option4": "Pepper",
+    "Answer": 2
+  },
+  {
+    "Question": "Which organ in the human body is primarily responsible for filtering blood?",
+    "Option1": "Lungs",
+    "Option2": "Heart",
+    "Option3": "Liver",
+    "Option4": "Kidneys",
+    "Answer": 4
+  },
+  {
+    "Question": "In which year did World War II end?",
+    "Option1": "1939",
+    "Option2": "1942",
+    "Option3": "1945",
+    "Option4": "1948",
+    "Answer": 3
+  },
+  {
+    "Question": "Who discovered penicillin?",
+    "Option1": "Marie Curie",
+    "Option2": "Alexander Fleming",
+    "Option3": "Louis Pasteur",
+    "Option4": "Thomas Edison",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the largest desert in the world?",
+    "Option1": "Sahara Desert",
+    "Option2": "Gobi Desert",
+    "Option3": "Arabian Desert",
+    "Option4": "Antarctic Desert",
+    "Answer": 4
+  },
+  {
+    "Question": "Who was the first person to walk on the Moon?",
+    "Option1": "Yuri Gagarin",
+    "Option2": "Buzz Aldrin",
+    "Option3": "Neil Armstrong",
+    "Option4": "Michael Collins",
+    "Answer": 3
+  },
+  {
+    "Question": "What is the chemical formula for water?",
+    "Option1": "CO2",
+    "Option2": "H2O",
+    "Option3": "O2",
+    "Option4": "NaCl",
+    "Answer": 2
+  },
+  {
+    "Question": "Which planet is known for having a prominent ring system?",
+    "Option1": "Jupiter",
+    "Option2": "Saturn",
+    "Option3": "Neptune",
+    "Option4": "Uranus",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the longest bone in the human body?",
+    "Option1": "Femur",
+    "Option2": "Humerus",
+    "Option3": "Tibia",
+    "Option4": "Fibula",
+    "Answer": 1
+  },
+  {
+    "Question": "Which country is famous for inventing pizza?",
+    "Option1": "France",
+    "Option2": "Spain",
+    "Option3": "Greece",
+    "Option4": "Italy",
+    "Answer": 4
+  },
+  {
+    "Question": "What is the capital city of Canada?",
+    "Option1": "Toronto",
+    "Option2": "Vancouver",
+    "Option3": "Ottawa",
+    "Option4": "Montreal",
+    "Answer": 3
+  },
+  {
+    "Question": "What is the primary language spoken in Brazil?",
+    "Option1": "Spanish",
+    "Option2": "Portuguese",
+    "Option3": "French",
+    "Option4": "English",
+    "Answer": 2
+  },
+  {
+    "Question": "Who is known as the 'Father of Modern Physics'?",
+    "Option1": "Albert Einstein",
+    "Option2": "Galileo Galilei",
+    "Option3": "Isaac Newton",
+    "Option4": "Niels Bohr",
+    "Answer": 2
+  },
+  {
+    "Question": "Which planet is known as the 'Morning Star' or 'Evening Star'?",
+    "Option1": "Mercury",
+    "Option2": "Mars",
+    "Option3": "Venus",
+    "Option4": "Jupiter",
+    "Answer": 3
+  },
+  {
+    "Question": "What vitamin is primarily produced when human skin is exposed to sunlight?",
+    "Option1": "Vitamin A",
+    "Option2": "Vitamin C",
+    "Option3": "Vitamin D",
+    "Option4": "Vitamin B12",
+    "Answer": 3
+  },
+
+  {
+    "Question": "What part of the cell contains the genetic material?",
+    "Option1": "Cytoplasm",
+    "Option2": "Nucleus",
+    "Option3": "Mitochondria",
+    "Option4": "Ribosome",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the most abundant mineral in Earth's crust?",
+    "Option1": "Quartz",
+    "Option2": "Feldspar",
+    "Option3": "Mica",
+    "Option4": "Calcite",
+    "Answer": 2
+  },
+  {
+    "Question": "What type of rock is formed from the cooling and solidification of magma or lava?",
+    "Option1": "Sedimentary",
+    "Option2": "Metamorphic",
+    "Option3": "Igneous",
+    "Option4": "Organic",
+    "Answer": 3
+  },
+  {
+    "Question": "What is the name of the supercontinent that existed about 300 million years ago?",
+    "Option1": "Gondwana",
+    "Option2": "Laurasia",
+    "Option3": "Pangaea",
+    "Option4": "Rodinia",
+    "Answer": 3
+  },
+  {
+    "Question": "Which mineral is known as 'fool's gold' because it resembles real gold?",
+    "Option1": "Chalcopyrite",
+    "Option2": "Hematite",
+    "Option3": "Pyrite",
+    "Option4": "Galena",
+    "Answer": 3
+  },
+  {
+    "Question": "What is the hardest natural substance on Earth?",
+    "Option1": "Corundum",
+    "Option2": "Diamond",
+    "Option3": "Topaz",
+    "Option4": "Quartz",
+    "Answer": 2
+  },
+  {
+    "Question": "What type of rock is formed by the accumulation and compaction of sediment?",
+    "Option1": "Sedimentary",
+    "Option2": "Igneous",
+    "Option3": "Metamorphic",
+    "Option4": "Volcanic",
+    "Answer": 1
+  },
+  {
+    "Question": "What is the name of the process by which sedimentary rocks are formed?",
+    "Option1": "Metamorphism",
+    "Option2": "Erosion",
+    "Option3": "Lithification",
+    "Option4": "Sublimation",
+    "Answer": 3
+  },
+  {
+    "Question": "What scale is used to measure the hardness of minerals?",
+    "Option1": "Richter scale",
+    "Option2": "Mohs scale",
+    "Option3": "Beaufort scale",
+    "Option4": "Saffir-Simpson scale",
+    "Answer": 2
+  },
+  {
+    "Question": "Which layer of the Earth is composed mostly of iron and nickel?",
+    "Option1": "Crust",
+    "Option2": "Mantle",
+    "Option3": "Outer core",
+    "Option4": "Lithosphere",
+    "Answer": 3
+  },
+  {
+    "Question": "What type of rock can be transformed into metamorphic rock under heat and pressure?",
+    "Option1": "Igneous rock",
+    "Option2": "Sedimentary rock",
+    "Option3": "Metamorphic rock",
+    "Option4": "All of the above",
+    "Answer": 4
+  },
+  {
+    "Question": "Which geological era is known as the 'Age of Reptiles'?",
+    "Option1": "Paleozoic",
+    "Option2": "Mesozoic",
+    "Option3": "Cenozoic",
+    "Option4": "Proterozoic",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the most common rock type found on Earth's surface?",
+    "Option1": "Basalt",
+    "Option2": "Granite",
+    "Option3": "Sandstone",
+    "Option4": "Limestone",
+    "Answer": 1
+  },
+  {
+    "Question": "What is the name of the boundary between Earth's crust and mantle?",
+    "Option1": "Moho",
+    "Option2": "Lithosphere",
+    "Option3": "Asthenosphere",
+    "Option4": "Core",
+    "Answer": 1
+  },
+  {
+    "Question": "Which type of fault is caused by tensional forces pulling rocks apart?",
+    "Option1": "Strike-slip fault",
+    "Option2": "Normal fault",
+    "Option3": "Reverse fault",
+    "Option4": "Thrust fault",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the term for molten rock beneath the Earth's surface?",
+    "Option1": "Lava",
+    "Option2": "Magma",
+    "Option3": "Basalt",
+    "Option4": "Obsidian",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the main component of Earth's inner core?",
+    "Option1": "Iron",
+    "Option2": "Nickel",
+    "Option3": "Silicon",
+    "Option4": "Oxygen",
+    "Answer": 1
+  },
+  {
+    "Question": "What do we call a large, flat area of land that is elevated above the surrounding land?",
+    "Option1": "Valley",
+    "Option2": "Plain",
+    "Option3": "Plateau",
+    "Option4": "Basin",
+    "Answer": 3
+  },
+  {
+    "Question": "Which type of volcanic eruption is the most explosive?",
+    "Option1": "Hawaiian",
+    "Option2": "Strombolian",
+    "Option3": "Plinian",
+    "Option4": "Vulcanian",
+    "Answer": 3
+  },
+  {
+    "Question": "What type of rock is marble?",
+    "Option1": "Igneous",
+    "Option2": "Sedimentary",
+    "Option3": "Metamorphic",
+    "Option4": "Volcanic",
+    "Answer": 3
+  },
+  {
+    "Question": "Which process describes the breaking down of rocks into smaller pieces by natural forces?",
+    "Option1": "Erosion",
+    "Option2": "Weathering",
+    "Option3": "Deposition",
+    "Option4": "Compaction",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the name of the point on Earth's surface directly above the focus of an earthquake?",
+    "Option1": "Hypocenter",
+    "Option2": "Epicenter",
+    "Option3": "Fault",
+    "Option4": "Seismograph",
+    "Answer": 2
+  },
+  {
+    "Question": "Which mineral has a perfect cleavage in one direction and is commonly used in electrical insulators?",
+    "Option1": "Mica",
+    "Option2": "Quartz",
+    "Option3": "Feldspar",
+    "Option4": "Calcite",
+    "Answer": 1
+  },
+  {
+    "Question": "What do we call a naturally occurring, inorganic solid with a definite chemical composition and crystalline structure?",
+    "Option1": "Mineral",
+    "Option2": "Rock",
+    "Option3": "Ore",
+    "Option4": "Sediment",
+    "Answer": 1
+  },
+  {
+    "Question": "Which type of metamorphism occurs over large areas due to tectonic forces?",
+    "Option1": "Contact metamorphism",
+    "Option2": "Regional metamorphism",
+    "Option3": "Hydrothermal metamorphism",
+    "Option4": "Dynamic metamorphism",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the most abundant gas in Earth's atmosphere?",
+    "Option1": "Oxygen",
+    "Option2": "Carbon dioxide",
+    "Option3": "Nitrogen",
+    "Option4": "Argon",
+    "Answer": 3
+  },
+  {
+    "Question": "What is the name of the Earth's outermost layer?",
+    "Option1": "Mantle",
+    "Option2": "Core",
+    "Option3": "Crust",
+    "Option4": "Asthenosphere",
+    "Answer": 3
+  },
+  {
+    "Question": "Which rock type is primarily associated with fossil formation?",
+    "Option1": "Igneous",
+    "Option2": "Sedimentary",
+    "Option3": "Metamorphic",
+    "Option4": "Volcanic",
+    "Answer": 2
+  },
+  {
+    "Question": "What term describes the bending of rock layers due to stress?",
+    "Option1": "Folding",
+    "Option2": "Faulting",
+    "Option3": "Fracturing",
+    "Option4": "Shearing",
+    "Answer": 1
+  },
+  {
+    "Question": "Which element is the most abundant in Earth's crust?",
+    "Option1": "Oxygen",
+    "Option2": "Silicon",
+    "Option3": "Aluminum",
+    "Option4": "Iron",
+    "Answer": 1
+  },
+  {
+    "Question": "What is the term for a naturally occurring volcanic glass?",
+    "Option1": "Basalt",
+    "Option2": "Obsidian",
+    "Option3": "Pumice",
+    "Option4": "Rhyolite",
+    "Answer": 2
+  },
+  {
+    "Question": "What do we call a rock that forms from the cooling of lava on Earth's surface?",
+    "Option1": "Plutonic",
+    "Option2": "Extrusive",
+    "Option3": "Intrusive",
+    "Option4": "Clastic",
+    "Answer": 2
+  }
+]

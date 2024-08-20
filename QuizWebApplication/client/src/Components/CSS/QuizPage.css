@@ -1,0 +1,109 @@
+.Quiz-start{
+    min-height: 30vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.Quiz-start h2{
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Quiz-start button{
+    min-width: 10%;
+    padding: 2px;
+    min-height: 30px;
+    font-size: larger;
+    background-color: rgba(140, 190, 67, 0.637);
+    color: black;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+
+.Quiz-start button:hover{
+    color:white;
+    background-color:  rgba(140, 190, 67, 0.800) ;
+    transition: all 0.3s ease;
+}
+
+.Quiz-Question-Cointainer{
+    min-width: 240px;
+    margin: 10px;
+    margin-top: 2rem;
+    padding: 40px 10px;
+    background-color: rgba(201, 207, 203, 0.874);
+    color: #262626;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 25px;
+}
+
+.Quiz-Question-Cointainer hr{
+    height: 2px;
+    color: #707070;
+}
+
+.Quiz-Question-Cointainer h2{
+    font-size: 27px;
+    font-weight: 500;
+}
+
+.Quiz-Question-Cointainer h1{
+    text-align: center;
+}
+
+.Quiz-Question-Cointainer ul li{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding-left: 1rem;
+    border: 1px solid #686868;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.Quiz-Question-Cointainer button{
+    margin: auto;
+    min-width: 30%;
+    height: 40px;
+    background: #553f9a;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+    transition: 0.3s ease-in;
+}
+
+.Quiz-Question-Cointainer button:hover{
+    background: black;
+    transition: 0.3s ease-in;
+}
+
+.Quiz-index{
+    text-align: center;
+    font-size: 1.2rem;
+    margin: auto;
+}
+
+.Quiz-Question-Cointainer .correct{
+    background: #dffff2;
+    border-color: #00d397;
+}
+
+.Quiz-Question-Cointainer .wrong{
+    background: #ffebeb;
+    border-color: #ff4a4a;
+}

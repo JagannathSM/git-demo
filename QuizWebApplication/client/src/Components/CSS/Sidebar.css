@@ -1,0 +1,58 @@
+.sidebar_container{
+    display: flex;
+}
+
+main{
+    width: 100%;
+    /* padding: 1rem; */
+}
+
+.sidebar{
+    background-color: #000;
+    color: #fff;
+    height: 200vh;
+    transition: all 0.5s ease-out;
+    /* min-width: 300px; */
+}
+
+.top-section{
+    display: flex;
+    align-items: center;
+    padding: 20px 1rem;
+}
+
+.logo{
+    font-size: 30px;
+}
+
+.bars{
+    font-size: 25px;
+    display: flex;
+    margin-left: 4rem;
+    cursor: pointer;
+    /* margin-right: 1rem; */
+}
+
+.link{
+    display: flex;
+    color: #fff;
+    padding: 10px 1rem;
+    gap: 15px;
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+}
+
+.link:hover{
+    background-color: lightskyblue;
+    color: #000;
+    transition: all 0.3s ease-in;
+}
+
+.active{
+    background-color: lightskyblue;
+    color: #000;
+}
+
+.icon, .link-text{
+    font-size: 20px;
+}

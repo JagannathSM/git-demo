@@ -1,0 +1,250 @@
+[
+  {
+    "Question": "What is the most abundant mineral in Earth's crust?",
+    "Option1": "Quartz",
+    "Option2": "Feldspar",
+    "Option3": "Mica",
+    "Option4": "Calcite",
+    "Answer": 2
+  },
+  {
+    "Question": "What type of rock is formed from the cooling and solidification of magma or lava?",
+    "Option1": "Sedimentary",
+    "Option2": "Metamorphic",
+    "Option3": "Igneous",
+    "Option4": "Organic",
+    "Answer": 3
+  },
+  {
+    "Question": "What is the name of the supercontinent that existed about 300 million years ago?",
+    "Option1": "Gondwana",
+    "Option2": "Laurasia",
+    "Option3": "Pangaea",
+    "Option4": "Rodinia",
+    "Answer": 3
+  },
+  {
+    "Question": "Which mineral is known as 'fool's gold' because it resembles real gold?",
+    "Option1": "Chalcopyrite",
+    "Option2": "Hematite",
+    "Option3": "Pyrite",
+    "Option4": "Galena",
+    "Answer": 3
+  },
+  {
+    "Question": "What is the hardest natural substance on Earth?",
+    "Option1": "Corundum",
+    "Option2": "Diamond",
+    "Option3": "Topaz",
+    "Option4": "Quartz",
+    "Answer": 2
+  },
+  {
+    "Question": "What type of rock is formed by the accumulation and compaction of sediment?",
+    "Option1": "Sedimentary",
+    "Option2": "Igneous",
+    "Option3": "Metamorphic",
+    "Option4": "Volcanic",
+    "Answer": 1
+  },
+  {
+    "Question": "What is the name of the process by which sedimentary rocks are formed?",
+    "Option1": "Metamorphism",
+    "Option2": "Erosion",
+    "Option3": "Lithification",
+    "Option4": "Sublimation",
+    "Answer": 3
+  },
+  {
+    "Question": "What scale is used to measure the hardness of minerals?",
+    "Option1": "Richter scale",
+    "Option2": "Mohs scale",
+    "Option3": "Beaufort scale",
+    "Option4": "Saffir-Simpson scale",
+    "Answer": 2
+  },
+  {
+    "Question": "Which layer of the Earth is composed mostly of iron and nickel?",
+    "Option1": "Crust",
+    "Option2": "Mantle",
+    "Option3": "Outer core",
+    "Option4": "Lithosphere",
+    "Answer": 3
+  },
+  {
+    "Question": "What type of rock can be transformed into metamorphic rock under heat and pressure?",
+    "Option1": "Igneous rock",
+    "Option2": "Sedimentary rock",
+    "Option3": "Metamorphic rock",
+    "Option4": "All of the above",
+    "Answer": 4
+  },
+  {
+    "Question": "Which geological era is known as the 'Age of Reptiles'?",
+    "Option1": "Paleozoic",
+    "Option2": "Mesozoic",
+    "Option3": "Cenozoic",
+    "Option4": "Proterozoic",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the most common rock type found on Earth's surface?",
+    "Option1": "Basalt",
+    "Option2": "Granite",
+    "Option3": "Sandstone",
+    "Option4": "Limestone",
+    "Answer": 1
+  },
+  {
+    "Question": "What is the name of the boundary between Earth's crust and mantle?",
+    "Option1": "Moho",
+    "Option2": "Lithosphere",
+    "Option3": "Asthenosphere",
+    "Option4": "Core",
+    "Answer": 1
+  },
+  {
+    "Question": "Which type of fault is caused by tensional forces pulling rocks apart?",
+    "Option1": "Strike-slip fault",
+    "Option2": "Normal fault",
+    "Option3": "Reverse fault",
+    "Option4": "Thrust fault",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the term for molten rock beneath the Earth's surface?",
+    "Option1": "Lava",
+    "Option2": "Magma",
+    "Option3": "Basalt",
+    "Option4": "Obsidian",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the main component of Earth's inner core?",
+    "Option1": "Iron",
+    "Option2": "Nickel",
+    "Option3": "Silicon",
+    "Option4": "Oxygen",
+    "Answer": 1
+  },
+  {
+    "Question": "What do we call a large, flat area of land that is elevated above the surrounding land?",
+    "Option1": "Valley",
+    "Option2": "Plain",
+    "Option3": "Plateau",
+    "Option4": "Basin",
+    "Answer": 3
+  },
+  {
+    "Question": "Which type of volcanic eruption is the most explosive?",
+    "Option1": "Hawaiian",
+    "Option2": "Strombolian",
+    "Option3": "Plinian",
+    "Option4": "Vulcanian",
+    "Answer": 3
+  },
+  {
+    "Question": "What type of rock is marble?",
+    "Option1": "Igneous",
+    "Option2": "Sedimentary",
+    "Option3": "Metamorphic",
+    "Option4": "Volcanic",
+    "Answer": 3
+  },
+  {
+    "Question": "Which process describes the breaking down of rocks into smaller pieces by natural forces?",
+    "Option1": "Erosion",
+    "Option2": "Weathering",
+    "Option3": "Deposition",
+    "Option4": "Compaction",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the name of the point on Earth's surface directly above the focus of an earthquake?",
+    "Option1": "Hypocenter",
+    "Option2": "Epicenter",
+    "Option3": "Fault",
+    "Option4": "Seismograph",
+    "Answer": 2
+  },
+  {
+    "Question": "Which mineral has a perfect cleavage in one direction and is commonly used in electrical insulators?",
+    "Option1": "Mica",
+    "Option2": "Quartz",
+    "Option3": "Feldspar",
+    "Option4": "Calcite",
+    "Answer": 1
+  },
+  {
+    "Question": "What do we call a naturally occurring, inorganic solid with a definite chemical composition and crystalline structure?",
+    "Option1": "Mineral",
+    "Option2": "Rock",
+    "Option3": "Ore",
+    "Option4": "Sediment",
+    "Answer": 1
+  },
+  {
+    "Question": "Which type of metamorphism occurs over large areas due to tectonic forces?",
+    "Option1": "Contact metamorphism",
+    "Option2": "Regional metamorphism",
+    "Option3": "Hydrothermal metamorphism",
+    "Option4": "Dynamic metamorphism",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the most abundant gas in Earth's atmosphere?",
+    "Option1": "Oxygen",
+    "Option2": "Carbon dioxide",
+    "Option3": "Nitrogen",
+    "Option4": "Argon",
+    "Answer": 3
+  },
+  {
+    "Question": "What is the name of the Earth's outermost layer?",
+    "Option1": "Mantle",
+    "Option2": "Core",
+    "Option3": "Crust",
+    "Option4": "Asthenosphere",
+    "Answer": 3
+  },
+  {
+    "Question": "Which rock type is primarily associated with fossil formation?",
+    "Option1": "Igneous",
+    "Option2": "Sedimentary",
+    "Option3": "Metamorphic",
+    "Option4": "Volcanic",
+    "Answer": 2
+  },
+  {
+    "Question": "What term describes the bending of rock layers due to stress?",
+    "Option1": "Folding",
+    "Option2": "Faulting",
+    "Option3": "Fracturing",
+    "Option4": "Shearing",
+    "Answer": 1
+  },
+  {
+    "Question": "Which element is the most abundant in Earth's crust?",
+    "Option1": "Oxygen",
+    "Option2": "Silicon",
+    "Option3": "Aluminum",
+    "Option4": "Iron",
+    "Answer": 1
+  },
+  {
+    "Question": "What is the term for a naturally occurring volcanic glass?",
+    "Option1": "Basalt",
+    "Option2": "Obsidian",
+    "Option3": "Pumice",
+    "Option4": "Rhyolite",
+    "Answer": 2
+  },
+  {
+    "Question": "What do we call a rock that forms from the cooling of lava on Earth's surface?",
+    "Option1": "Plutonic",
+    "Option2": "Extrusive",
+    "Option3": "Intrusive",
+    "Option4": "Clastic",
+    "Answer": 2
+  }
+]

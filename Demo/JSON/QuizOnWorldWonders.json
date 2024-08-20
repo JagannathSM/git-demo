@@ -1,0 +1,162 @@
+[
+  {
+    "Question": "Which of the following is one of the Seven Wonders of the Ancient World?",
+    "Option1": "Eiffel Tower",
+    "Option2": "Great Pyramid of Giza",
+    "Option3": "Statue of Liberty",
+    "Option4": "Sydney Opera House",
+    "Answer": 2
+  },
+  {
+    "Question": "Where is the Taj Mahal located?",
+    "Option1": "India",
+    "Option2": "China",
+    "Option3": "Egypt",
+    "Option4": "Brazil",
+    "Answer": 1
+  },
+  {
+    "Question": "Which wonder is known for its giant stone heads on Easter Island?",
+    "Option1": "Machu Picchu",
+    "Option2": "Christ the Redeemer",
+    "Option3": "Moai Statues",
+    "Option4": "Great Wall of China",
+    "Answer": 3
+  },
+  {
+    "Question": "The Great Wall of China was built to protect against invasions from which direction?",
+    "Option1": "East",
+    "Option2": "West",
+    "Option3": "North",
+    "Option4": "South",
+    "Answer": 3
+  },
+  {
+    "Question": "Which wonder is located in Jordan and known for its rock-cut architecture?",
+    "Option1": "Petra",
+    "Option2": "Chichen Itza",
+    "Option3": "Machu Picchu",
+    "Option4": "Colosseum",
+    "Answer": 1
+  },
+  {
+    "Question": "Which wonder is a large statue in Rio de Janeiro, Brazil?",
+    "Option1": "Christ the Redeemer",
+    "Option2": "Colosseum",
+    "Option3": "Eiffel Tower",
+    "Option4": "Machu Picchu",
+    "Answer": 1
+  },
+  {
+    "Question": "Which ancient city is famous for the Temple of Artemis?",
+    "Option1": "Athens",
+    "Option2": "Rome",
+    "Option3": "Ephesus",
+    "Option4": "Cairo",
+    "Answer": 3
+  },
+  {
+    "Question": "Which wonder was a lighthouse built on the island of Pharos?",
+    "Option1": "Lighthouse of Alexandria",
+    "Option2": "Colossus of Rhodes",
+    "Option3": "Mausoleum at Halicarnassus",
+    "Option4": "Great Pyramid of Giza",
+    "Answer": 1
+  },
+  {
+    "Question": "Which wonder is known for its terraced slopes in Peru?",
+    "Option1": "Taj Mahal",
+    "Option2": "Machu Picchu",
+    "Option3": "Petra",
+    "Option4": "Chichen Itza",
+    "Answer": 2
+  },
+  {
+    "Question": "The Colosseum is located in which city?",
+    "Option1": "Paris",
+    "Option2": "Rome",
+    "Option3": "Athens",
+    "Option4": "London",
+    "Answer": 2
+  },
+  {
+    "Question": "Which of these wonders is in Egypt?",
+    "Option1": "Great Wall of China",
+    "Option2": "Great Pyramid of Giza",
+    "Option3": "Machu Picchu",
+    "Option4": "Christ the Redeemer",
+    "Answer": 2
+  },
+  {
+    "Question": "Which wonder was built to honor a Greek goddess and is located in Turkey?",
+    "Option1": "Temple of Artemis",
+    "Option2": "Great Wall of China",
+    "Option3": "Machu Picchu",
+    "Option4": "Petra",
+    "Answer": 1
+  },
+  {
+    "Question": "Which wonder is known for its large stone statues and is located in Mexico?",
+    "Option1": "Christ the Redeemer",
+    "Option2": "Machu Picchu",
+    "Option3": "Chichen Itza",
+    "Option4": "Eiffel Tower",
+    "Answer": 3
+  },
+  {
+    "Question": "What type of structure is the Colosseum?",
+    "Option1": "Temple",
+    "Option2": "Palace",
+    "Option3": "Amphitheater",
+    "Option4": "Statue",
+    "Answer": 3
+  },
+  {
+    "Question": "Which modern wonder is known for its engineering and is located in China?",
+    "Option1": "Great Wall of China",
+    "Option2": "Machu Picchu",
+    "Option3": "Christ the Redeemer",
+    "Option4": "Eiffel Tower",
+    "Answer": 1
+  },
+  {
+    "Question": "Which wonder was built as a tomb for an ancient ruler in Turkey?",
+    "Option1": "Great Pyramid of Giza",
+    "Option2": "Mausoleum at Halicarnassus",
+    "Option3": "Petra",
+    "Option4": "Colossus of Rhodes",
+    "Answer": 2
+  },
+  {
+    "Question": "Which wonder is a large, famous statue located in Brazil?",
+    "Option1": "Christ the Redeemer",
+    "Option2": "Great Pyramid of Giza",
+    "Option3": "Colosseum",
+    "Option4": "Eiffel Tower",
+    "Answer": 1
+  },
+  {
+    "Question": "Which wonder is known for its intricate carvings in Jordan?",
+    "Option1": "Petra",
+    "Option2": "Great Wall of China",
+    "Option3": "Machu Picchu",
+    "Option4": "Colosseum",
+    "Answer": 1
+  },
+  {
+    "Question": "Which wonder was built to protect against invasions in China?",
+    "Option1": "Machu Picchu",
+    "Option2": "Great Wall of China",
+    "Option3": "Colosseum",
+    "Option4": "Christ the Redeemer",
+    "Answer": 2
+  },
+  {
+    "Question": "Which wonder is known for its impressive stone faces and is located in Cambodia?",
+    "Option1": "Angkor Wat",
+    "Option2": "Great Wall of China",
+    "Option3": "Christ the Redeemer",
+    "Option4": "Machu Picchu",
+    "Answer": 1
+  }
+]

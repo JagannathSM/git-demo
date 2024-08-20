@@ -1,0 +1,38 @@
+.AvatarDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    background-color: rgba(162, 168, 119, 0.42);
+    flex-direction: column;
+}
+
+.AvatarH1{
+    color: rgb(91, 85, 85);
+    margin-top: 1rem;
+    padding: 0.5rem;
+    font-weight: 900;
+    text-align: center;
+}
+
+.Grid-Card{
+    padding: 2rem;
+    border: 1px solid rgb(75, 82, 92);
+    border-radius: 10px;
+    background-color: #21232861;
+    text-align: center;
+    color: white;
+}
+
+.Grid-cointainer{
+    margin: 1rem 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    justify-content: center;
+}
+
+.Grid-Card h1{
+    margin-top: 10px;
+    text-shadow: 0px 0px 3px black;
+}

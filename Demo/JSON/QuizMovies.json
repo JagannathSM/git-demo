@@ -1,0 +1,323 @@
+[
+  {
+    "Question": "Who is known as the 'Father of Indian Cinema'?",
+    "Option1": "Satyajit Ray",
+    "Option2": "Raj Kapoor",
+    "Option3": "Dadasaheb Phalke",
+    "Option4": "Guru Dutt",
+    "Answer": 3
+  },
+  {
+    "Question": "Which was the first Indian film to be submitted for the Oscars?",
+    "Option1": "Mother India",
+    "Option2": "Pather Panchali",
+    "Option3": "Lagaan",
+    "Option4": "Salaam Bombay!",
+    "Answer": 1
+  },
+  {
+    "Question": "Which Indian film won the first National Film Award for Best Feature Film in 1953?",
+    "Option1": "Mirza Ghalib",
+    "Option2": "Shyamchi Aai",
+    "Option3": "Do Bigha Zamin",
+    "Option4": "Neecha Nagar",
+    "Answer": 2
+  },
+  {
+    "Question": "Who was the first Indian actress to win the Best Actress award at the Cannes Film Festival?",
+    "Option1": "Aishwarya Rai",
+    "Option2": "Shabana Azmi",
+    "Option3": "Nargis",
+    "Option4": "Smita Patil",
+    "Answer": 2
+  },
+  {
+    "Question": "Which movie marked the debut of Amitabh Bachchan in Indian cinema?",
+    "Option1": "Zanjeer",
+    "Option2": "Anand",
+    "Option3": "Saat Hindustani",
+    "Option4": "Sholay",
+    "Answer": 3
+  },
+  {
+    "Question": "Which is the highest-grossing Indian film of all time?",
+    "Option1": "Baahubali 2: The Conclusion",
+    "Option2": "Dangal",
+    "Option3": "RRR",
+    "Option4": "KGF Chapter 2",
+    "Answer": 1
+  },
+  {
+    "Question": "Which Indian director is known for creating the 'Apu Trilogy'?",
+    "Option1": "Mani Ratnam",
+    "Option2": "Satyajit Ray",
+    "Option3": "Ritwik Ghatak",
+    "Option4": "Bimal Roy",
+    "Answer": 2
+  },
+  {
+    "Question": "Which Bollywood movie was inspired by the Hollywood film 'The Godfather'?",
+    "Option1": "Sarkar",
+    "Option2": "Agneepath",
+    "Option3": "Deewar",
+    "Option4": "Satya",
+    "Answer": 1
+  },
+  {
+    "Question": "Which actor played the role of 'Mogambo' in the film 'Mr. India'?",
+    "Option1": "Amrish Puri",
+    "Option2": "Pran",
+    "Option3": "Anupam Kher",
+    "Option4": "Prem Chopra",
+    "Answer": 1
+  },
+  {
+    "Question": "Which was the first Indian sound film?",
+    "Option1": "Raja Harishchandra",
+    "Option2": "Alam Ara",
+    "Option3": "Sant Tukaram",
+    "Option4": "Devdas",
+    "Answer": 2
+  },
+  {
+    "Question": "Which actress is known as the 'Queen of Indian Cinema'?",
+    "Option1": "Madhubala",
+    "Option2": "Meena Kumari",
+    "Option3": "Sridevi",
+    "Option4": "Madhuri Dixit",
+    "Answer": 3
+  },
+  {
+    "Question": "Which Indian film was the first to win a Golden Globe Award?",
+    "Option1": "Salaam Bombay!",
+    "Option2": "Gandhi",
+    "Option3": "Monsoon Wedding",
+    "Option4": "Slumdog Millionaire",
+    "Answer": 4
+  },
+  {
+    "Question": "Which Indian actor is often referred to as the 'Tragedy King'?",
+    "Option1": "Raj Kapoor",
+    "Option2": "Dev Anand",
+    "Option3": "Dilip Kumar",
+    "Option4": "Guru Dutt",
+    "Answer": 3
+  },
+  {
+    "Question": "Who directed the iconic Bollywood film 'Sholay'?",
+    "Option1": "Ramesh Sippy",
+    "Option2": "Yash Chopra",
+    "Option3": "Raj Kapoor",
+    "Option4": "Manmohan Desai",
+    "Answer": 1
+  },
+  {
+    "Question": "Which actress won the first Filmfare Award for Best Actress?",
+    "Option1": "Nargis",
+    "Option2": "Madhubala",
+    "Option3": "Meena Kumari",
+    "Option4": "Vyjayanthimala",
+    "Answer": 3
+  },
+  {
+    "Question": "Which film is considered India's first feature film?",
+    "Option1": "Raja Harishchandra",
+    "Option2": "Alam Ara",
+    "Option3": "Devdas",
+    "Option4": "Sant Tukaram",
+    "Answer": 1
+  },
+  {
+    "Question": "Who played the role of the iconic character 'Gabbar Singh' in 'Sholay'?",
+    "Option1": "Amjad Khan",
+    "Option2": "Pran",
+    "Option3": "Sanjeev Kumar",
+    "Option4": "Kader Khan",
+    "Answer": 1
+  },
+  {
+    "Question": "Which Indian filmmaker is known for the movie 'Lagaan'?",
+    "Option1": "Rajkumar Hirani",
+    "Option2": "Ashutosh Gowariker",
+    "Option3": "Karan Johar",
+    "Option4": "Farhan Akhtar",
+    "Answer": 2
+  },
+  {
+    "Question": "Which film won the first-ever Filmfare Award for Best Film?",
+    "Option1": "Do Bigha Zamin",
+    "Option2": "Mother India",
+    "Option3": "Mughal-e-Azam",
+    "Option4": "Baiju Bawra",
+    "Answer": 4
+  },
+  {
+    "Question": "Which Bollywood actor is also known as 'Mr. Perfectionist'?",
+    "Option1": "Shah Rukh Khan",
+    "Option2": "Salman Khan",
+    "Option3": "Aamir Khan",
+    "Option4": "Hrithik Roshan",
+    "Answer": 3
+  },
+
+  {
+    "Question": "Which Indian film won the Best Original Song award at the 95th Academy Awards in 2023?",
+    "Option1": "RRR",
+    "Option2": "Gangubai Kathiawadi",
+    "Option3": "Brahmāstra",
+    "Option4": "Pushpa",
+    "Answer": 1
+  },
+  {
+    "Question": "Which actor played the lead role in the 2022 blockbuster film 'Vikram Vedha'?",
+    "Option1": "Ranbir Kapoor",
+    "Option2": "Hrithik Roshan",
+    "Option3": "Ranveer Singh",
+    "Option4": "Shahid Kapoor",
+    "Answer": 2
+  },
+  {
+    "Question": "Which film marked Alia Bhatt’s Hollywood debut in 2023?",
+    "Option1": "The Archies",
+    "Option2": "Heart of Stone",
+    "Option3": "The Gray Man",
+    "Option4": "Citadel",
+    "Answer": 2
+  },
+  {
+    "Question": "Which Indian film received a standing ovation at the Cannes Film Festival in 2023?",
+    "Option1": "Rocketry: The Nambi Effect",
+    "Option2": "The Kerala Story",
+    "Option3": "Kantara",
+    "Option4": "Joyland",
+    "Answer": 1
+  },
+  {
+    "Question": "Which Bollywood film was the highest-grossing film in India in 2022?",
+    "Option1": "Pathaan",
+    "Option2": "KGF Chapter 2",
+    "Option3": "RRR",
+    "Option4": "Brahmāstra",
+    "Answer": 2
+  },
+  {
+    "Question": "Which actor won the National Film Award for Best Actor in 2023?",
+    "Option1": "Allu Arjun",
+    "Option2": "Dhanush",
+    "Option3": "Ranveer Singh",
+    "Option4": "Ajay Devgn",
+    "Answer": 1
+  },
+  {
+    "Question": "Which movie features Deepika Padukone in a cameo as a scientist in 2023?",
+    "Option1": "Jawaan",
+    "Option2": "Fighter",
+    "Option3": "Project K",
+    "Option4": "Brahmāstra",
+    "Answer": 4
+  },
+  {
+    "Question": "Which Indian director was honored with the Dadasaheb Phalke Award in 2023?",
+    "Option1": "Rajamouli",
+    "Option2": "Pradeep Sarkar",
+    "Option3": "Karan Johar",
+    "Option4": "R. Balki",
+    "Answer": 2
+  },
+  {
+    "Question": "Which Bollywood movie is India's official entry for the Best International Feature Film category at the 2024 Oscars?",
+    "Option1": "The Kashmir Files",
+    "Option2": "Gadar 2",
+    "Option3": "The Kerala Story",
+    "Option4": "Ponniyin Selvan: Part 2",
+    "Answer": 1
+  },
+  {
+    "Question": "Which Indian film industry superstar made his digital debut with the series 'Farzi' in 2023?",
+    "Option1": "Shahid Kapoor",
+    "Option2": "Akshay Kumar",
+    "Option3": "Ajay Devgn",
+    "Option4": "Saif Ali Khan",
+    "Answer": 1
+  },
+  {
+    "Question": "Which actress starred in the 2023 biopic 'Sita: The Incarnation'?",
+    "Option1": "Kangana Ranaut",
+    "Option2": "Kiara Advani",
+    "Option3": "Deepika Padukone",
+    "Option4": "Alia Bhatt",
+    "Answer": 1
+  },
+  {
+    "Question": "Which Indian film was the first to cross the ₹1000 crore mark at the global box office in 2023?",
+    "Option1": "RRR",
+    "Option2": "Pathaan",
+    "Option3": "KGF Chapter 2",
+    "Option4": "Ponniyin Selvan: Part 1",
+    "Answer": 2
+  },
+  {
+    "Question": "Which 2023 movie stars Shah Rukh Khan in a double role after a long gap?",
+    "Option1": "Dunki",
+    "Option2": "Jawaan",
+    "Option3": "Pathaan",
+    "Option4": "Zero",
+    "Answer": 2
+  },
+  {
+    "Question": "Which Tamil movie became a sensational hit worldwide in 2023?",
+    "Option1": "Varisu",
+    "Option2": "Thunivu",
+    "Option3": "Ponniyin Selvan: Part 2",
+    "Option4": "Leo",
+    "Answer": 4
+  },
+  {
+    "Question": "Which Indian film from 2023 is based on the life of a real spy?",
+    "Option1": "Mission Majnu",
+    "Option2": "Raazi",
+    "Option3": "IB71",
+    "Option4": "Bell Bottom",
+    "Answer": 3
+  },
+  {
+    "Question": "Which actor made a cameo appearance in the 2023 film 'Rocky Aur Rani Ki Prem Kahani'?",
+    "Option1": "Salman Khan",
+    "Option2": "Shah Rukh Khan",
+    "Option3": "Amitabh Bachchan",
+    "Option4": "Hrithik Roshan",
+    "Answer": 3
+  },
+  {
+    "Question": "Which 2023 Indian film tells the story of a high-stakes heist during the festival of Dussehra?",
+    "Option1": "Jawaan",
+    "Option2": "Thunivu",
+    "Option3": "Gadar 2",
+    "Option4": "Pathaan",
+    "Answer": 2
+  },
+  {
+    "Question": "Which recent Indian movie features a strong anti-corruption theme, starring Vijay?",
+    "Option1": "Master",
+    "Option2": "Leo",
+    "Option3": "Varisu",
+    "Option4": "Beast",
+    "Answer": 3
+  },
+  {
+    "Question": "Which Bollywood actress made her debut in the South Indian film industry with 'Pushpa 2' in 2023?",
+    "Option1": "Kriti Sanon",
+    "Option2": "Sara Ali Khan",
+    "Option3": "Rashmika Mandanna",
+    "Option4": "Kiara Advani",
+    "Answer": 4
+  },
+  {
+    "Question": "Which Indian director is set to make a sci-fi film titled 'Project K' with Prabhas in 2024?",
+    "Option1": "S. Shankar",
+    "Option2": "S. S. Rajamouli",
+    "Option3": "Nag Ashwin",
+    "Option4": "A. R. Murugadoss",
+    "Answer": 3
+  }
+]

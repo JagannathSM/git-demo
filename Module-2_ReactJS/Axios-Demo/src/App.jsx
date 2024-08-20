@@ -15,6 +15,7 @@ import CardsCompo from '../Components/CardsCompo'
 import ExampleCHECKLIST from '../Components/ExampleCHECKLIST';
 import LoadingAnimation from '../Components/LoadingAnimation'
 import DownloadBills from '../Components/DownloadBills'
+import Admindashboard from '../Components/Admindashboard'
 
 const theme = createTheme();
 
@@ -36,7 +37,8 @@ function App() {
     <Footer/> */}
     {/* <ExampleCHECKLIST/> */}
     {/* <LoadingAnimation/> */}
-    <DownloadBills/>
+    {/* <DownloadBills/> */}
+    <Admindashboard/>
     </>
   )
 }

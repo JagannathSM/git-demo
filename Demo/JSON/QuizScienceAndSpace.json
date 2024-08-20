@@ -1,0 +1,482 @@
+[
+  {
+    "Question": "What is the chemical symbol for water?",
+    "Option1": "H2O",
+    "Option2": "O2",
+    "Option3": "CO2",
+    "Option4": "H2",
+    "Answer": 1
+  },
+  {
+    "Question": "What planet is known as the Red Planet?",
+    "Option1": "Earth",
+    "Option2": "Venus",
+    "Option3": "Mars",
+    "Option4": "Jupiter",
+    "Answer": 3
+  },
+  {
+    "Question": "What gas do plants absorb from the atmosphere?",
+    "Option1": "Oxygen",
+    "Option2": "Carbon Dioxide",
+    "Option3": "Nitrogen",
+    "Option4": "Hydrogen",
+    "Answer": 2
+  },
+  {
+    "Question": "How many bones are in the adult human body?",
+    "Option1": "206",
+    "Option2": "210",
+    "Option3": "195",
+    "Option4": "250",
+    "Answer": 1
+  },
+  {
+    "Question": "What is the largest planet in our solar system?",
+    "Option1": "Saturn",
+    "Option2": "Earth",
+    "Option3": "Jupiter",
+    "Option4": "Neptune",
+    "Answer": 3
+  },
+  {
+    "Question": "Which element has the atomic number 1?",
+    "Option1": "Oxygen",
+    "Option2": "Helium",
+    "Option3": "Hydrogen",
+    "Option4": "Nitrogen",
+    "Answer": 3
+  },
+  {
+    "Question": "What is the powerhouse of the cell?",
+    "Option1": "Nucleus",
+    "Option2": "Ribosome",
+    "Option3": "Mitochondria",
+    "Option4": "Chloroplast",
+    "Answer": 3
+  },
+  {
+    "Question": "What force keeps us on the ground?",
+    "Option1": "Magnetism",
+    "Option2": "Friction",
+    "Option3": "Gravity",
+    "Option4": "Inertia",
+    "Answer": 3
+  },
+  {
+    "Question": "Which gas is most abundant in the Earth's atmosphere?",
+    "Option1": "Oxygen",
+    "Option2": "Nitrogen",
+    "Option3": "Carbon Dioxide",
+    "Option4": "Argon",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the chemical formula for table salt?",
+    "Option1": "NaCl",
+    "Option2": "KCl",
+    "Option3": "CaCl2",
+    "Option4": "MgCl2",
+    "Answer": 1
+  },
+  {
+    "Question": "What part of the human body is primarily responsible for filtering blood?",
+    "Option1": "Heart",
+    "Option2": "Lungs",
+    "Option3": "Liver",
+    "Option4": "Kidneys",
+    "Answer": 4
+  },
+  {
+    "Question": "What type of rock is formed from cooled lava?",
+    "Option1": "Sedimentary",
+    "Option2": "Igneous",
+    "Option3": "Metamorphic",
+    "Option4": "Fossil",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the main gas found in the air we breathe?",
+    "Option1": "Oxygen",
+    "Option2": "Hydrogen",
+    "Option3": "Nitrogen",
+    "Option4": "Carbon Dioxide",
+    "Answer": 3
+  },
+  {
+    "Question": "Which organ in the human body is responsible for producing insulin?",
+    "Option1": "Liver",
+    "Option2": "Pancreas",
+    "Option3": "Kidney",
+    "Option4": "Stomach",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the boiling point of water in Celsius?",
+    "Option1": "90°C",
+    "Option2": "100°C",
+    "Option3": "110°C",
+    "Option4": "120°C",
+    "Answer": 2
+  },
+  {
+    "Question": "Which planet is closest to the Sun?",
+    "Option1": "Earth",
+    "Option2": "Mars",
+    "Option3": "Venus",
+    "Option4": "Mercury",
+    "Answer": 4
+  },
+  {
+    "Question": "What is the most common blood type in humans?",
+    "Option1": "A",
+    "Option2": "B",
+    "Option3": "AB",
+    "Option4": "O",
+    "Answer": 4
+  },
+  {
+    "Question": "What metal is liquid at room temperature?",
+    "Option1": "Mercury",
+    "Option2": "Gold",
+    "Option3": "Silver",
+    "Option4": "Iron",
+    "Answer": 1
+  },
+  {
+    "Question": "Which of the following is a primary color?",
+    "Option1": "Green",
+    "Option2": "Purple",
+    "Option3": "Yellow",
+    "Option4": "Red",
+    "Answer": 4
+  },
+  {
+    "Question": "What is the center of an atom called?",
+    "Option1": "Electron",
+    "Option2": "Neutron",
+    "Option3": "Proton",
+    "Option4": "Nucleus",
+    "Answer": 4
+  },
+  {
+    "Question": "Which organ is responsible for pumping blood throughout the human body?",
+    "Option1": "Liver",
+    "Option2": "Heart",
+    "Option3": "Lungs",
+    "Option4": "Kidneys",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the largest organ in the human body?",
+    "Option1": "Liver",
+    "Option2": "Heart",
+    "Option3": "Skin",
+    "Option4": "Lungs",
+    "Answer": 3
+  },
+  {
+    "Question": "How many chambers does the human heart have?",
+    "Option1": "2",
+    "Option2": "4",
+    "Option3": "3",
+    "Option4": "5",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the primary function of red blood cells?",
+    "Option1": "To fight infection",
+    "Option2": "To carry oxygen",
+    "Option3": "To clot blood",
+    "Option4": "To produce hormones",
+    "Answer": 2
+  },
+  {
+    "Question": "Which part of the human brain is responsible for regulating balance and coordination?",
+    "Option1": "Cerebrum",
+    "Option2": "Cerebellum",
+    "Option3": "Brainstem",
+    "Option4": "Hypothalamus",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the smallest bone in the human body?",
+    "Option1": "Stapes",
+    "Option2": "Femur",
+    "Option3": "Humerus",
+    "Option4": "Tibia",
+    "Answer": 1
+  },
+  {
+    "Question": "What is the main function of the kidneys?",
+    "Option1": "To produce bile",
+    "Option2": "To filter blood",
+    "Option3": "To digest food",
+    "Option4": "To store fat",
+    "Answer": 2
+  },
+  {
+    "Question": "Which muscle is primarily responsible for breathing?",
+    "Option1": "Biceps",
+    "Option2": "Triceps",
+    "Option3": "Diaphragm",
+    "Option4": "Gluteus maximus",
+    "Answer": 3
+  },
+  {
+    "Question": "What is the name of the bone that protects the brain?",
+    "Option1": "Femur",
+    "Option2": "Ribcage",
+    "Option3": "Pelvis",
+    "Option4": "Skull",
+    "Answer": 4
+  },
+  {
+    "Question": "How many pairs of ribs does a human have?",
+    "Option1": "10",
+    "Option2": "12",
+    "Option3": "14",
+    "Option4": "16",
+    "Answer": 2
+  },
+  {
+    "Question": "What substance gives skin and hair its color?",
+    "Option1": "Keratin",
+    "Option2": "Collagen",
+    "Option3": "Melanin",
+    "Option4": "Hemoglobin",
+    "Answer": 3
+  },
+  {
+    "Question": "Which part of the eye controls the amount of light that enters?",
+    "Option1": "Cornea",
+    "Option2": "Retina",
+    "Option3": "Iris",
+    "Option4": "Lens",
+    "Answer": 3
+  },
+  {
+    "Question": "What is the strongest muscle in the human body based on its size?",
+    "Option1": "Gluteus maximus",
+    "Option2": "Biceps",
+    "Option3": "Masseter (jaw muscle)",
+    "Option4": "Heart",
+    "Answer": 3
+  },
+  {
+    "Question": "What is the name of the structure that connects muscles to bones?",
+    "Option1": "Ligaments",
+    "Option2": "Cartilage",
+    "Option3": "Tendons",
+    "Option4": "Fascia",
+    "Answer": 3
+  },
+  {
+    "Question": "Which part of the digestive system is primarily responsible for nutrient absorption?",
+    "Option1": "Stomach",
+    "Option2": "Large intestine",
+    "Option3": "Small intestine",
+    "Option4": "Esophagus",
+    "Answer": 3
+  },
+  {
+    "Question": "What is the basic structural unit of the nervous system?",
+    "Option1": "Neuron",
+    "Option2": "Axon",
+    "Option3": "Synapse",
+    "Option4": "Dendrite",
+    "Answer": 1
+  },
+  {
+    "Question": "Which type of blood vessel carries blood away from the heart?",
+    "Option1": "Veins",
+    "Option2": "Arteries",
+    "Option3": "Capillaries",
+    "Option4": "Venules",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the primary function of the white blood cells?",
+    "Option1": "To transport oxygen",
+    "Option2": "To fight infections",
+    "Option3": "To clot blood",
+    "Option4": "To carry nutrients",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the name of the pigment that carries oxygen in the blood?",
+    "Option1": "Myoglobin",
+    "Option2": "Melanin",
+    "Option3": "Hemoglobin",
+    "Option4": "Chlorophyll",
+    "Answer": 3
+  },
+  {
+    "Question": "Which part of the ear is responsible for maintaining balance?",
+    "Option1": "Cochlea",
+    "Option2": "Eardrum",
+    "Option3": "Semicircular canals",
+    "Option4": "Auditory nerve",
+    "Answer": 3
+  },
+  {
+    "Question": "Which planet is known as the Red Planet?",
+    "Option1": "Mars",
+    "Option2": "Jupiter",
+    "Option3": "Saturn",
+    "Option4": "Venus",
+    "Answer": 1
+  },
+  {
+    "Question": "What is the largest planet in our solar system?",
+    "Option1": "Earth",
+    "Option2": "Neptune",
+    "Option3": "Saturn",
+    "Option4": "Jupiter",
+    "Answer": 4
+  },
+  {
+    "Question": "What is the name of Earth's natural satellite?",
+    "Option1": "The Moon",
+    "Option2": "Europa",
+    "Option3": "Phobos",
+    "Option4": "Titan",
+    "Answer": 1
+  },
+  {
+    "Question": "What galaxy is Earth located in?",
+    "Option1": "Andromeda Galaxy",
+    "Option2": "Milky Way Galaxy",
+    "Option3": "Whirlpool Galaxy",
+    "Option4": "Sombrero Galaxy",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the second smallest planet in our solar system?",
+    "Option1": "Mercury",
+    "Option2": "Mars",
+    "Option3": "Venus",
+    "Option4": "Pluto",
+    "Answer": 2
+  },
+  {
+    "Question": "Which planet has the most moons?",
+    "Option1": "Saturn",
+    "Option2": "Jupiter",
+    "Option3": "Uranus",
+    "Option4": "Neptune",
+    "Answer": 1
+  },
+  {
+    "Question": "What is the name of the first manned mission to land on the Moon?",
+    "Option1": "Apollo 11",
+    "Option2": "Gemini 12",
+    "Option3": "Vostok 1",
+    "Option4": "Apollo 13",
+    "Answer": 1
+  },
+  {
+    "Question": "Which planet is famous for its large, beautiful rings?",
+    "Option1": "Saturn",
+    "Option2": "Jupiter",
+    "Option3": "Neptune",
+    "Option4": "Uranus",
+    "Answer": 1
+  },
+  {
+    "Question": "What is the name of the largest moon of Saturn?",
+    "Option1": "Ganymede",
+    "Option2": "Titan",
+    "Option3": "Io",
+    "Option4": "Europa",
+    "Answer": 2
+  },
+  {
+    "Question": "How long does it take for light from the Sun to reach Earth?",
+    "Option1": "1 minute",
+    "Option2": "8 minutes",
+    "Option3": "20 minutes",
+    "Option4": "1 hour",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the name of the force that keeps planets in orbit around the Sun?",
+    "Option1": "Magnetism",
+    "Option2": "Gravity",
+    "Option3": "Electromagnetism",
+    "Option4": "Inertia",
+    "Answer": 2
+  },
+  {
+    "Question": "Which planet is known for its Great Red Spot?",
+    "Option1": "Mars",
+    "Option2": "Saturn",
+    "Option3": "Jupiter",
+    "Option4": "Neptune",
+    "Answer": 3
+  },
+  {
+    "Question": "What is the name of the first artificial satellite launched into space?",
+    "Option1": "Sputnik 1",
+    "Option2": "Explorer 1",
+    "Option3": "Luna 2",
+    "Option4": "Vanguard 1",
+    "Answer": 1
+  },
+  {
+    "Question": "Which planet has the shortest day, completing a rotation on its axis in just about 10 hours?",
+    "Option1": "Mars",
+    "Option2": "Jupiter",
+    "Option3": "Saturn",
+    "Option4": "Uranus",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the closest star to Earth?",
+    "Option1": "Alpha Centauri",
+    "Option2": "Betelgeuse",
+    "Option3": "Sirius",
+    "Option4": "The Sun",
+    "Answer": 4
+  },
+  {
+    "Question": "What phenomenon is responsible for the twinkling of stars in the night sky?",
+    "Option1": "Reflection",
+    "Option2": "Refraction",
+    "Option3": "Diffraction",
+    "Option4": "Interference",
+    "Answer": 2
+  },
+  {
+    "Question": "Which planet is the hottest in the solar system?",
+    "Option1": "Mercury",
+    "Option2": "Venus",
+    "Option3": "Mars",
+    "Option4": "Jupiter",
+    "Answer": 2
+  },
+  {
+    "Question": "What is a light-year a measure of?",
+    "Option1": "Time",
+    "Option2": "Brightness",
+    "Option3": "Distance",
+    "Option4": "Speed",
+    "Answer": 3
+  },
+  {
+    "Question": "Which planet is known as the Earth's twin?",
+    "Option1": "Mars",
+    "Option2": "Venus",
+    "Option3": "Mercury",
+    "Option4": "Neptune",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the farthest planet from the Sun in our solar system?",
+    "Option1": "Neptune",
+    "Option2": "Uranus",
+    "Option3": "Pluto",
+    "Option4": "Saturn",
+    "Answer": 1
+  }
+]

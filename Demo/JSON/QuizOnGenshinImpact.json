@@ -1,0 +1,130 @@
+[
+  {
+    "Question": "Which element does the character Amber control?",
+    "Option1": "Hydro",
+    "Option2": "Pyro",
+    "Option3": "Cryo",
+    "Option4": "Anemo",
+    "Answer": 2
+  },
+  {
+    "Question": "Which city in Teyvat is known for its Anemo Archon?",
+    "Option1": "Mondstadt",
+    "Option2": "Liyue",
+    "Option3": "Inazuma",
+    "Option4": "Sumeru",
+    "Answer": 1
+  },
+  {
+    "Question": "What is the name of the Pyro character who wields a claymore and is also the owner of the Dawn Winery?",
+    "Option1": "Klee",
+    "Option2": "Xiangling",
+    "Option3": "Diluc",
+    "Option4": "Beidou",
+    "Answer": 3
+  },
+  {
+    "Question": "Which element does the character Mona control?",
+    "Option1": "Electro",
+    "Option2": "Cryo",
+    "Option3": "Geo",
+    "Option4": "Hydro",
+    "Answer": 4
+  },
+  {
+    "Question": "Who is the Geo Archon in Genshin Impact?",
+    "Option1": "Venti",
+    "Option2": "Raiden Shogun",
+    "Option3": "Zhongli",
+    "Option4": "Nahida",
+    "Answer": 3
+  },
+  {
+    "Question": "Which region is known for its Electro Archon and the Shogun?",
+    "Option1": "Mondstadt",
+    "Option2": "Liyue",
+    "Option3": "Inazuma",
+    "Option4": "Sumeru",
+    "Answer": 3
+  },
+  {
+    "Question": "Which character is known for her ability to control wind and is the leader of the Knights of Favonius?",
+    "Option1": "Amber",
+    "Option2": "Lisa",
+    "Option3": "Jean",
+    "Option4": "Barbara",
+    "Answer": 3
+  },
+  {
+    "Question": "Which of the following is not a playable character in Genshin Impact?",
+    "Option1": "Barbara",
+    "Option2": "Qiqi",
+    "Option3": "Albedo",
+    "Option4": "Kazuya",
+    "Answer": 4
+  },
+  {
+    "Question": "Which character is known for her Geo abilities and has a vision of Geo?",
+    "Option1": "Xiao",
+    "Option2": "Razor",
+    "Option3": "Ningguang",
+    "Option4": "Fischl",
+    "Answer": 3
+  },
+  {
+    "Question": "What is the name of the mysterious organization that the protagonist’s sibling is associated with?",
+    "Option1": "Abyss Order",
+    "Option2": "Fatui",
+    "Option3": "Order of the Phoenix",
+    "Option4": "The Adventurers' Guild",
+    "Answer": 1
+  },
+  {
+    "Question": "Which element does the character Xiao control?",
+    "Option1": "Geo",
+    "Option2": "Electro",
+    "Option3": "Cryo",
+    "Option4": "Anemo",
+    "Answer": 4
+  },
+  {
+    "Question": "Which Genshin Impact character is a librarian and controls the Electro element?",
+    "Option1": "Lisa",
+    "Option2": "Mona",
+    "Option3": "Keqing",
+    "Option4": "Rosaria",
+    "Answer": 1
+  },
+  {
+    "Question": "Which Genshin Impact region is based on Chinese culture and architecture?",
+    "Option1": "Mondstadt",
+    "Option2": "Liyue",
+    "Option3": "Inazuma",
+    "Option4": "Sumeru",
+    "Answer": 2
+  },
+  {
+    "Question": "What is the primary currency used for upgrading weapons and characters in Genshin Impact?",
+    "Option1": "Primogems",
+    "Option2": "Mora",
+    "Option3": "Fates",
+    "Option4": "Enhancement Ores",
+    "Answer": 2
+  },
+  {
+    "Question": "Which character is a 4-star Electro archer from Mondstadt?",
+    "Option1": "Fischl",
+    "Option2": "Razor",
+    "Option3": "Xingqiu",
+    "Option4": "Barbara",
+    "Answer": 1
+  },
+  {
+    "Question": "Which element does the character Beidou control?",
+    "Option1": "Pyro",
+    "Option2": "Hydro",
+    "Option3": "Electro",
+    "Option4": "Geo",
+    "Answer": 3
+  }
+]
