@@ -94,20 +94,9 @@ const ForgotPassword = () => {
             value={formik.values.email}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
+            error={formik.touched.email && formik.errors.email ? true : false}
+            helperText={formik.errors.email}
           />
-
-            <Typography
-              fullwidth="true"
-              variant="caption"
-              textAlign="center"
-              display="block"
-              gutterBottom
-              sx={styleErrorMsg}
-            >
-              {formik.touched.email && formik.errors.email
-                 ? formik.errors.email
-                 : ""}
-            </Typography>
 
           <Button
             type="submit"

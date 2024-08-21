@@ -91,6 +91,7 @@ const GobalProvider = ({ children }) => {
           points = ele.roundPoint + points;
         });
         setLastFiveRounds(points);
+        setUserRounds(data.data);
       } else {
         data.data.sort((a,b)=>Date.parse(b.createdAt) - Date.parse(a.createdAt))
         const result = data.data.slice(0,5);

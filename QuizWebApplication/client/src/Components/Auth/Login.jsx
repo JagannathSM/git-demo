@@ -139,19 +139,9 @@ const Login = () => {
                 value={formik.values.email}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
+                error={formik.touched.email && formik.errors.email ? true : false}
+                helperText={formik.errors.email}
               />
-
-              <Typography
-                variant="caption"
-                textAlign="center"
-                display="block"
-                gutterBottom
-                sx={styleErrorMsg}
-              >
-                {formik.touched.email && formik.errors.email
-                  ? formik.errors.email
-                  : ""}
-              </Typography>
 
               <TextField
                 variant="outlined"
@@ -165,19 +155,9 @@ const Login = () => {
                 value={formik.values.password}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
+                error={formik.touched.password && formik.errors.password ? true : false}
+                helperText={formik.errors.password}
               />
-
-              <Typography
-                variant="caption"
-                textAlign="center"
-                display="block"
-                gutterBottom
-                sx={styleErrorMsg}
-              >
-                {formik.touched.password && formik.errors.password
-                  ? formik.errors.password
-                  : ""}
-              </Typography>
 
               <Button
                 type="submit"
@@ -186,7 +166,7 @@ const Login = () => {
                 color="primary"
                 sx={{ mt: 3, mb: 2 }}
               >
-                {!loading ? "Sign In" : <CircularProgress size={24}/>}
+                {!loading ? "Sign In" : <CircularProgress sx={{color:"white"}} size={24}/>}
               </Button>
 
               <Grid container>

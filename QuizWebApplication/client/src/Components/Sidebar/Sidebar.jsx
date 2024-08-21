@@ -34,11 +34,6 @@ function Sidebar({children}) {
             path:"/quiz-page"
         },
         {
-            icon:<FaUser/>,
-            name:"User Profile",
-            path:"/user-profile"
-        },
-        {
             icon:<FaSignOutAlt/>,
             name:"Log Out",
             path:'/logout'

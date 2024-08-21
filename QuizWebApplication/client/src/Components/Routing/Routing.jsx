@@ -9,7 +9,6 @@ import PassTokenVerifyPage from '../Auth/PassTokenVerifyPage';
 import ResetPassword from '../Auth/ResetPassword';
 import Dashboard from '../Pages/Dashboard';
 import QuizPage from '../Pages/QuizPage';
-import UserProfile from '../Pages/UserProfile';
 import Logout from '../Auth/Logout';
 
 function Routing() {
@@ -24,7 +23,6 @@ function Routing() {
         <Route element={<PrivateRoute />}>
           <Route path="/dashboard" element={<Dashboard />}/>
           <Route path="/quiz-page" element={<QuizPage />}/>
-          <Route path='/user-profile' element={<UserProfile />}/>
           <Route path='/logout' element={<Logout />}/>
         </Route>
       </Routes>
