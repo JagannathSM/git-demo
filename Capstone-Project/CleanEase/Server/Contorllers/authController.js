@@ -24,8 +24,8 @@ exports.sendRegisterMail = async (req, res) => {
   }
 
   const user_detail = await User.findOne({ email });
-  if (user_detail) {
-    return res.status(400).send("User / Email already exists!");
+  if (user_detail && user_detail.active) {
+    return res.status(400).send("User / Email already exists and accound has been activated!");
   }
 
   const registerToken = Math.random().toString(36).slice(-8);
@@ -44,13 +44,13 @@ exports.sendRegisterMail = async (req, res) => {
   });
   await new_user.save();
 
-  const message = `<div style="diaplay:flex;flex-direction:column;justify-content:center;text-align: center;background-color: lightgreen;border: 5px outset black;color:black">
+  const message = `<div style="display:flex;flex-direction:column;justify-content:center;text-align: center;background-color: lightgreen;border: 5px outset black;color:black">
   <div style="padding:10px;margin:5px">
   <h3 style="margin:0px">Verify Account to login!</h3>
   <p>Account Created successfully, please follow the instructions to register your account. Click on the below link to register your account, this link expires in 1hr. <br>  If you did not request this, please ignore this email.</p>
   <a style="text-decoration:none; border:1px solid black; background-color:black;color:white;padding:4px;border-radius:5px" type="button" href="${process.env.NETLIFY_REGISTOR}${registerToken}" target="_blank">Verify Now!</a>
-  </div>
-  </div>`;
+  <h4>NOTE : IF THE ABOVE BUTTON IS NOT CLICKABLE PLEASE COPY AND PAST THE LINK IN YOUR BROWSER TO ACTIVATE YOUR ACCOUNT</h4>
+  <p>${process.env.NETLIFY_REGISTOR}${registerToken}</p>`;
 
   sendEmail({
     email: new_user.email,
@@ -123,13 +123,13 @@ exports.resetPassToken = async (req, res) => {
 
   await userData.save();
 
-  const message = `<div style="diaplay:flex;flex-direction:column;justify-content:center;text-align: center;background-color: lightblue;border: 5px outset black;color:black">
+  const message = `<div style="display:flex;flex-direction:column;justify-content:center;text-align: center;background-color: lightblue;border: 5px outset black;color:black">
     <div style="padding:10px;margin:5px">
     <h3 style="margin:0px">Password Reset Request</h3>
     <p>Your Password reset token - ${passResetToken}. Click on the below link to reset your password, this link expires in 1hr. <br>  If you did not request this, please ignore this email and your password will remain unchanged.</p>
     <a style="text-decoration:none; border:1px solid black; background-color:black;color:white;padding:4px;border-radius:5px" type="button" href="${process.env.NETLIFY_PASSWORD}${passResetToken}" target="_blank">Reset Password</a>
-    </div>
-    </div>`;
+  <h4>NOTE : IF THE ABOVE BUTTON IS NOT CLICKABLE PLEASE COPY AND PAST THE LINK IN YOUR BROWSER TO RESET YOUR PASSWORD</h4>
+  <p>${process.env.NETLIFY_PASSWORD}${passResetToken}</p>`;
   sendEmail({
     email: userData.email,
     subject: "Password Reset Request",
