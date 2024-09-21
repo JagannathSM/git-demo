@@ -16,6 +16,7 @@ import ExampleCHECKLIST from '../Components/ExampleCHECKLIST';
 import LoadingAnimation from '../Components/LoadingAnimation'
 import DownloadBills from '../Components/DownloadBills'
 import Admindashboard from '../Components/Admindashboard'
+import ApiCall from '../Components/ApiCall'
 
 const theme = createTheme();
 
@@ -38,7 +39,8 @@ function App() {
     {/* <ExampleCHECKLIST/> */}
     {/* <LoadingAnimation/> */}
     {/* <DownloadBills/> */}
-    <Admindashboard/>
+    {/* <Admindashboard/> */}
+    <ApiCall/>
     </>
   )
 }
