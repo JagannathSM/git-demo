@@ -34,15 +34,6 @@ const ApiCall = () => {
           </dl>
         ))}
       </ul>
-
-      {/* <dl>
-        {posts.map((post) => (
-          < div key={post.id}>
-            <dt>{post.title}</dt> 
-            <dd>{post.body}</dd>
-          </ div>
-        ))}
-      </dl> */}
     </div>
   );
 };
