@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#root{
+  min-height: 100vh;
+  display: flex;
+  background-image: url("./chatbackground.jpg");
+  background-size: cover;
+  background-position: center;
+  /* background-color: #dadbd3;
+  place-items: center;
+  font-family: 'Work Sans', sans-serif; */
+}
