@@ -151,6 +151,8 @@ page_button_start.className = "hello";
 var page_button_div = document.createElement("div");
 page_button_div.className = "button_class";
 
+var pages = document.getElementsByClassName("page");
+
 var start_page = 1;
 var end_page = 5;
 var total_page = 5;
@@ -201,7 +203,8 @@ function next_fun(pages){
     reset_showvalues();
 }
 
-function prev_fun(){
+function prev_fun(pages){
+    console.log(`prev_fun ${pages}`)
     var val = document.querySelector(".active");
     var cpage= parseInt(val.id);
     currentpage = cpage-1;

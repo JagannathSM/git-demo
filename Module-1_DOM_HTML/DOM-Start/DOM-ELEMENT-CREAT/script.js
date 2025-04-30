@@ -85,7 +85,9 @@ var lab_loc=label_creat("label","for","Location","Location:");
 var in_loc=input_creat("input","type","text","id","Location");
 
 
-document.body.append(lab_first,break_creat(),in_first,break_creat(),lab_mid,break_creat(),in_mid,break_creat(),lab_last,break_creat(),in_last,break_creat(),lab_email,break_creat(),in_email,break_creat(),lab_add,break_creat(),in_add,break_creat(),lab_loc,break_creat(),in_loc,break_creat(),br);
+// document.body.append(lab_first,break_creat(),in_first,break_creat(),lab_mid,break_creat(),in_mid,break_creat(),lab_last,break_creat(),in_last,break_creat(),lab_email,break_creat(),in_email,break_creat(),lab_add,break_creat(),in_add,break_creat(),lab_loc,break_creat(),in_loc,break_creat(),br);
+document.body.append(lab_first,br,in_first,br,lab_mid,br,in_mid,br,lab_last,br,in_last,br,lab_email,br,in_email,br,lab_add,br,in_add,br,lab_loc,br,in_loc,br,br);
+
 
 var button = document.createElement("button");
 button.setAttribute("type","button");
@@ -94,7 +96,9 @@ button.className = "btn btn-success"
 button.addEventListener("click",getvalues);
 document.body.append(button);
 
-document.body.append(break_creat(),break_creat())
+// document.body.append(break_creat(),break_creat())
+document.body.append(br,br)
+
 
 var button1 = document.createElement("button");
 button1.setAttribute("type","button");
